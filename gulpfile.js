@@ -355,7 +355,7 @@ gulp.task('express', function() {
       NODE_ENV: process.env.NODE_ENV || 'development',
       APP: defaultAppName,
       RTL: createRTL,
-      PORT: 5000,
+      PORT: 5050,
       WPORT: wport,
       WHOST: whost
     },
@@ -372,7 +372,7 @@ gulp.task('express', function() {
     if(m === 'CONNECTED' && !browserSyncConnected) {
       gutil.log(gutil.colors.bgMagenta(gutil.colors.white('Server spawned! Starting proxy...')));
       browserSync({
-        proxy: 'localhost:5000',
+        proxy: 'localhost:5050',
         port: port
       }, function() {
         browserSyncConnected = true;

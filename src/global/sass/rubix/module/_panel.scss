@@ -1,4 +1,4 @@
-$panel-radius: 8px;
+$panel-radius: 4px;
 
 .rubix-panel-container-with-controls {
   position: relative;
@@ -19,55 +19,6 @@ $panel-radius: 8px;
       border-bottom-left-radius: $panel-radius;
       border-bottom-right-radius: $panel-radius;
     }
-  }
-}
-
-html.no-touch .rubix-panel-container-with-controls {
-  &:hover, &:focus, &.active {
-    > .rubix-panel-controls {
-      top: - (4 * $line-height-computed / 5);
-    }
-  }
-}
-
-.rubix-panel-controls {
-  @include transition(all 0.2s ease);
-  top: 0;
-  z-index: 0;
-  background: white;
-  position: absolute;
-  right: $line-height-computed / 2;
-  border-top-left-radius: $panel-radius / 2;
-  border-top-right-radius: $panel-radius / 2;
-  padding: 0px $line-height-computed/2 5px $line-height-computed/2;
-}
-
-.rubix-panel-controls > button {
-  top: -2px;
-  padding: 0;
-  border: none;
-  opacity: 0.5;
-  color: inherit;
-  background: none;
-  position: relative;
-
-  &:hover, &:focus, &:active, &:active:focus {
-    @include box-shadow(none);
-    opacity: 1;
-    border: none;
-    outline: none;
-    color: inherit;
-    background: none;
-  }
-}
-
-.rubix-panel-controls > button > .rubix-icon {
-  font-size: 14px;
-}
-
-.rubix-panel-controls > {
-  button ~ button {
-    padding-left: 10px;
   }
 }
 

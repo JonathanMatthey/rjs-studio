@@ -18,19 +18,19 @@
       color $primary-color
     ),
     header (
-      bg #273135,
-      color $primary-color,
-      hover-color #ffffff,
+      bg #fff,
+      color #222,
+      hover-color #333,
 
       logout (
         bg get($list, logout, bg),
-        color #ffffff,
+        color #222,
         hover-bg get($list, logout, hover-bg)
       ),
 
       sidebar-btn (
         bg #2AA38B,
-        color #ffffff,
+        color #333,
         hover-bg #2EB398
       ),
 

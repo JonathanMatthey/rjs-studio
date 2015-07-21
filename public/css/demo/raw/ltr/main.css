@@ -5815,7 +5815,8 @@ label {
     display: inline-block; }
 
 #app-container {
-  display: block; }
+  display: block;
+  margin-top: 100px; }
 
 #container {
   min-height: 100vh;
@@ -6323,59 +6324,22 @@ td > .tab-content > .tab-pane {
 .rubix-panel-container {
   overflow: hidden;
   position: relative;
-  border-radius: 8px;
+  border-radius: 4px;
   margin-bottom: 25px; }
   .rubix-panel-container.noOverflow .rubix-panel-header:first-child {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px; }
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px; }
   .rubix-panel-container.noOverflow .rubix-panel-footer:last-child {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px; }
-
-html.no-touch .rubix-panel-container-with-controls:hover > .rubix-panel-controls, html.no-touch .rubix-panel-container-with-controls:focus > .rubix-panel-controls, html.no-touch .rubix-panel-container-with-controls.active > .rubix-panel-controls {
-  top: -20px; }
-
-.rubix-panel-controls {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  top: 0;
-  z-index: 0;
-  background: white;
-  position: absolute;
-  right: 12.5px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  padding: 0px 12.5px 5px 12.5px; }
-
-.rubix-panel-controls > button {
-  top: -2px;
-  padding: 0;
-  border: none;
-  opacity: 0.5;
-  color: inherit;
-  background: none;
-  position: relative; }
-  .rubix-panel-controls > button:hover, .rubix-panel-controls > button:focus, .rubix-panel-controls > button:active, .rubix-panel-controls > button:active:focus {
-    box-shadow: none;
-    opacity: 1;
-    border: none;
-    outline: none;
-    color: inherit;
-    background: none; }
-
-.rubix-panel-controls > button > .rubix-icon {
-  font-size: 14px; }
-
-.rubix-panel-controls > button ~ button {
-  padding-left: 10px; }
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px; }
 
 .rubix-panel {
   z-index: 1;
   position: relative; }
 
 .rubix-panel-header {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px; }
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
   .rubix-panel-header[class*='bg-'] {
     margin-bottom: 12.5px; }
   .rubix-panel-header ~ .rubix-panel-body {
@@ -6386,18 +6350,18 @@ html.no-touch .rubix-panel-container-with-controls:hover > .rubix-panel-controls
   padding-top: 25px; }
 
 .rubix-panel-footer {
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px; }
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
   .rubix-panel-footer[class*='bg-'] {
     margin-top: 12.5px; }
 
 .rubix-panel-right {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px; }
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px; }
 
 .rubix-panel-left {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px; }
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px; }
 
 .rubix-panel-header.noRadius, .rubix-panel-footer.noRadius, .rubix-panel-left.noRadius, .rubix-panel-right.noRadius {
   border-radius: 0 !important; }
@@ -16916,6 +16880,15 @@ html.social body .sidebar-nav > li.active:after {
   .gallery-item .black-wrapper .rubix-icon {
     color: white;
     display: block; }
+
+.gallery-item .campaign-details {
+  position: absolute;
+  bottom: 0;
+  background: transparent;
+  color: white;
+  padding: 0 10px; }
+  .gallery-item .campaign-details .campaign-title {
+    font-size: 14px; }
 
 .gallery-item-link {
   display: block;

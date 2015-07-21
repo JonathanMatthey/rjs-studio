@@ -922,11 +922,10 @@ html.default {
               transition: all 0.3s ease;
       border: none;
       margin-left: 0;
-      background: #273135; }
+      background: #fff; }
       html.default body #rubix-nav-header .navbar-brand {
-        width: 100%;
         text-align: center;
-        color: #89949B; }
+        color: #222; }
         html.default body #rubix-nav-header .navbar-brand > img {
           top: -3px;
           position: relative; }
@@ -961,9 +960,9 @@ html.default {
         font-size: 26px;
         background: none;
         text-align: center;
-        color: #89949B; }
+        color: #222; }
         html.default body #rubix-nav-header .navbar-nav > li.active > a:hover, html.default body #rubix-nav-header .navbar-nav > li > a:hover {
-          color: #ffffff; }
+          color: #333; }
       html.default body #rubix-nav-header .navbar-nav > li.pressed > a {
         color: white; }
       html.default body #rubix-nav-header .navbar-nav > li.logout > a, html.default body #rubix-nav-header .navbar-nav > li.sidebar-btn > a {
@@ -972,12 +971,12 @@ html.default {
         padding-left: 0;
         padding-right: 0; }
       html.default body #rubix-nav-header .navbar-nav > li.logout > a {
-        color: #ffffff;
+        color: #222;
         background: #E76049; }
         html.default body #rubix-nav-header .navbar-nav > li.logout > a:hover {
           background: #F4654D; }
       html.default body #rubix-nav-header .navbar-nav > li.sidebar-btn > a {
-        color: #ffffff;
+        color: #333;
         background: #2AA38B; }
         html.default body #rubix-nav-header .navbar-nav > li.sidebar-btn > a:hover {
           background: #2EB398; }
@@ -994,9 +993,6 @@ html.default {
         line-height: 9px;
         margin-top: -10px;
         position: absolute; }
-    @media (min-width: 990px) {
-      html.default body #rubix-nav-header {
-        margin-left: 250px; } }
     html.default body #flag-menu-btn > img {
       top: -2px;
       position: relative; }
@@ -1736,11 +1732,10 @@ html.green {
               transition: all 0.3s ease;
       border: none;
       margin-left: 0;
-      background: #273135; }
+      background: #fff; }
       html.green body #rubix-nav-header .navbar-brand {
-        width: 100%;
         text-align: center;
-        color: #89949B; }
+        color: #222; }
         html.green body #rubix-nav-header .navbar-brand > img {
           top: -3px;
           position: relative; }
@@ -1775,9 +1770,9 @@ html.green {
         font-size: 26px;
         background: none;
         text-align: center;
-        color: #89949B; }
+        color: #222; }
         html.green body #rubix-nav-header .navbar-nav > li.active > a:hover, html.green body #rubix-nav-header .navbar-nav > li > a:hover {
-          color: #ffffff; }
+          color: #333; }
       html.green body #rubix-nav-header .navbar-nav > li.pressed > a {
         color: white; }
       html.green body #rubix-nav-header .navbar-nav > li.logout > a, html.green body #rubix-nav-header .navbar-nav > li.sidebar-btn > a {
@@ -1786,12 +1781,12 @@ html.green {
         padding-left: 0;
         padding-right: 0; }
       html.green body #rubix-nav-header .navbar-nav > li.logout > a {
-        color: #ffffff;
+        color: #222;
         background: #2EB398; }
         html.green body #rubix-nav-header .navbar-nav > li.logout > a:hover {
           background: #31C0A3; }
       html.green body #rubix-nav-header .navbar-nav > li.sidebar-btn > a {
-        color: #ffffff;
+        color: #333;
         background: #2AA38B; }
         html.green body #rubix-nav-header .navbar-nav > li.sidebar-btn > a:hover {
           background: #2EB398; }
@@ -1808,9 +1803,6 @@ html.green {
         line-height: 9px;
         margin-top: -10px;
         position: absolute; }
-    @media (min-width: 990px) {
-      html.green body #rubix-nav-header {
-        margin-left: 250px; } }
     html.green body #flag-menu-btn > img {
       top: -2px;
       position: relative; }
@@ -2550,11 +2542,10 @@ html.blue {
               transition: all 0.3s ease;
       border: none;
       margin-left: 0;
-      background: #273135; }
+      background: #fff; }
       html.blue body #rubix-nav-header .navbar-brand {
-        width: 100%;
         text-align: center;
-        color: #89949B; }
+        color: #222; }
         html.blue body #rubix-nav-header .navbar-brand > img {
           top: -3px;
           position: relative; }
@@ -2589,9 +2580,9 @@ html.blue {
         font-size: 26px;
         background: none;
         text-align: center;
-        color: #89949B; }
+        color: #222; }
         html.blue body #rubix-nav-header .navbar-nav > li.active > a:hover, html.blue body #rubix-nav-header .navbar-nav > li > a:hover {
-          color: #ffffff; }
+          color: #333; }
       html.blue body #rubix-nav-header .navbar-nav > li.pressed > a {
         color: white; }
       html.blue body #rubix-nav-header .navbar-nav > li.logout > a, html.blue body #rubix-nav-header .navbar-nav > li.sidebar-btn > a {
@@ -2600,12 +2591,12 @@ html.blue {
         padding-left: 0;
         padding-right: 0; }
       html.blue body #rubix-nav-header .navbar-nav > li.logout > a {
-        color: #ffffff;
+        color: #222;
         background: #6FA2D9; }
         html.blue body #rubix-nav-header .navbar-nav > li.logout > a:hover {
           background: #80BAF9; }
       html.blue body #rubix-nav-header .navbar-nav > li.sidebar-btn > a {
-        color: #ffffff;
+        color: #333;
         background: #2AA38B; }
         html.blue body #rubix-nav-header .navbar-nav > li.sidebar-btn > a:hover {
           background: #2EB398; }
@@ -2622,9 +2613,6 @@ html.blue {
         line-height: 9px;
         margin-top: -10px;
         position: absolute; }
-    @media (min-width: 990px) {
-      html.blue body #rubix-nav-header {
-        margin-left: 250px; } }
     html.blue body #flag-menu-btn > img {
       top: -2px;
       position: relative; }
@@ -3364,11 +3352,10 @@ html.purple {
               transition: all 0.3s ease;
       border: none;
       margin-left: 0;
-      background: #273135; }
+      background: #fff; }
       html.purple body #rubix-nav-header .navbar-brand {
-        width: 100%;
         text-align: center;
-        color: #89949B; }
+        color: #222; }
         html.purple body #rubix-nav-header .navbar-brand > img {
           top: -3px;
           position: relative; }
@@ -3403,9 +3390,9 @@ html.purple {
         font-size: 26px;
         background: none;
         text-align: center;
-        color: #89949B; }
+        color: #222; }
         html.purple body #rubix-nav-header .navbar-nav > li.active > a:hover, html.purple body #rubix-nav-header .navbar-nav > li > a:hover {
-          color: #ffffff; }
+          color: #333; }
       html.purple body #rubix-nav-header .navbar-nav > li.pressed > a {
         color: white; }
       html.purple body #rubix-nav-header .navbar-nav > li.logout > a, html.purple body #rubix-nav-header .navbar-nav > li.sidebar-btn > a {
@@ -3414,12 +3401,12 @@ html.purple {
         padding-left: 0;
         padding-right: 0; }
       html.purple body #rubix-nav-header .navbar-nav > li.logout > a {
-        color: #ffffff;
+        color: #222;
         background: #A593CA; }
         html.purple body #rubix-nav-header .navbar-nav > li.logout > a:hover {
           background: #BEAAEA; }
       html.purple body #rubix-nav-header .navbar-nav > li.sidebar-btn > a {
-        color: #ffffff;
+        color: #333;
         background: #2AA38B; }
         html.purple body #rubix-nav-header .navbar-nav > li.sidebar-btn > a:hover {
           background: #2EB398; }
@@ -3436,9 +3423,6 @@ html.purple {
         line-height: 9px;
         margin-top: -10px;
         position: absolute; }
-    @media (min-width: 990px) {
-      html.purple body #rubix-nav-header {
-        margin-left: 250px; } }
     html.purple body #flag-menu-btn > img {
       top: -2px;
       position: relative; }
@@ -4178,11 +4162,10 @@ html.brown {
               transition: all 0.3s ease;
       border: none;
       margin-left: 0;
-      background: #273135; }
+      background: #fff; }
       html.brown body #rubix-nav-header .navbar-brand {
-        width: 100%;
         text-align: center;
-        color: #89949B; }
+        color: #222; }
         html.brown body #rubix-nav-header .navbar-brand > img {
           top: -3px;
           position: relative; }
@@ -4217,9 +4200,9 @@ html.brown {
         font-size: 26px;
         background: none;
         text-align: center;
-        color: #89949B; }
+        color: #222; }
         html.brown body #rubix-nav-header .navbar-nav > li.active > a:hover, html.brown body #rubix-nav-header .navbar-nav > li > a:hover {
-          color: #ffffff; }
+          color: #333; }
       html.brown body #rubix-nav-header .navbar-nav > li.pressed > a {
         color: white; }
       html.brown body #rubix-nav-header .navbar-nav > li.logout > a, html.brown body #rubix-nav-header .navbar-nav > li.sidebar-btn > a {
@@ -4228,12 +4211,12 @@ html.brown {
         padding-left: 0;
         padding-right: 0; }
       html.brown body #rubix-nav-header .navbar-nav > li.logout > a {
-        color: #ffffff;
+        color: #222;
         background: #954B33; }
         html.brown body #rubix-nav-header .navbar-nav > li.logout > a:hover {
           background: #B55B3E; }
       html.brown body #rubix-nav-header .navbar-nav > li.sidebar-btn > a {
-        color: #ffffff;
+        color: #333;
         background: #2AA38B; }
         html.brown body #rubix-nav-header .navbar-nav > li.sidebar-btn > a:hover {
           background: #2EB398; }
@@ -4250,9 +4233,6 @@ html.brown {
         line-height: 9px;
         margin-top: -10px;
         position: absolute; }
-    @media (min-width: 990px) {
-      html.brown body #rubix-nav-header {
-        margin-left: 250px; } }
     html.brown body #flag-menu-btn > img {
       top: -2px;
       position: relative; }
@@ -4992,11 +4972,10 @@ html.cyan {
               transition: all 0.3s ease;
       border: none;
       margin-left: 0;
-      background: #273135; }
+      background: #fff; }
       html.cyan body #rubix-nav-header .navbar-brand {
-        width: 100%;
         text-align: center;
-        color: #89949B; }
+        color: #222; }
         html.cyan body #rubix-nav-header .navbar-brand > img {
           top: -3px;
           position: relative; }
@@ -5031,9 +5010,9 @@ html.cyan {
         font-size: 26px;
         background: none;
         text-align: center;
-        color: #89949B; }
+        color: #222; }
         html.cyan body #rubix-nav-header .navbar-nav > li.active > a:hover, html.cyan body #rubix-nav-header .navbar-nav > li > a:hover {
-          color: #ffffff; }
+          color: #333; }
       html.cyan body #rubix-nav-header .navbar-nav > li.pressed > a {
         color: white; }
       html.cyan body #rubix-nav-header .navbar-nav > li.logout > a, html.cyan body #rubix-nav-header .navbar-nav > li.sidebar-btn > a {
@@ -5042,12 +5021,12 @@ html.cyan {
         padding-left: 0;
         padding-right: 0; }
       html.cyan body #rubix-nav-header .navbar-nav > li.logout > a {
-        color: #ffffff;
+        color: #222;
         background: #5C8E92; }
         html.cyan body #rubix-nav-header .navbar-nav > li.logout > a:hover {
           background: #70ACB2; }
       html.cyan body #rubix-nav-header .navbar-nav > li.sidebar-btn > a {
-        color: #ffffff;
+        color: #333;
         background: #2AA38B; }
         html.cyan body #rubix-nav-header .navbar-nav > li.sidebar-btn > a:hover {
           background: #2EB398; }
@@ -5064,9 +5043,6 @@ html.cyan {
         line-height: 9px;
         margin-top: -10px;
         position: absolute; }
-    @media (min-width: 990px) {
-      html.cyan body #rubix-nav-header {
-        margin-left: 250px; } }
     html.cyan body #flag-menu-btn > img {
       top: -2px;
       position: relative; }

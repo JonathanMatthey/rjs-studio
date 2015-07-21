@@ -10,7 +10,6 @@
     background: get($list, header, bg);
 
     .navbar-brand {
-      width: 100%;
       text-align: center;
       color: get($list, header, color);
 
@@ -133,7 +132,6 @@
 
   @media (min-width: $screen-sm-min) {
     #rubix-nav-header {
-      margin-left: get($list, sidebar, width);
     }
   }
 

@@ -1,5 +1,3 @@
-/*! rubix - v3.0.0 - 2015-07-21 [copyright: SketchPixy LLP, email: support@sketchpixy.com] */
-(function() {
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -58,9 +56,10 @@
 
 	var _globalRouter = __webpack_require__(175);
 
+	/* Initialize Locales */
+
 	var _globalRouter2 = _interopRequireDefault(_globalRouter);
 
-	/* Initialize Locales */
 	l20n.initializeLocales(("demo"), {
 	  'locales': ['en-US', 'fr', 'it', 'ge', 'ar', 'ch'],
 	  'default': 'en-US'
@@ -309,9 +308,9 @@
 
 	var _routesPricing = __webpack_require__(109);
 
-	var _routesPricing2 = _interopRequireDefault(_routesPricing);
-
 	// documentation
+
+	var _routesPricing2 = _interopRequireDefault(_routesPricing);
 
 	var _routesDocsInstallation = __webpack_require__(111);
 
@@ -588,7 +587,7 @@
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      $('#my-awesome-dropzone').dropzone({
-	        paramName: 'file', // The name that will be used to transfer the file
+	        paramName: "file", // The name that will be used to transfer the file
 	        maxFilesize: 2, // MB
 	        accept: function accept(file, done) {
 	          done();
@@ -4179,7 +4178,7 @@
 	        React.createElement(
 	          NavBrand,
 	          { tabIndex: '-1' },
-	          React.createElement('img', { src: '/imgs/logo.png', alt: 'rubix', width: '111', height: '28' })
+	          'Fuisz Studio'
 	        )
 	      );
 	    }
@@ -4255,235 +4254,8 @@
 	  }
 	});
 
-	var Skins = (function (_React$Component3) {
-	  _inherits(Skins, _React$Component3);
-
-	  function Skins() {
-	    _classCallCheck(this, Skins);
-
-	    _get(Object.getPrototypeOf(Skins.prototype), 'constructor', this).apply(this, arguments);
-	  }
-
-	  _createClass(Skins, [{
-	    key: 'switchSkin',
-	    value: function switchSkin(skin, e) {
-	      e.preventDefault();
-	      e.stopPropagation();
-	      for (var i = 0; i < Skins.skins.length; i++) {
-	        $('html').removeClass(Skins.skins[i]);
-	      }
-	      $('html').addClass(skin);
-	      vex.close(this.props.id);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return React.createElement(
-	        Grid,
-	        { style: { margin: '-2em' } },
-	        React.createElement(
-	          Row,
-	          null,
-	          React.createElement(
-	            Col,
-	            { xs: 12, className: 'text-center bg-darkgrayishblue75', style: { marginBottom: 25 } },
-	            React.createElement(
-	              'div',
-	              { className: 'fg-white', style: { fontSize: 24, lineHeight: 1, padding: '25px 10px' } },
-	              'Choose a theme:'
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          Row,
-	          null,
-	          React.createElement(
-	            Col,
-	            { xs: 4, className: 'text-center' },
-	            React.createElement(
-	              'a',
-	              { href: '#', style: { border: 'none' }, onClick: this.switchSkin.bind(this, 'default') },
-	              React.createElement(Icon, { glyph: 'icon-fontello-stop icon-4x', style: { color: '#E76049' } })
-	            )
-	          ),
-	          React.createElement(
-	            Col,
-	            { xs: 4, className: 'text-center' },
-	            React.createElement(
-	              'a',
-	              { href: '#', style: { border: 'none' }, onClick: this.switchSkin.bind(this, 'green') },
-	              React.createElement(Icon, { glyph: 'icon-fontello-stop icon-4x', className: 'fg-darkgreen45' })
-	            )
-	          ),
-	          React.createElement(
-	            Col,
-	            { xs: 4, className: 'text-center' },
-	            React.createElement(
-	              'a',
-	              { href: '#', style: { border: 'none' }, onClick: this.switchSkin.bind(this, 'blue') },
-	              React.createElement(Icon, { glyph: 'icon-fontello-stop icon-4x', className: 'fg-blue' })
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          Row,
-	          null,
-	          React.createElement(
-	            Col,
-	            { xs: 4, className: 'text-center' },
-	            React.createElement(
-	              'a',
-	              { href: '#', style: { border: 'none' }, onClick: this.switchSkin.bind(this, 'purple') },
-	              React.createElement(Icon, { glyph: 'icon-fontello-stop icon-4x', className: 'fg-purple' })
-	            )
-	          ),
-	          React.createElement(
-	            Col,
-	            { xs: 4, className: 'text-center' },
-	            React.createElement(
-	              'a',
-	              { href: '#', style: { border: 'none' }, onClick: this.switchSkin.bind(this, 'brown') },
-	              React.createElement(Icon, { glyph: 'icon-fontello-stop icon-4x', className: 'fg-brown' })
-	            )
-	          ),
-	          React.createElement(
-	            Col,
-	            { xs: 4, className: 'text-center' },
-	            React.createElement(
-	              'a',
-	              { href: '#', style: { border: 'none' }, onClick: this.switchSkin.bind(this, 'cyan') },
-	              React.createElement(Icon, { glyph: 'icon-fontello-stop icon-4x', className: 'fg-darkcyan' })
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Skins;
-	})(React.Component);
-
-	Skins.skins = ['default', 'green', 'blue', 'purple', 'brown', 'cyan'];
-
-	var CommitChart = (function (_React$Component4) {
-	  _inherits(CommitChart, _React$Component4);
-
-	  function CommitChart() {
-	    _classCallCheck(this, CommitChart);
-
-	    _get(Object.getPrototypeOf(CommitChart.prototype), 'constructor', this).apply(this, arguments);
-	  }
-
-	  _createClass(CommitChart, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var chart = new Rubix('#commit-column-chart', {
-	        width: '100%',
-	        height: 100,
-	        hideAxisAndGrid: true,
-	        hideLegend: true,
-	        tooltip: {
-	          color: '#2EB398'
-	        },
-	        margin: {
-	          top: 25,
-	          bottom: 25
-	        }
-	      });
-
-	      var alerts = chart.column_series({
-	        name: 'Commits',
-	        color: '#2EB398'
-	      });
-
-	      alerts.addData([{ x: 10, y: 20 }, { x: 11, y: 50 }, { x: 12, y: 35 }, { x: 13, y: 30 }, { x: 14, y: 20 }, { x: 15, y: 25 }, { x: 16, y: 30 }, { x: 17, y: 50 }, { x: 18, y: 20 }, { x: 19, y: 30 }, { x: 20, y: 50 }, { x: 21, y: 20 }, { x: 22, y: 50 }, { x: 23, y: 35 }, { x: 24, y: 30 }, { x: 25, y: 20 }, { x: 26, y: 30 }]);
-
-	      $(window).trigger('resize');
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return React.createElement(
-	        Grid,
-	        { style: { marginBottom: -10 } },
-	        React.createElement(
-	          Row,
-	          null,
-	          React.createElement(
-	            Col,
-	            { xs: 12 },
-	            React.createElement('div', { id: 'commit-column-chart' })
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return CommitChart;
-	})(React.Component);
-
-	var LtrRtlLayout = (function (_React$Component5) {
-	  _inherits(LtrRtlLayout, _React$Component5);
-
-	  function LtrRtlLayout() {
-	    _classCallCheck(this, LtrRtlLayout);
-
-	    _get(Object.getPrototypeOf(LtrRtlLayout.prototype), 'constructor', this).apply(this, arguments);
-	  }
-
-	  _createClass(LtrRtlLayout, [{
-	    key: 'handleLayoutRadioChange',
-	    value: function handleLayoutRadioChange(e) {
-	      var dir = e.target.value;
-	      _cookies2['default'].setItem('rubix_dir', dir);
-	      window.location.reload();
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      if ($('html').attr('dir') === 'ltr') {
-	        this.refs.ltr.checked = true;
-	      } else {
-	        this.refs.rtl.checked = true;
-	      }
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return React.createElement(
-	        Grid,
-	        null,
-	        React.createElement(
-	          Row,
-	          null,
-	          React.createElement(
-	            Col,
-	            { xs: 6 },
-	            React.createElement(
-	              Radio,
-	              { browser: true, ref: 'ltr', value: 'ltr', name: 'switch-layout', defaultChecked: true, onChange: this.handleLayoutRadioChange.bind(this) },
-	              'LTR'
-	            )
-	          ),
-	          React.createElement(
-	            Col,
-	            { xs: 6, className: 'text-right' },
-	            React.createElement(
-	              Radio,
-	              { browser: true, ref: 'rtl', value: 'rtl', name: 'switch-layout', onChange: this.handleLayoutRadioChange.bind(this) },
-	              'RTL'
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return LtrRtlLayout;
-	})(React.Component);
-
-	var BodyLayout = (function (_React$Component6) {
-	  _inherits(BodyLayout, _React$Component6);
+	var BodyLayout = (function (_React$Component3) {
+	  _inherits(BodyLayout, _React$Component3);
 
 	  function BodyLayout() {
 	    _classCallCheck(this, BodyLayout);
@@ -4493,19 +4265,7 @@
 
 	  _createClass(BodyLayout, [{
 	    key: 'bodyLayoutRadioChange',
-	    value: function bodyLayoutRadioChange(value) {
-	      if (!value) return;
-	      if (value === 'fixed-body') {
-	        $('html').removeClass('static');
-	        localStorage.setItem('bodyLayout', 'fixed-body');
-	        ReactBootstrap.Dispatcher.emit('sidebar:reinitialize');
-	      } else if (value === 'static-body') {
-	        $('html').addClass('static');
-	        localStorage.setItem('bodyLayout', 'static-body');
-	        ReactBootstrap.Dispatcher.emit('sidebar:destroy');
-	      }
-	      this.refs[value].checked = true;
-	    }
+	    value: function bodyLayoutRadioChange(value) {}
 	  }, {
 	    key: 'handleBodyLayoutRadioChange',
 	    value: function handleBodyLayoutRadioChange(e) {
@@ -4558,65 +4318,6 @@
 	  getInitialState: function getInitialState() {
 	    return { selectedFlag: 'United-States' };
 	  },
-	  handleSkinSwitch: function handleSkinSwitch(e) {
-	    e.preventDefault();
-	    e.stopPropagation();
-	    var vexContent;
-	    vex.dialog.open({
-	      afterOpen: function afterOpen($vexContent) {
-	        vexContent = $vexContent;
-	        return React.render(React.createElement(Skins, { id: $vexContent.data().vex.id }), $vexContent.get(0));
-	      },
-	      afterClose: function afterClose() {
-	        React.unmountComponentAtNode(vexContent.get(0));
-	      }
-	    });
-	  },
-	  changeFlag: function changeFlag(props) {
-	    this.setState({
-	      selectedFlag: props.flag
-	    }, function () {
-	      if (props.locale === 'ar') $('html').addClass('arabic');else $('html').removeClass('arabic');
-	      Preloader.show();
-	      l20n.changeLocale(props.locale);
-	    });
-	  },
-	  l20nContextReady: function l20nContextReady(e) {
-	    var selectedFlag = l20n.ctx.getSync('selectedFlag');
-	    this.refs['flag-menu'].selectItem('flag', selectedFlag);
-	    this.setState({
-	      selectedFlag: selectedFlag
-	    }, function () {
-	      Preloader.hide();
-	    });
-	  },
-	  changeSettingsMenuItemState: function changeSettingsMenuItemState(item) {
-	    if (item === 'fluid' || item === null || item === undefined) {
-	      this.refs['settings-menu'].selectItem('data-val', 'fluid');
-	      $('html').removeClass('boxed');
-	    } else if (item === 'boxed') {
-	      this.refs['settings-menu'].selectItem('data-val', 'boxed');
-	      $('html').addClass('boxed');
-	    }
-	    setTimeout(function () {
-	      $(window).trigger('resize');
-	    }, 300);
-	  },
-	  changeViewport: function changeViewport(props) {
-	    switch (props['data-type']) {
-	      case 'dimension':
-	        if (props['data-val'] === 'boxed') {
-	          localStorage.setItem('settingsMenu', 'boxed');
-	          this.changeSettingsMenuItemState('boxed');
-	        } else {
-	          localStorage.setItem('settingsMenu', 'fluid');
-	          this.changeSettingsMenuItemState('fluid');
-	        }
-	        break;
-	      default:
-	        break;
-	    }
-	  },
 	  handleLogout: function handleLogout(e) {
 	    var _this = this;
 
@@ -4626,16 +4327,12 @@
 	    }, 250);
 	  },
 	  componentDidMount: function componentDidMount() {
-	    ReactBootstrap.Dispatcher.on('ctx:ready', this.l20nContextReady);
 	    (function () {
 	      var item = localStorage.getItem('settingsMenu');
-	      this.changeSettingsMenuItemState(item);
 	      localStorage.setItem('settingsMenu', item || 'fluid');
 	    }).bind(this)();
 	  },
-	  componentWillUnmount: function componentWillUnmount() {
-	    ReactBootstrap.Dispatcher.off('ctx:ready', this.l20nContextReady);
-	  },
+	  componentWillUnmount: function componentWillUnmount() {},
 	  render: function render() {
 	    return React.createElement(
 	      NavContent,
@@ -4643,627 +4340,14 @@
 	      React.createElement(
 	        Nav,
 	        { className: 'hidden-xs' },
-	        React.createElement(NavItem, { divider: true }),
-	        React.createElement(
-	          NavItem,
-	          { className: 'hidden-sm' },
-	          React.createElement(
-	            'a',
-	            { href: '#', onClick: this.handleSkinSwitch },
-	            React.createElement(Icon, { glyph: 'icon-fontello-circle', className: 'fg-theme', style: { lineHeight: 1, fontSize: 24 } })
-	          )
-	        ),
-	        React.createElement(NavItem, { divider: true }),
-	        React.createElement(
-	          NavItem,
-	          { dropdown: true, toggleOnHover: true },
-	          React.createElement(
-	            DropdownButton,
-	            { nav: true, id: 'flag-menu-btn' },
-	            React.createElement('img', { src: '/imgs/flags/flags/flat/32/' + this.state.selectedFlag + '.png', width: '32', height: '32' })
-	          ),
-	          React.createElement(
-	            Menu,
-	            { alignRight: true, ref: 'flag-menu', id: 'flag-menu', className: 'double-width', bsStyle: 'theme', style: { paddingBottom: 0 }, onItemSelect: this.changeFlag },
-	            React.createElement(
-	              MenuItem,
-	              { header: true },
-	              React.createElement(Entity, { entity: 'languageMenuHeading' })
-	            ),
-	            React.createElement(LocaleMenuItem, { lang: 'enUS', locale: 'en-US', flag: 'United-States', active: true }),
-	            React.createElement(LocaleMenuItem, { lang: 'fr', locale: 'fr', flag: 'France' }),
-	            React.createElement(LocaleMenuItem, { lang: 'it', locale: 'it', flag: 'Italy' }),
-	            React.createElement(LocaleMenuItem, { lang: 'ge', locale: 'ge', flag: 'Germany' }),
-	            React.createElement(LocaleMenuItem, { lang: 'ar', locale: 'ar', flag: 'Saudi-Arabia' }),
-	            React.createElement(LocaleMenuItem, { lang: 'ch', locale: 'ch', flag: 'China' })
-	          )
-	        ),
-	        React.createElement(NavItem, { divider: true }),
-	        React.createElement(DirectNavItem, { glyph: 'user-female', path: '/app/social', className: 'small-font' }),
-	        React.createElement(
-	          NavItem,
-	          { dropdown: true, toggleOnHover: true, className: 'small-font collapse-left' },
-	          React.createElement(
-	            DropdownButton,
-	            { nav: true },
-	            React.createElement(Icon, { bundle: 'fontello', glyph: 'cog-7' })
-	          ),
-	          React.createElement(
-	            Menu,
-	            { alignRight: true, ref: 'settings-menu', id: 'settings-menu', bsStyle: 'theme', style: { width: 375 }, onItemSelect: this.changeViewport },
-	            React.createElement(
-	              MenuItem,
-	              { header: true },
-	              React.createElement(Entity, { entity: 'settingsMenuHeading' })
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { 'data-type': 'dimension', 'data-val': 'fluid', href: '#', active: true },
-	              React.createElement(Entity, { entity: 'settingsMenuFluid' })
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { 'data-type': 'dimension', 'data-val': 'boxed', href: '#' },
-	              React.createElement(Entity, { entity: 'settingsMenuBoxed' })
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { header: true },
-	              'Layout'
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { noHover: true },
-	              React.createElement(LtrRtlLayout, null)
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { header: true },
-	              'Body Layout'
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { noHover: true },
-	              React.createElement(BodyLayout, null)
-	            )
-	          )
-	        ),
-	        React.createElement(NavItem, { divider: true }),
-	        React.createElement(DirectNavItem, { glyph: 'mail-3', path: '/app/mailbox/inbox' }),
-	        React.createElement(
-	          NavItem,
-	          { dropdown: true, toggleOnHover: true, className: 'collapse-left' },
-	          React.createElement(
-	            DropdownButton,
-	            { nav: true },
-	            React.createElement(Icon, { bundle: 'fontello', glyph: 'bullhorn' }),
-	            React.createElement(
-	              Badge,
-	              { className: 'fg-darkbrown bg-orange notification-badge' },
-	              '3'
-	            )
-	          ),
-	          React.createElement(
-	            Menu,
-	            { alignRight: true, ref: 'bullhorn-menu', id: 'notifications-menu', className: 'double-width', alwaysInactive: true },
-	            React.createElement(
-	              MenuItem,
-	              { header: true },
-	              React.createElement(Entity, { entity: 'notificationsMenuHeading' })
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { href: '#' },
-	              React.createElement(
-	                Grid,
-	                null,
-	                React.createElement(
-	                  Row,
-	                  null,
-	                  React.createElement(
-	                    Col,
-	                    { xs: 2, className: 'avatar-container', collapseRight: true },
-	                    React.createElement(
-	                      'div',
-	                      null,
-	                      React.createElement('img', { src: '/imgs/avatars/avatar22.png', width: '40', height: '40', alt: 'sarah_patchett' })
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'text-center' },
-	                      React.createElement(
-	                        BLabel,
-	                        { bsStyle: 'info' },
-	                        'NEW'
-	                      )
-	                    )
-	                  ),
-	                  React.createElement(
-	                    Col,
-	                    { xs: 10, className: 'notification-container', collapseLeft: true, collapseRight: true },
-	                    React.createElement(
-	                      'div',
-	                      { className: 'time' },
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkgray50' },
-	                        React.createElement(Icon, { bundle: 'fontello', glyph: 'chat-5' }),
-	                        React.createElement(
-	                          'em',
-	                          null,
-	                          React.createElement(Entity, { entity: 'notificationsTimeFirst' })
-	                        )
-	                      )
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'message-header' },
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkgreen45' },
-	                        'Sarah Patchett sent you a private message'
-	                      )
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'message-details fg-text' },
-	                      React.createElement(
-	                        'span',
-	                        null,
-	                        'Hey Anna! Sorry for delayed response. I\'ve just finished reading the mail you sent couple of days ago...'
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { href: '#' },
-	              React.createElement(
-	                Grid,
-	                null,
-	                React.createElement(
-	                  Row,
-	                  null,
-	                  React.createElement(
-	                    Col,
-	                    { xs: 2, className: 'avatar-container', collapseRight: true },
-	                    React.createElement('img', { src: '/imgs/avatars/avatar21.png', width: '40', height: '40', alt: 'john_young' })
-	                  ),
-	                  React.createElement(
-	                    Col,
-	                    { xs: 10, className: 'notification-container', collapseLeft: true, collapseRight: true },
-	                    React.createElement(
-	                      'div',
-	                      { className: 'time' },
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkgray50' },
-	                        React.createElement(Icon, { bundle: 'fontello', glyph: 'user-add' }),
-	                        React.createElement(
-	                          'em',
-	                          null,
-	                          '2 hours ago'
-	                        )
-	                      )
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'message-header' },
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkgreen45' },
-	                        'John Young added you as a collaborator'
-	                      )
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'message-details fg-text' },
-	                      React.createElement(
-	                        'span',
-	                        null,
-	                        'to the repository '
-	                      ),
-	                      React.createElement(
-	                        'em',
-	                        { className: 'fg-darkblue' },
-	                        'sketchpixy/rubix'
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { href: '#' },
-	              React.createElement(
-	                Grid,
-	                null,
-	                React.createElement(
-	                  Row,
-	                  null,
-	                  React.createElement(
-	                    Col,
-	                    { xs: 2, className: 'avatar-container', collapseRight: true },
-	                    React.createElement(
-	                      'div',
-	                      null,
-	                      React.createElement('img', { src: '/imgs/github.png', width: '40', height: '40', alt: 'github' })
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'text-center' },
-	                      React.createElement(
-	                        BLabel,
-	                        { bsStyle: 'danger' },
-	                        'ALERT'
-	                      )
-	                    )
-	                  ),
-	                  React.createElement(
-	                    Col,
-	                    { xs: 10, className: 'notification-container', collapseLeft: true, collapseRight: true },
-	                    React.createElement(
-	                      'div',
-	                      { className: 'time' },
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkgray50' },
-	                        React.createElement(Icon, { bundle: 'fontello', glyph: 'attention-alt-1' }),
-	                        React.createElement(
-	                          'em',
-	                          null,
-	                          '5 days ago'
-	                        )
-	                      )
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'message-header' },
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkgreen45' },
-	                        'Github sent you a notification'
-	                      )
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'message-details fg-text' },
-	                      React.createElement(
-	                        'span',
-	                        null,
-	                        'Your '
-	                      ),
-	                      React.createElement(
-	                        'span',
-	                        { className: 'fg-darkblue' },
-	                        'Large Plan'
-	                      ),
-	                      React.createElement(
-	                        'span',
-	                        null,
-	                        ' will expire in one week. Please update your billing details at our Billing center. Thank you!'
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { noHover: true },
-	              React.createElement(
-	                Grid,
-	                { collapse: true, style: { marginBottom: -10 } },
-	                React.createElement(
-	                  Row,
-	                  null,
-	                  React.createElement(
-	                    Col,
-	                    { xs: 6, collapseLeft: true, collapseRight: true },
-	                    React.createElement(
-	                      Button,
-	                      { block: true, className: 'notification-footer-btn left-btn' },
-	                      'MARK ALL READ'
-	                    )
-	                  ),
-	                  React.createElement(
-	                    Col,
-	                    { xs: 6, collapseLeft: true, collapseRight: true },
-	                    React.createElement(
-	                      Button,
-	                      { block: true, className: 'notification-footer-btn right-btn' },
-	                      'VIEW ALL'
-	                    )
-	                  )
-	                )
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          NavItem,
-	          { dropdown: true, toggleOnHover: true, className: 'collapse-left' },
-	          React.createElement(
-	            DropdownButton,
-	            { nav: true },
-	            React.createElement(Icon, { bundle: 'fontello', glyph: 'rss-1' }),
-	            React.createElement(
-	              Badge,
-	              { className: 'fg-darkgreen bg-darkgreen40 notification-badge' },
-	              '4'
-	            )
-	          ),
-	          React.createElement(
-	            Menu,
-	            { alignRight: true, id: 'rss-menu', className: 'double-width', alwaysInactive: true },
-	            React.createElement(
-	              MenuItem,
-	              { header: true },
-	              'Your news feed'
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { href: '#' },
-	              React.createElement(
-	                Grid,
-	                null,
-	                React.createElement(
-	                  Row,
-	                  null,
-	                  React.createElement(
-	                    Col,
-	                    { xs: 2 },
-	                    React.createElement(Icon, { className: 'fg-text', bundle: 'fontello', glyph: 'star' })
-	                  ),
-	                  React.createElement(
-	                    Col,
-	                    { xs: 10, collapseLeft: true, className: 'notification-container', style: { width: 265 } },
-	                    React.createElement(
-	                      'div',
-	                      { className: 'time' },
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkgray50' },
-	                        React.createElement(
-	                          'em',
-	                          null,
-	                          'an hour ago'
-	                        )
-	                      )
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'message-header fg-darkgray50' },
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkgreen45' },
-	                        '@johndoe'
-	                      ),
-	                      React.createElement(
-	                        'strong',
-	                        null,
-	                        ' starred '
-	                      ),
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkblue' },
-	                        'joyent/node'
-	                      )
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'message-details fg-text' },
-	                      'evented I/O for v8 javascript'
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { href: '#' },
-	              React.createElement(
-	                Grid,
-	                null,
-	                React.createElement(
-	                  Row,
-	                  null,
-	                  React.createElement(
-	                    Col,
-	                    { xs: 2 },
-	                    React.createElement(Icon, { className: 'fg-text', bundle: 'fontello', glyph: 'chat-1' })
-	                  ),
-	                  React.createElement(
-	                    Col,
-	                    { xs: 10, collapseLeft: true, className: 'notification-container', style: { width: 265 } },
-	                    React.createElement(
-	                      'div',
-	                      { className: 'time' },
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkgray50' },
-	                        React.createElement(
-	                          'em',
-	                          null,
-	                          '2 hours ago'
-	                        )
-	                      )
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'message-header fg-darkgray50' },
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkgreen45' },
-	                        '@jackie'
-	                      ),
-	                      React.createElement(
-	                        'strong',
-	                        null,
-	                        ' commented on issue '
-	                      ),
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkblue' },
-	                        '#150'
-	                      )
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'message-details fg-text' },
-	                      'Nice catch! I\'ll get this fixed soon. Meanwhile...'
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { href: '#' },
-	              React.createElement(
-	                Grid,
-	                null,
-	                React.createElement(
-	                  Row,
-	                  null,
-	                  React.createElement(
-	                    Col,
-	                    { xs: 2 },
-	                    React.createElement(Icon, { className: 'fg-text', bundle: 'fontello', glyph: 'fork' })
-	                  ),
-	                  React.createElement(
-	                    Col,
-	                    { xs: 10, collapseLeft: true, className: 'notification-container', style: { width: 265 } },
-	                    React.createElement(
-	                      'div',
-	                      { className: 'time' },
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkgray50' },
-	                        React.createElement(
-	                          'em',
-	                          null,
-	                          '5 hours ago'
-	                        )
-	                      )
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'message-header fg-darkgray50' },
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkgreen45' },
-	                        '@sketchpixy'
-	                      ),
-	                      React.createElement(
-	                        'strong',
-	                        null,
-	                        ' forked '
-	                      ),
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkblue' },
-	                        'facebook/react'
-	                      )
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'message-details fg-text' },
-	                      'to sketchpixy/react'
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { href: '#' },
-	              React.createElement(
-	                Grid,
-	                null,
-	                React.createElement(
-	                  Row,
-	                  null,
-	                  React.createElement(
-	                    Col,
-	                    { xs: 2 },
-	                    React.createElement(Icon, { className: 'fg-text', bundle: 'fontello', glyph: 'attention-alt-1' })
-	                  ),
-	                  React.createElement(
-	                    Col,
-	                    { xs: 10, collapseLeft: true, className: 'notification-container', style: { width: 265 } },
-	                    React.createElement(
-	                      'div',
-	                      { className: 'time' },
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkgray50' },
-	                        React.createElement(
-	                          'em',
-	                          null,
-	                          '2 days ago'
-	                        )
-	                      )
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'message-header fg-darkgray50' },
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkgreen45' },
-	                        '@mario'
-	                      ),
-	                      React.createElement(
-	                        'strong',
-	                        null,
-	                        ' opened issue '
-	                      ),
-	                      React.createElement(
-	                        'strong',
-	                        { className: 'fg-darkblue' },
-	                        'twbs/bootstrap#44'
-	                      )
-	                    ),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'message-details fg-text' },
-	                      'Request: Support RTL version'
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { header: true },
-	              'Your commit activity'
-	            ),
-	            React.createElement(
-	              MenuItem,
-	              { noHover: true },
-	              React.createElement(CommitChart, null)
-	            )
-	          )
-	        )
-	      ),
-	      React.createElement(
-	        Nav,
-	        null,
-	        React.createElement(
-	          NavItem,
-	          { className: 'logout', href: '#', onClick: this.handleLogout },
-	          React.createElement(Icon, { bundle: 'fontello', glyph: 'off-1' })
-	        )
+	        React.createElement(DirectNavItem, { glyph: 'user-female', path: '/app/social', className: 'small-font' })
 	      )
 	    );
 	  }
 	});
 
-	var Header = (function (_React$Component7) {
-	  _inherits(Header, _React$Component7);
+	var Header = (function (_React$Component4) {
+	  _inherits(Header, _React$Component4);
 
 	  function Header() {
 	    _classCallCheck(this, Header);
@@ -5412,8 +4496,6 @@
 	  value: true
 	});
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
@@ -5436,1338 +4518,8 @@
 
 	var _globalJsxLoremipsum2 = _interopRequireDefault(_globalJsxLoremipsum);
 
-	var ApplicationSidebar = (function (_React$Component) {
-	  _inherits(ApplicationSidebar, _React$Component);
-
-	  function ApplicationSidebar() {
-	    _classCallCheck(this, ApplicationSidebar);
-
-	    _get(Object.getPrototypeOf(ApplicationSidebar.prototype), 'constructor', this).apply(this, arguments);
-	  }
-
-	  _createClass(ApplicationSidebar, [{
-	    key: 'render',
-	    value: function render() {
-	      return React.createElement(
-	        'div',
-	        null,
-	        React.createElement(
-	          Grid,
-	          null,
-	          React.createElement(
-	            Row,
-	            null,
-	            React.createElement(
-	              Col,
-	              { xs: 12 },
-	              React.createElement(
-	                'div',
-	                { className: 'sidebar-header' },
-	                'PAGES'
-	              ),
-	              React.createElement(
-	                'div',
-	                { className: 'sidebar-nav-container' },
-	                React.createElement(
-	                  _globalJsxSidebar_component.SidebarNav,
-	                  { style: { marginBottom: 0 } },
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-fontello-gauge', name: 'Dashboard', href: '/app/dashboard' }),
-	                  React.createElement(
-	                    _globalJsxSidebar_component.SidebarNavItem,
-	                    { glyph: 'icon-feather-mail', name: React.createElement(
-	                        'span',
-	                        null,
-	                        'Mailbox ',
-	                        React.createElement(
-	                          BLabel,
-	                          { className: 'bg-darkgreen45 fg-white' },
-	                          '3'
-	                        )
-	                      ) },
-	                    React.createElement(
-	                      _globalJsxSidebar_component.SidebarNav,
-	                      null,
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-feather-inbox', name: 'Inbox', href: '/app/mailbox/inbox' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-outlined-mail-open', name: 'Mail', href: '/app/mailbox/mail' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-dripicons-message', name: 'Compose', href: '/app/mailbox/compose' })
-	                    )
-	                  ),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-pixelvicon-photo-gallery', name: 'Gallery', href: '/app/gallery' }),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-feather-share', name: 'Social', href: '/app/social' }),
-	                  React.createElement(
-	                    _globalJsxSidebar_component.SidebarNavItem,
-	                    { glyph: 'icon-stroke-gap-icons-Blog', name: React.createElement(
-	                        'span',
-	                        null,
-	                        'Blog ',
-	                        React.createElement(
-	                          BLabel,
-	                          { className: 'bg-darkcyan fg-white' },
-	                          '2'
-	                        )
-	                      ) },
-	                    React.createElement(
-	                      _globalJsxSidebar_component.SidebarNav,
-	                      null,
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-feather-layout', name: 'Posts', href: '/app/blog/posts' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-feather-paper', name: 'Single Post', href: '/app/blog/post' })
-	                    )
-	                  )
-	                )
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement('hr', { style: { borderColor: '#3B4648', borderWidth: 2, marginTop: 15, marginBottom: 0, width: 200 } }),
-	        React.createElement(
-	          Grid,
-	          null,
-	          React.createElement(
-	            Row,
-	            null,
-	            React.createElement(
-	              Col,
-	              { xs: 12 },
-	              React.createElement(
-	                'div',
-	                { className: 'sidebar-header' },
-	                'COMPONENTS'
-	              ),
-	              React.createElement(
-	                'div',
-	                { className: 'sidebar-nav-container' },
-	                React.createElement(
-	                  _globalJsxSidebar_component.SidebarNav,
-	                  { style: { marginBottom: 0 } },
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-simple-line-icons-layers float-right-rtl', name: 'Panels', href: '/app/panels' }),
-	                  React.createElement(
-	                    _globalJsxSidebar_component.SidebarNavItem,
-	                    { glyph: 'icon-ikons-bar-chart-2 float-right-rtl', name: React.createElement(
-	                        'span',
-	                        null,
-	                        'Charts ',
-	                        React.createElement(
-	                          BLabel,
-	                          { className: 'bg-brown50 fg-white' },
-	                          '4'
-	                        )
-	                      ) },
-	                    React.createElement(
-	                      _globalJsxSidebar_component.SidebarNav,
-	                      null,
-	                      React.createElement(
-	                        _globalJsxSidebar_component.SidebarNavItem,
-	                        { glyph: 'icon-fontello-chart-area', name: 'Rubix Charts' },
-	                        React.createElement(
-	                          _globalJsxSidebar_component.SidebarNav,
-	                          null,
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Line Series', href: '/app/charts/rubix/line' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Area Series', href: '/app/charts/rubix/area' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Bar + Column Series', href: '/app/charts/rubix/barcol' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Mixed Series', href: '/app/charts/rubix/mixed' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Pie + Donut Series', href: '/app/charts/rubix/piedonut' })
-	                        )
-	                      ),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-simple-line-icons-graph', name: 'Chart.JS', href: '/app/charts/chartjs' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-dripicons-graph-line', name: 'C3.JS', href: '/app/charts/c3js' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-feather-pie-graph', name: 'Morris.JS', href: '/app/charts/morrisjs' })
-	                    )
-	                  ),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/timeline', glyph: 'icon-ikons-time', name: 'Static Timeline' }),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/interactive-timeline', glyph: 'icon-fontello-back-in-time', name: 'Interactive Timeline' }),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/codemirror', glyph: 'icon-dripicons-code', name: 'Codemirror' }),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/maps', glyph: 'icon-ikons-pin-2', name: 'Maps' }),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/editor', glyph: 'icon-simple-line-icons-note', name: 'Editor' }),
-	                  React.createElement(
-	                    _globalJsxSidebar_component.SidebarNavItem,
-	                    { glyph: 'icon-feather-toggle', name: React.createElement(
-	                        'span',
-	                        null,
-	                        'UI Elements ',
-	                        React.createElement(
-	                          BLabel,
-	                          { className: 'bg-deepred fg-white' },
-	                          '7'
-	                        )
-	                      ) },
-	                    React.createElement(
-	                      _globalJsxSidebar_component.SidebarNav,
-	                      null,
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/ui-elements/buttons', glyph: 'icon-mfizz-oracle', name: 'Buttons' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/ui-elements/dropdowns', glyph: 'icon-outlined-arrow-down', name: 'Dropdowns' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/ui-elements/tabs-and-navs', glyph: 'icon-nargela-navigation', name: 'Tabs & Navs' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/ui-elements/sliders', glyph: 'icon-outlined-three-stripes-horiz', name: 'Sliders' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/ui-elements/knobs', glyph: 'icon-ikons-chart-3-8', name: 'Knobs' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/ui-elements/modals', glyph: 'icon-pixelvicon-browser-1', name: 'Modals' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/ui-elements/messenger', glyph: 'icon-dripicons-message', name: 'Messenger' })
-	                    )
-	                  ),
-	                  React.createElement(
-	                    _globalJsxSidebar_component.SidebarNavItem,
-	                    { glyph: 'icon-stroke-gap-icons-Files float-right-rtl', name: React.createElement(
-	                        'span',
-	                        null,
-	                        'Forms ',
-	                        React.createElement(
-	                          BLabel,
-	                          { className: 'bg-danger fg-white' },
-	                          '3'
-	                        )
-	                      ) },
-	                    React.createElement(
-	                      _globalJsxSidebar_component.SidebarNav,
-	                      null,
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-mfizz-fire-alt', href: '/app/forms/controls', name: 'Controls' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-stroke-gap-icons-Edit', href: '/app/forms/x-editable', name: 'X-Editable' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-simple-line-icons-magic-wand', href: '/app/forms/wizard', name: 'Wizard' })
-	                    )
-	                  ),
-	                  React.createElement(
-	                    _globalJsxSidebar_component.SidebarNavItem,
-	                    { glyph: 'icon-fontello-table', name: React.createElement(
-	                        'span',
-	                        null,
-	                        'Tables ',
-	                        React.createElement(
-	                          BLabel,
-	                          { className: 'bg-blue fg-white' },
-	                          '3'
-	                        )
-	                      ) },
-	                    React.createElement(
-	                      _globalJsxSidebar_component.SidebarNav,
-	                      null,
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/tables/bootstrap-tables', glyph: 'icon-fontello-th-thumb', name: 'Bootstrap Tables' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/tables/datatables', glyph: 'icon-fontello-th-2', name: 'Datatables' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/tables/tablesaw', glyph: 'icon-fontello-view-mode', name: 'Tablesaw' })
-	                    )
-	                  ),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/grid', glyph: 'icon-ikons-grid-1 float-right-rtl', name: 'Grid' }),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/calendar', glyph: 'icon-fontello-calendar-alt', name: 'Calendar' }),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/lists', glyph: 'icon-fontello-flow-cascade', name: 'Lists' }),
-	                  React.createElement(
-	                    _globalJsxSidebar_component.SidebarNavItem,
-	                    { glyph: 'icon-fontello-folder-open-empty', name: React.createElement(
-	                        'span',
-	                        null,
-	                        'File Utilities ',
-	                        React.createElement(
-	                          BLabel,
-	                          { className: 'bg-orange fg-darkbrown' },
-	                          '2'
-	                        )
-	                      ) },
-	                    React.createElement(
-	                      _globalJsxSidebar_component.SidebarNav,
-	                      null,
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/file-utilities/dropzone', glyph: 'icon-stroke-gap-icons-Download', name: 'Dropzone' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/file-utilities/crop', glyph: 'icon-ikons-crop', name: 'Image Cropping' })
-	                    )
-	                  ),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { href: '/app/fonts', glyph: 'icon-fontello-fontsize', name: 'Fonts' })
-	                )
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement('hr', { style: { borderColor: '#3B4648', borderWidth: 2, marginTop: 15, marginBottom: 0, width: 200 } }),
-	        React.createElement(
-	          Grid,
-	          { gutterBottom: true },
-	          React.createElement(
-	            Row,
-	            null,
-	            React.createElement(
-	              Col,
-	              { xs: 12 },
-	              React.createElement(
-	                'div',
-	                { className: 'sidebar-header' },
-	                'EXTRAS'
-	              ),
-	              React.createElement(
-	                'div',
-	                { className: 'sidebar-nav-container' },
-	                React.createElement(
-	                  _globalJsxSidebar_component.SidebarNav,
-	                  { style: { marginBottom: 0 } },
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-ikons-login', name: 'Login', href: '/app/login' }),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-simple-line-icons-users', name: 'Signup', href: '/app/signup' }),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-ikons-lock', name: 'Lock Page', href: '/app/lock' }),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-dripicons-document', name: 'Invoice', href: '/app/invoice' }),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-feather-tag icon-rotate-135', name: 'Pricing Tables', href: '/app/pricing' })
-	                )
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement('hr', { style: { borderColor: '#3B4648', borderWidth: 2, marginTop: 15, marginBottom: 0, width: 200 } }),
-	        React.createElement(
-	          Grid,
-	          { gutterBottom: true },
-	          React.createElement(
-	            Row,
-	            null,
-	            React.createElement(
-	              Col,
-	              { xs: 12 },
-	              React.createElement(
-	                'div',
-	                { className: 'sidebar-header' },
-	                'DOCUMENTATION'
-	              ),
-	              React.createElement(
-	                'div',
-	                { className: 'sidebar-nav-container' },
-	                React.createElement(
-	                  _globalJsxSidebar_component.SidebarNav,
-	                  { style: { marginBottom: 0 } },
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-fontello-install', name: 'Installation', href: '/app/docs/installation' }),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'devicon-rails-plain', name: 'Rails Installation', href: '/app/docs/rails_installation' }),
-	                  React.createElement(
-	                    _globalJsxSidebar_component.SidebarNavItem,
-	                    { glyph: 'devicon-gulp-plain', name: React.createElement(
-	                        'span',
-	                        null,
-	                        'Gulpfile.js ',
-	                        React.createElement(
-	                          BLabel,
-	                          { className: 'bg-red fg-white' },
-	                          '6'
-	                        )
-	                      ) },
-	                    React.createElement(
-	                      _globalJsxSidebar_component.SidebarNav,
-	                      null,
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Basics', href: '/app/docs/gulpfile/basics' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Sass to CSS', href: '/app/docs/gulpfile/sass' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'WebFonts', href: '/app/docs/gulpfile/webfonts' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Scaffolding', href: '/app/docs/gulpfile/scaffolding' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'External Plugins', href: '/app/docs/gulpfile/externalplugins' })
-	                    )
-	                  ),
-	                  React.createElement(
-	                    _globalJsxSidebar_component.SidebarNavItem,
-	                    { glyph: 'icon-fontello-looped-square-interest', name: React.createElement(
-	                        'span',
-	                        null,
-	                        'Rubix ',
-	                        React.createElement(
-	                          BLabel,
-	                          { className: 'bg-darkgreen45 fg-white' },
-	                          '2'
-	                        )
-	                      ) },
-	                    React.createElement(
-	                      _globalJsxSidebar_component.SidebarNav,
-	                      null,
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Rubix - JSX', href: '/app/docs/rubix/jsx' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Rubix - SASS', href: '/app/docs/rubix/sass' })
-	                    )
-	                  ),
-	                  React.createElement(
-	                    _globalJsxSidebar_component.SidebarNavItem,
-	                    { glyph: 'devicon-bootstrap-plain', name: React.createElement(
-	                        'span',
-	                        null,
-	                        'Bootstrap ',
-	                        React.createElement(
-	                          BLabel,
-	                          { className: 'bg-darkblue fg-white' },
-	                          '7'
-	                        )
-	                      ) },
-	                    React.createElement(
-	                      _globalJsxSidebar_component.SidebarNav,
-	                      null,
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Grid', href: '/app/docs/bootstrap/grid' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Typography', href: '/app/docs/bootstrap/typography' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Code', href: '/app/docs/bootstrap/code' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Tables', href: '/app/docs/bootstrap/tables' }),
-	                      React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Forms', href: '/app/docs/bootstrap/forms' }),
-	                      React.createElement(
-	                        _globalJsxSidebar_component.SidebarNavItem,
-	                        { name: 'Form Controls' },
-	                        React.createElement(
-	                          _globalJsxSidebar_component.SidebarNav,
-	                          null,
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Inputs', href: '/app/docs/bootstrap/form_controls/inputs' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Textarea', href: '/app/docs/bootstrap/form_controls/textarea' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Checkbox & Radio', href: '/app/docs/bootstrap/form_controls/checkradio' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Select', href: '/app/docs/bootstrap/form_controls/select' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Buttons', href: '/app/docs/bootstrap/form_controls/buttons' })
-	                        )
-	                      ),
-	                      React.createElement(
-	                        _globalJsxSidebar_component.SidebarNavItem,
-	                        { name: 'Components' },
-	                        React.createElement(
-	                          _globalJsxSidebar_component.SidebarNav,
-	                          null,
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Dropdowns', href: '/app/docs/bootstrap/components/dropdowns' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Button Groups', href: '/app/docs/bootstrap/components/button_groups' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Input Groups', href: '/app/docs/bootstrap/components/input_groups' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Navs', href: '/app/docs/bootstrap/components/navs' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Navbar', href: '/app/docs/bootstrap/components/navbar' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Breadcrumbs', href: '/app/docs/bootstrap/components/breadcrumbs' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Pagination', href: '/app/docs/bootstrap/components/pagination' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Labels & Badges', href: '/app/docs/bootstrap/components/labels_and_badges' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Jumbotron', href: '/app/docs/bootstrap/components/jumbotron' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Alerts', href: '/app/docs/bootstrap/components/alerts' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Progress bars', href: '/app/docs/bootstrap/components/progress-bars' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'Media', href: '/app/docs/bootstrap/components/media' }),
-	                          React.createElement(_globalJsxSidebar_component.SidebarNavItem, { name: 'List Group', href: '/app/docs/bootstrap/components/list-group' })
-	                        )
-	                      )
-	                    )
-	                  ),
-	                  React.createElement(_globalJsxSidebar_component.SidebarNavItem, { glyph: 'icon-outlined-geolocalizator', name: 'Mozilla L20n.js', href: '/app/docs/l20n' })
-	                )
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return ApplicationSidebar;
-	})(React.Component);
-
-	var StatisticsComponent = (function (_React$Component2) {
-	  _inherits(StatisticsComponent, _React$Component2);
-
-	  function StatisticsComponent() {
-	    _classCallCheck(this, StatisticsComponent);
-
-	    _get(Object.getPrototypeOf(StatisticsComponent.prototype), 'constructor', this).apply(this, arguments);
-	  }
-
-	  _createClass(StatisticsComponent, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      (function () {
-	        var data = [{
-	          value: 200,
-	          color: '#F7464A',
-	          highlight: '#FF5A5E',
-	          label: 'Red'
-	        }, {
-	          value: 100,
-	          color: '#46BFBD',
-	          highlight: '#5AD3D1',
-	          label: 'Green'
-	        }, {
-	          value: 110,
-	          color: '#FDB45C',
-	          highlight: '#FFC870',
-	          label: 'Yellow'
-	        }, {
-	          value: 130,
-	          color: '#949FB1',
-	          highlight: '#A8B3C5',
-	          label: 'Grey'
-	        }, {
-	          value: 120,
-	          color: '#4D5360',
-	          highlight: '#616774',
-	          label: 'Dark Grey'
-	        }];
-	        var ctx = this.refs.myChart.getDOMNode().getContext('2d');
-	        new Chart(ctx).PolarArea(data, {
-	          maintainAspectRatio: true,
-	          scaleLineColor: 'rgba(255,255,255,0.1)'
-	        });
-	      }).bind(this)();
-
-	      (function () {
-	        $(this.refs.sparklineOne.getDOMNode()).sparkline([2, 3, 5, 1, 2, 5, 8, 6, 7, 9, 3, 5, 7, 8, 3, 3, 2, 9, 5, 3, 2, 2, 4, 6, 7, 8, 9, 1, 12, 14, 11, 3, 4, 6, 9, 17, 19, 9, 5, 3, 2, 2, 4, 6, 7, 8, 9, 10, 11, 12, 14, 23, 2, 3, 1, 5, 6, 7, 3, 2, 8, 14, 12, 4, 7, 14, 19, 18, 22, 3, 14], {
-	          type: 'line',
-	          width: '200',
-	          height: '40',
-	          lineColor: '#FADD7F',
-	          fillColor: 'rgba(250, 221, 127, 0.5)' });
-
-	        $(this.refs.sparklineTwo.getDOMNode()).sparkline([0, 1, 2, 1, 2, -0.25, -4, -2, -2, -0.6, -2, -0.5, -0.25], {
-	          type: 'bar',
-	          height: '30',
-	          barWidth: 6,
-	          zeroAxis: false,
-	          barColor: '#ff5a5e',
-	          negBarColor: '#52b27e',
-	          stackedBarColor: [] });
-
-	        var dynamic_data = {
-	          nasdaq_prices: [4415.49, 4440.42, 4416.39, 4425.97, 4363.45, 4432.15, 4424.70, 4456.02, 4473.70, 4472.11, 4449.56, 4444.91, 4442.70, 4462.90, 4369.77, 4352.64, 4383.89, 4352.84, 4355.05, 4334.97, 4370.90, 4401.33, 4389.25, 4434.13, 4453.00, 4464.93, 4508.31, 4527.51, 4526.48, 4532.10],
-	          nasdaq_volume: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	          dow_prices: [16943.81, 17055.42, 17060.68, 17138.20, 16976.81, 17100.18, 17051.73, 17113.54, 17086.63, 17083.80, 16960.57, 16982.59, 16912.11, 16880.36, 16563.30, 16493.37, 16569.28, 16429.47, 16443.34, 16368.27, 16553.93, 16569.98, 16560.54, 16651.80, 16713.58, 16662.91, 16838.74, 16919.59, 16979.13, 17039.49],
-	          dow_volume: [60599405, 60569705, 101734854, 111503036, 99238723, 112530379, 67590253, 77958670, 73444902, 66387656, 67289449, 66187279, 75984025, 77746377, 101667914, 84856015, 76255891, 76627473, 78599736, 80426811, 82415249, 65558636, 62768164, 66015422, 62370832, 109183219, 75671468, 67221266, 61963156, 65160621]
-	        };
-	        $(this.refs.dow.getDOMNode()).sparkline(dynamic_data.dow_volume, { height: '1.3em', type: 'bar', barSpacing: 0, barWidth: 3, barColor: '#374B55', tooltipPrefix: 'Volume: ' });
-	        $(this.refs.dow.getDOMNode()).sparkline(dynamic_data.dow_prices, { composite: true, height: '1.3em', fillColor: false, lineColor: '#EE682F', tooltipPrefix: 'Index: ' });
-	        $(this.refs.nasdaq.getDOMNode()).sparkline(dynamic_data.nasdaq_prices, { composite: false, height: '1.3em', fillColor: false, lineColor: '#7CD5BA', tooltipPrefix: 'Index: ' });
-	        $(this.refs.malefemale.getDOMNode()).sparkline('html', {
-	          type: 'bar',
-	          height: '30',
-	          barWidth: 5,
-	          barColor: '#79b0ec',
-	          stackedBarColor: ['#79b0ec', '#EA7882'] });
-	      }).bind(this)();
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return React.createElement(
-	        'div',
-	        null,
-	        React.createElement(
-	          Grid,
-	          null,
-	          React.createElement(
-	            Row,
-	            null,
-	            React.createElement(
-	              Col,
-	              { xs: 12 },
-	              React.createElement(
-	                'div',
-	                { className: 'sidebar-header text-center' },
-	                'STATISTICS'
-	              ),
-	              React.createElement(
-	                'div',
-	                { style: { marginLeft: -25, marginRight: -25, marginTop: 12.5, marginBottom: 12.5 } },
-	                React.createElement('canvas', { width: '250', height: '150', ref: 'myChart' })
-	              ),
-	              React.createElement('hr', { style: { borderColor: 'rgba(255,255,255,0.1)', borderWidth: 2, marginTop: 12.5, marginBottom: 12.5, width: 200 } }),
-	              React.createElement(
-	                'div',
-	                null,
-	                React.createElement('div', { ref: 'sparklineOne' })
-	              ),
-	              React.createElement(
-	                'div',
-	                null,
-	                React.createElement(
-	                  Grid,
-	                  null,
-	                  React.createElement(
-	                    Row,
-	                    null,
-	                    React.createElement(
-	                      Col,
-	                      { xs: 6, collapseLeft: true, collapseRight: true },
-	                      React.createElement(
-	                        'div',
-	                        { className: 'sidebar-header' },
-	                        'AAPL'
-	                      ),
-	                      React.createElement('div', { ref: 'sparklineTwo' })
-	                    ),
-	                    React.createElement(
-	                      Col,
-	                      { xs: 6, collapseLeft: true, collapseRight: true },
-	                      React.createElement(
-	                        'div',
-	                        { className: 'sidebar-header text-left', style: { marginRight: 5, marginLeft: 5 } },
-	                        'Yearly Change'
-	                      ),
-	                      React.createElement(
-	                        'div',
-	                        null,
-	                        React.createElement(
-	                          'h5',
-	                          { className: 'bg-darkgreen45 fg-white text-center', style: { margin: 0, height: 30, paddingTop: 7, marginLeft: 5, marginRight: 5 } },
-	                          '+127.01'
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              ),
-	              React.createElement('hr', { style: { borderColor: 'rgba(255,255,255,0.1)', borderWidth: 2, marginTop: 25, marginBottom: 12.5, width: 200 } }),
-	              React.createElement(
-	                'div',
-	                null,
-	                React.createElement(
-	                  Grid,
-	                  null,
-	                  React.createElement(
-	                    Row,
-	                    null,
-	                    React.createElement(
-	                      Col,
-	                      { xs: 6, collapseLeft: true, collapseRight: true },
-	                      React.createElement(
-	                        'div',
-	                        { className: 'sidebar-header' },
-	                        'NASDAQ'
-	                      ),
-	                      React.createElement('div', { ref: 'nasdaq' })
-	                    ),
-	                    React.createElement(
-	                      Col,
-	                      { xs: 6, collapseLeft: true, collapseRight: true },
-	                      React.createElement(
-	                        'div',
-	                        { className: 'sidebar-header' },
-	                        'DOW'
-	                      ),
-	                      React.createElement('div', { ref: 'dow' })
-	                    )
-	                  )
-	                )
-	              ),
-	              React.createElement(
-	                'div',
-	                null,
-	                React.createElement(
-	                  Grid,
-	                  null,
-	                  React.createElement(
-	                    Row,
-	                    null,
-	                    React.createElement(
-	                      Col,
-	                      { xs: 6, collapseLeft: true, collapseRight: true },
-	                      React.createElement(
-	                        'div',
-	                        null,
-	                        React.createElement(
-	                          'span',
-	                          { className: 'fg-yellow' },
-	                          'USD '
-	                        ),
-	                        React.createElement(
-	                          'span',
-	                          { className: 'fg-green' },
-	                          '0.43% ',
-	                          React.createElement(Icon, { glyph: 'icon-fontello-up-dir' })
-	                        )
-	                      ),
-	                      React.createElement(
-	                        'div',
-	                        { className: 'fg-white' },
-	                        React.createElement(
-	                          'h4',
-	                          { style: { marginTop: 0 } },
-	                          '$518.47'
-	                        )
-	                      ),
-	                      React.createElement(
-	                        'p',
-	                        null,
-	                        React.createElement(
-	                          'span',
-	                          { className: 'fg-yellow' },
-	                          'EUR '
-	                        ),
-	                        React.createElement(
-	                          'span',
-	                          { className: 'fg-white' },
-	                          '€391.85'
-	                        )
-	                      )
-	                    ),
-	                    React.createElement(
-	                      Col,
-	                      { xs: 6, collapseLeft: true, collapseRight: true },
-	                      React.createElement(
-	                        'div',
-	                        null,
-	                        React.createElement(
-	                          'span',
-	                          { className: 'fg-yellow' },
-	                          'CNY '
-	                        ),
-	                        React.createElement(
-	                          'span',
-	                          { className: 'fg-red' },
-	                          '0.24% ',
-	                          React.createElement(Icon, { glyph: 'icon-fontello-down-dir' })
-	                        )
-	                      ),
-	                      React.createElement(
-	                        'div',
-	                        { className: 'fg-white' },
-	                        React.createElement(
-	                          'h4',
-	                          { style: { marginTop: 0 } },
-	                          '¥3,170.65'
-	                        )
-	                      ),
-	                      React.createElement(
-	                        'p',
-	                        null,
-	                        React.createElement(
-	                          'span',
-	                          { className: 'fg-yellow' },
-	                          'GBP '
-	                        ),
-	                        React.createElement(
-	                          'span',
-	                          { className: 'fg-white' },
-	                          '£312.89'
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              ),
-	              React.createElement('hr', { style: { borderColor: 'rgba(255,255,255,0.1)', borderWidth: 2, marginTop: 12.5, marginBottom: 25, width: 200 } }),
-	              React.createElement(
-	                'div',
-	                null,
-	                React.createElement(
-	                  Grid,
-	                  null,
-	                  React.createElement(
-	                    Row,
-	                    null,
-	                    React.createElement(
-	                      Col,
-	                      { xs: 12, collapseLeft: true, collapseRight: true },
-	                      React.createElement(
-	                        'div',
-	                        { ref: 'malefemale' },
-	                        '1:1,1:2,1:3,2:0.01,1:0.1,0.2:1,2:2,2:1.5,2:1.2,1.2:2,1:3,1:0.25,2:0.02,1:3,3:0.5,2:4,4:1,1:1,1:2,1:4,2:1,2:3,2:1.5,2:0.5,2:0.25,1:0.01,1:0.1,0.2:1,2:2,2:1.5,2:1.2,1.2:2,1:3'
-	                      ),
-	                      React.createElement('br', null)
-	                    )
-	                  ),
-	                  React.createElement(
-	                    Row,
-	                    null,
-	                    React.createElement(
-	                      Col,
-	                      { xs: 4, collapseLeft: true, collapseRight: true },
-	                      React.createElement(
-	                        'span',
-	                        { className: 'sidebar-header' },
-	                        'MALE'
-	                      )
-	                    ),
-	                    React.createElement(
-	                      Col,
-	                      { xs: 8, collapseLeft: true, collapseRight: true },
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-blue' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-blue' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-blue' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-blue' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-blue' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-black75' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-black75' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-black75' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-black75' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-black75' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-black75' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-black75' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-black75' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-black75' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-male fg-black75' })
-	                    )
-	                  ),
-	                  React.createElement(
-	                    Row,
-	                    null,
-	                    React.createElement(
-	                      Col,
-	                      { xs: 4, collapseLeft: true, collapseRight: true },
-	                      React.createElement(
-	                        'span',
-	                        { className: 'sidebar-header' },
-	                        'FEMALE'
-	                      )
-	                    ),
-	                    React.createElement(
-	                      Col,
-	                      { xs: 8, collapseLeft: true, collapseRight: true },
-	                      React.createElement(Icon, { glyph: 'icon-fontello-female fg-red' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-female fg-red' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-female fg-red' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-female fg-red' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-female fg-red' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-female fg-red' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-female fg-red' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-female fg-black75' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-female fg-black75' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-female fg-black75' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-female fg-black75' }),
-	                      React.createElement(Icon, { glyph: 'icon-fontello-female fg-black75' })
-	                    )
-	                  )
-	                )
-	              ),
-	              React.createElement('br', null)
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return StatisticsComponent;
-	})(React.Component);
-
-	var TimelineComponent = (function (_React$Component3) {
-	  _inherits(TimelineComponent, _React$Component3);
-
-	  function TimelineComponent() {
-	    _classCallCheck(this, TimelineComponent);
-
-	    _get(Object.getPrototypeOf(TimelineComponent.prototype), 'constructor', this).apply(this, arguments);
-	  }
-
-	  _createClass(TimelineComponent, [{
-	    key: 'render',
-	    value: function render() {
-	      return React.createElement(
-	        'div',
-	        null,
-	        React.createElement(
-	          Grid,
-	          null,
-	          React.createElement(
-	            Row,
-	            null,
-	            React.createElement(
-	              Col,
-	              { xs: 12, collapseLeft: true, collapseRight: true },
-	              React.createElement(
-	                TimelineView,
-	                { className: 'border-black50 tl-blue' },
-	                React.createElement(
-	                  TimelineItem,
-	                  null,
-	                  React.createElement(
-	                    TimelineHeader,
-	                    null,
-	                    React.createElement(TimelineAvatar, { src: '/imgs/avatars/avatar5.png', className: 'border-blue' }),
-	                    React.createElement(
-	                      TimelineTitle,
-	                      null,
-	                      'Jordyn Ouellet'
-	                    )
-	                  ),
-	                  React.createElement(
-	                    TimelineBody,
-	                    null,
-	                    React.createElement(
-	                      'ul',
-	                      null,
-	                      React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                          'div',
-	                          null,
-	                          React.createElement(
-	                            'div',
-	                            { className: 'fg-lightgray' },
-	                            React.createElement(
-	                              'small',
-	                              null,
-	                              React.createElement(
-	                                'strong',
-	                                null,
-	                                'Aug 10, 2014'
-	                              )
-	                            )
-	                          ),
-	                          React.createElement(
-	                            'div',
-	                            null,
-	                            React.createElement(
-	                              'small',
-	                              null,
-	                              'Sent you a friend request!'
-	                            )
-	                          )
-	                        ),
-	                        React.createElement('br', null),
-	                        React.createElement(
-	                          'div',
-	                          { className: 'text-center' },
-	                          React.createElement(
-	                            Button,
-	                            { xs: true, outlined: true, bsStyle: 'darkgreen45' },
-	                            'Accept'
-	                          ),
-	                          ' ',
-	                          React.createElement(
-	                            Button,
-	                            { xs: true, outlined: true, bsStyle: 'red' },
-	                            'Reject'
-	                          )
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              ),
-	              React.createElement(
-	                TimelineView,
-	                { className: 'border-black50 tl-green' },
-	                React.createElement(
-	                  TimelineItem,
-	                  null,
-	                  React.createElement(
-	                    TimelineHeader,
-	                    null,
-	                    React.createElement(TimelineAvatar, { src: '/imgs/avatars/avatar7.png', className: 'border-green' }),
-	                    React.createElement(
-	                      TimelineTitle,
-	                      null,
-	                      'Toby King'
-	                    )
-	                  ),
-	                  React.createElement(
-	                    TimelineBody,
-	                    null,
-	                    React.createElement(
-	                      'ul',
-	                      null,
-	                      React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                          'div',
-	                          { className: 'fg-lightgray' },
-	                          React.createElement(
-	                            'small',
-	                            null,
-	                            React.createElement(
-	                              'strong',
-	                              null,
-	                              'Aug 9, 2014'
-	                            )
-	                          )
-	                        ),
-	                        React.createElement(
-	                          'div',
-	                          null,
-	                          React.createElement(
-	                            'small',
-	                            null,
-	                            'Visiting ',
-	                            React.createElement(
-	                              'strong',
-	                              { className: 'fg-darkgreen45' },
-	                              'The Museum of Modern Art'
-	                            ),
-	                            ' at ',
-	                            React.createElement(
-	                              'strong',
-	                              null,
-	                              React.createElement(
-	                                'em',
-	                                null,
-	                                '11 W 53rd St, New York, NY 10019'
-	                              )
-	                            )
-	                          )
-	                        ),
-	                        React.createElement('br', null),
-	                        React.createElement('img', { border: '0', src: '/imgs/staticmap.png', alt: 'Points of Interest in Lower Manhattan' })
-	                      ),
-	                      React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                          'div',
-	                          { className: 'fg-lightgray' },
-	                          React.createElement(
-	                            'small',
-	                            null,
-	                            React.createElement(
-	                              'strong',
-	                              null,
-	                              'Aug 8, 2014'
-	                            )
-	                          )
-	                        ),
-	                        React.createElement(
-	                          'div',
-	                          null,
-	                          React.createElement(
-	                            'small',
-	                            null,
-	                            'Driving through! :)'
-	                          )
-	                        ),
-	                        React.createElement('br', null),
-	                        React.createElement('img', { border: '0', width: '155', src: '/imgs/gallery/tumblr_n7yhe1sTa41st5lhmo1_1280-thumb.jpg', alt: 'the taxi' })
-	                      )
-	                    )
-	                  )
-	                )
-	              ),
-	              React.createElement(
-	                TimelineView,
-	                { className: 'border-black50 tl-yellow' },
-	                React.createElement(
-	                  TimelineItem,
-	                  null,
-	                  React.createElement(
-	                    TimelineHeader,
-	                    null,
-	                    React.createElement(TimelineAvatar, { src: '/imgs/avatars/avatar10.png', className: 'border-yellow' }),
-	                    React.createElement(
-	                      TimelineTitle,
-	                      null,
-	                      'Angelina Mills'
-	                    )
-	                  ),
-	                  React.createElement(
-	                    TimelineBody,
-	                    null,
-	                    React.createElement(
-	                      'ul',
-	                      null,
-	                      React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                          'div',
-	                          { className: 'fg-lightgray' },
-	                          React.createElement(
-	                            'small',
-	                            null,
-	                            React.createElement(
-	                              'strong',
-	                              null,
-	                              'Aug 8, 2014'
-	                            )
-	                          )
-	                        ),
-	                        React.createElement(
-	                          'div',
-	                          null,
-	                          React.createElement(
-	                            'small',
-	                            null,
-	                            'Hey you free tomorrow? Lets go shopping!'
-	                          )
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return TimelineComponent;
-	})(React.Component);
-
-	var NotificationComponent = (function (_React$Component4) {
-	  _inherits(NotificationComponent, _React$Component4);
-
-	  function NotificationComponent() {
-	    _classCallCheck(this, NotificationComponent);
-
-	    _get(Object.getPrototypeOf(NotificationComponent.prototype), 'constructor', this).apply(this, arguments);
-	  }
-
-	  _createClass(NotificationComponent, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      (function () {
-	        $(this.refs.sparklineOne.getDOMNode()).sparkline([2, 3, 5, 1, 2, 5, 8, 6, 7, 9, 3, 5, 7, 8, 3, 3, 2, 9, 5, 3, 2, 2, 4, 6, 7, 8, 9, 1, 12, 14, 11, 3, 4, 6, 9, 10, 12, 9, 5, 3, 2, 2, 4, 6, 7, 8, 9, 10, 11, 12, 14, 23], {
-	          type: 'bar',
-	          barWidth: 2,
-	          height: '40',
-	          barSpacing: 1,
-	          barColor: '#D71F4B' });
-	        $(this.refs.sparklineTwo.getDOMNode()).sparkline([10, 40, 20, 30, 20, 20, 40, 20, 25, 35, 44, 55, 66, 20, 20, 30, 50, 60, 30, 40, 50, 60, 50, 30, 20, 90, 100, 100, 100, 100, 100, 100], {
-	          type: 'bar',
-	          barWidth: 4,
-	          height: '40',
-	          barSpacing: 1,
-	          barColor: '#FADD7F' });
-	        $(this.refs.pieOne.getDOMNode()).sparkline([1, 0.2], {
-	          type: 'pie',
-	          width: '35',
-	          height: '35',
-	          sliceColors: ['#FADD7F', '#D71F4B'] });
-	        $(this.refs.pieTwo.getDOMNode()).sparkline([0.2, 1], {
-	          type: 'pie',
-	          width: '35',
-	          height: '35',
-	          sliceColors: ['#ff9900', '#109618'] });
-	        $(this.refs.pieThree.getDOMNode()).sparkline([1, 0.2, 0.3, 0.2], {
-	          type: 'pie',
-	          width: '35',
-	          height: '35',
-	          sliceColors: ['#ff9900', '#109618', '#66aa00', '#dd4477'] });
-	        $(this.refs.pieFour.getDOMNode()).sparkline([0.2, 0.3, 0.4, 0.1, 1, 0.2], {
-	          type: 'pie',
-	          width: '35',
-	          height: '35',
-	          sliceColors: ['#dd4477', '#0099c6', '#990099', '#ff9900', '#B4A1DD', '#66aa00'] });
-	      }).bind(this)();
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return React.createElement(
-	        'div',
-	        null,
-	        React.createElement(
-	          Grid,
-	          null,
-	          React.createElement(
-	            Row,
-	            null,
-	            React.createElement(
-	              Col,
-	              { xs: 12, collapseLeft: true, collapseRight: true },
-	              React.createElement(
-	                TimelineView,
-	                { className: 'border-black50 tl-deepred' },
-	                React.createElement(
-	                  TimelineItem,
-	                  null,
-	                  React.createElement(
-	                    TimelineHeader,
-	                    null,
-	                    React.createElement(TimelineIcon, { glyph: 'icon-fontello-attention-3 bg-deepred fg-white' }),
-	                    React.createElement(
-	                      TimelineTitle,
-	                      null,
-	                      'SYSTEM-WIDE ALERTS'
-	                    )
-	                  ),
-	                  React.createElement(
-	                    TimelineBody,
-	                    null,
-	                    React.createElement(
-	                      'ul',
-	                      null,
-	                      React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                          'div',
-	                          null,
-	                          React.createElement(
-	                            'div',
-	                            { className: 'fg-lightgray' },
-	                            React.createElement(
-	                              'small',
-	                              null,
-	                              React.createElement(
-	                                'strong',
-	                                null,
-	                                'Aug 12, 2014'
-	                              )
-	                            )
-	                          ),
-	                          React.createElement(
-	                            'div',
-	                            null,
-	                            React.createElement(
-	                              'small',
-	                              null,
-	                              'Spike in network traffic detected.'
-	                            )
-	                          ),
-	                          React.createElement(
-	                            'div',
-	                            null,
-	                            React.createElement('div', { ref: 'sparklineOne' })
-	                          )
-	                        )
-	                      ),
-	                      React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                          'div',
-	                          null,
-	                          React.createElement(
-	                            'div',
-	                            { className: 'fg-lightgray' },
-	                            React.createElement(
-	                              'small',
-	                              null,
-	                              React.createElement(
-	                                'strong',
-	                                null,
-	                                'Aug 10, 2014'
-	                              )
-	                            )
-	                          ),
-	                          React.createElement(
-	                            'div',
-	                            null,
-	                            React.createElement(
-	                              'small',
-	                              null,
-	                              'Node 1 down for 30 minutes! Take action!'
-	                            )
-	                          )
-	                        ),
-	                        React.createElement('br', null),
-	                        React.createElement(
-	                          'div',
-	                          { className: 'text-center' },
-	                          React.createElement(
-	                            Button,
-	                            { xs: true, outlined: true, bsStyle: 'darkgreen45' },
-	                            'Restore'
-	                          ),
-	                          ' ',
-	                          React.createElement(
-	                            Button,
-	                            { xs: true, outlined: true, bsStyle: 'red' },
-	                            'Destroy'
-	                          )
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              ),
-	              React.createElement(
-	                TimelineView,
-	                { className: 'border-black50 tl-yellow' },
-	                React.createElement(
-	                  TimelineItem,
-	                  null,
-	                  React.createElement(
-	                    TimelineHeader,
-	                    null,
-	                    React.createElement(TimelineIcon, { glyph: 'icon-fontello-attention-3 bg-yellow fg-red' }),
-	                    React.createElement(
-	                      TimelineTitle,
-	                      null,
-	                      'NODE ALERTS'
-	                    )
-	                  ),
-	                  React.createElement(
-	                    TimelineBody,
-	                    null,
-	                    React.createElement(
-	                      'ul',
-	                      null,
-	                      React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                          'div',
-	                          null,
-	                          React.createElement(
-	                            'div',
-	                            { className: 'fg-lightgray' },
-	                            React.createElement(
-	                              'small',
-	                              null,
-	                              React.createElement(
-	                                'strong',
-	                                null,
-	                                'Aug 12, 2014'
-	                              )
-	                            )
-	                          ),
-	                          React.createElement(
-	                            'div',
-	                            null,
-	                            React.createElement(
-	                              'small',
-	                              null,
-	                              'CPU running at 100% on Node 1.'
-	                            )
-	                          ),
-	                          React.createElement(
-	                            'div',
-	                            null,
-	                            React.createElement('div', { ref: 'sparklineTwo' })
-	                          )
-	                        )
-	                      ),
-	                      React.createElement(
-	                        'li',
-	                        null,
-	                        React.createElement(
-	                          'div',
-	                          null,
-	                          React.createElement(
-	                            'div',
-	                            { className: 'fg-lightgray' },
-	                            React.createElement(
-	                              'small',
-	                              null,
-	                              React.createElement(
-	                                'strong',
-	                                null,
-	                                'Aug 10, 2014'
-	                              )
-	                            )
-	                          ),
-	                          React.createElement(
-	                            'div',
-	                            null,
-	                            React.createElement(
-	                              'small',
-	                              null,
-	                              'Running out of disk space on ',
-	                              React.createElement(
-	                                'strong',
-	                                { className: 'fg-yellow' },
-	                                'Node 2'
-	                              ),
-	                              ', ',
-	                              React.createElement(
-	                                'strong',
-	                                { className: 'fg-yellow' },
-	                                'Node 3'
-	                              ),
-	                              ', ',
-	                              React.createElement(
-	                                'strong',
-	                                { className: 'fg-yellow' },
-	                                'Node 5'
-	                              ),
-	                              ' and ',
-	                              React.createElement(
-	                                'strong',
-	                                { className: 'fg-yellow' },
-	                                'Node 7'
-	                              )
-	                            )
-	                          )
-	                        ),
-	                        React.createElement('br', null),
-	                        React.createElement(
-	                          'div',
-	                          { className: 'text-center' },
-	                          React.createElement('span', { ref: 'pieOne', style: { marginLeft: 5 } }),
-	                          React.createElement('span', { ref: 'pieTwo', style: { marginLeft: 5 } }),
-	                          React.createElement('span', { ref: 'pieThree', style: { marginLeft: 5 } }),
-	                          React.createElement('span', { ref: 'pieFour', style: { marginLeft: 5 } })
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return NotificationComponent;
-	})(React.Component);
-
-	var _default = (function (_React$Component5) {
-	  _inherits(_default, _React$Component5);
+	var _default = (function (_React$Component) {
+	  _inherits(_default, _React$Component);
 
 	  function _default() {
 	    _classCallCheck(this, _default);
@@ -6778,84 +4530,7 @@
 	  _createClass(_default, [{
 	    key: 'render',
 	    value: function render() {
-	      return React.createElement(
-	        'div',
-	        _extends({ id: 'sidebar' }, this.props),
-	        React.createElement(
-	          'div',
-	          { id: 'avatar' },
-	          React.createElement(
-	            Grid,
-	            null,
-	            React.createElement(
-	              Row,
-	              { className: 'fg-white' },
-	              React.createElement(
-	                Col,
-	                { xs: 4, collapseRight: true },
-	                React.createElement('img', { src: '/imgs/avatars/avatar0.png', width: '40', height: '40' })
-	              ),
-	              React.createElement(
-	                Col,
-	                { xs: 8, collapseLeft: true, id: 'avatar-col' },
-	                React.createElement(
-	                  'div',
-	                  { style: { top: 23, fontSize: 16, lineHeight: 1, position: 'relative' } },
-	                  'Anna Sanchez'
-	                ),
-	                React.createElement(
-	                  'div',
-	                  null,
-	                  React.createElement(Progress, { id: 'demo-progress', value: 30, min: 0, max: 100, color: '#ffffff' }),
-	                  React.createElement(
-	                    _reactRouter.Link,
-	                    { to: '/app/lock' },
-	                    React.createElement(Icon, { id: 'demo-icon', bundle: 'fontello', glyph: 'lock-5' })
-	                  )
-	                )
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          _globalJsxSidebar_component.SidebarControls,
-	          null,
-	          React.createElement(_globalJsxSidebar_component.SidebarControlBtn, { bundle: 'fontello', glyph: 'docs', sidebar: 0 }),
-	          React.createElement(_globalJsxSidebar_component.SidebarControlBtn, { bundle: 'fontello', glyph: 'chat-1', sidebar: 1 }),
-	          React.createElement(_globalJsxSidebar_component.SidebarControlBtn, { bundle: 'fontello', glyph: 'chart-pie-2', sidebar: 2 }),
-	          React.createElement(_globalJsxSidebar_component.SidebarControlBtn, { bundle: 'fontello', glyph: 'th-list-2', sidebar: 3 }),
-	          React.createElement(_globalJsxSidebar_component.SidebarControlBtn, { bundle: 'fontello', glyph: 'bell-5', sidebar: 4 })
-	        ),
-	        React.createElement(
-	          'div',
-	          { id: 'sidebar-container' },
-	          React.createElement(
-	            _globalJsxSidebar_component.Sidebar,
-	            { sidebar: 0, active: true },
-	            React.createElement(ApplicationSidebar, null)
-	          ),
-	          React.createElement(
-	            _globalJsxSidebar_component.Sidebar,
-	            { sidebar: 1 },
-	            React.createElement(_chat2['default'], null)
-	          ),
-	          React.createElement(
-	            _globalJsxSidebar_component.Sidebar,
-	            { sidebar: 2 },
-	            React.createElement(StatisticsComponent, null)
-	          ),
-	          React.createElement(
-	            _globalJsxSidebar_component.Sidebar,
-	            { sidebar: 3 },
-	            React.createElement(TimelineComponent, null)
-	          ),
-	          React.createElement(
-	            _globalJsxSidebar_component.Sidebar,
-	            { sidebar: 4 },
-	            React.createElement(NotificationComponent, null)
-	          )
-	        )
-	      );
+	      return React.createElement('div', null);
 	    }
 	  }]);
 
@@ -7100,28 +4775,28 @@
 	                for (var i = 0; i < count; i++) {
 	                    var paragraphLength = this.randomInt(10, 20);
 	                    var paragraph = this.createText(paragraphLength, Lorem.TYPE.SENTENCE);
-	                    paragraphs.push("<p>" + paragraph + "</p>");
+	                    paragraphs.push('<p>' + paragraph + '</p>');
 	                }
-	                return paragraphs.join("\n");
+	                return paragraphs.join('\n');
 	                break;
 	            //sentences are loads of words.
 	            case Lorem.TYPE.SENTENCE:
 	                var sentences = new Array();
 	                for (var i = 0; i < count; i++) {
 	                    var sentenceLength = this.randomInt(5, 10);
-	                    var words = this.createText(sentenceLength, Lorem.TYPE.WORD).split(" ");
+	                    var words = this.createText(sentenceLength, Lorem.TYPE.WORD).split(' ');
 	                    words[0] = words[0].substr(0, 1).toUpperCase() + words[0].substr(1);
-	                    var sentence = words.join(" ");
+	                    var sentence = words.join(' ');
 
 	                    sentences.push(sentence);
 	                }
-	                return (sentences.join(". ") + ".").replace(/(\.\,|\,\.)/g, ".");
+	                return (sentences.join('. ') + '.').replace(/(\.\,|\,\.)/g, '.');
 	                break;
 	            //words are words
 	            case Lorem.TYPE.WORD:
 	                var wordIndex = this.randomInt(0, Lorem.WORDS.length - count - 1);
 
-	                return Lorem.WORDS.slice(wordIndex, wordIndex + count).join(" ").replace(/\.|\,/g, "");
+	                return Lorem.WORDS.slice(wordIndex, wordIndex + count).join(' ').replace(/\.|\,/g, '');
 	                break;
 	        }
 	    };
@@ -7131,7 +4806,7 @@
 	        var count;
 
 	        if (/\d+-\d+[psw]/.test(this.query)) {
-	            var range = this.query.replace(/[a-z]/, "").split("-");
+	            var range = this.query.replace(/[a-z]/, '').split("-");
 	            count = Math.floor(Math.random() * parseInt(range[1])) + parseInt(range[0]);
 	        } else {
 	            count = parseInt(this.query);
@@ -7146,23 +4821,23 @@
 	        }
 
 	        lorem.push(this.createText(count, type));
-	        lorem = lorem.join(" ");
+	        lorem = lorem.join(' ');
 
 	        if (element) {
 	            if (this.type == Lorem.TEXT) element.innerHTML += lorem;else if (this.type == Lorem.IMAGE) {
 	                //TODO: for now, using lorempixel.
-	                var path = "";
-	                var options = this.query.split(" ");
-	                if (options[0] == "gray") {
-	                    path += "/g";
-	                    options[0] = "";
+	                var path = '';
+	                var options = this.query.split(' ');
+	                if (options[0] == 'gray') {
+	                    path += '/g';
+	                    options[0] = '';
 	                }
-	                if (element.getAttribute("width")) path += "/" + element.getAttribute("width");
+	                if (element.getAttribute('width')) path += '/' + element.getAttribute('width');
 
-	                if (element.getAttribute("height")) path += "/" + element.getAttribute("height");
+	                if (element.getAttribute('height')) path += '/' + element.getAttribute('height');
 
-	                path += "/" + options.join(" ").replace(/(^\s+|\s+$)/, "");
-	                element.src = "http://lorempixel.com" + path.replace(/\/\//, "/");
+	                path += '/' + options.join(' ').replace(/(^\s+|\s+$)/, '');
+	                element.src = 'http://lorempixel.com' + path.replace(/\/\//, '/');
 	            }
 	        }
 
@@ -7179,17 +4854,17 @@
 	    },
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            type: "text"
+	            type: 'text'
 	        };
 	    },
 	    componentDidMount: function componentDidMount() {
 	        var lorem = new Lorem();
 
 	        switch (this.props.type) {
-	            case "img":
+	            case 'img':
 	                lorem.type = Lorem.IMAGE;
 	                break;
-	            case "text":
+	            case 'text':
 	            default:
 	                lorem.type = Lorem.TEXT;
 	                break;
@@ -7202,11 +4877,11 @@
 	        var props = _extends({
 	            type: null,
 	            query: null,
-	            ref: "node"
+	            ref: 'node'
 	        }, this.props);
 
 	        var ComponentClass;
-	        if (this.props.type === "text") return React.createElement("span", props);else return React.createElement("img", props);
+	        if (this.props.type === 'text') return React.createElement("span", props);else return React.createElement("img", props);
 	    }
 	});
 	module.exports = exports["default"];
@@ -7618,13 +5293,13 @@
 	          React.createElement(
 	            'span',
 	            null,
-	            'Don\'t wait for Web Components'
+	            "Don't wait for Web Components"
 	          )
 	        ),
 	        React.createElement(
 	          HeroHeader2,
 	          null,
-	          'Embrace React ',
+	          "Embrace React ",
 	          React.createElement(
 	            'sup',
 	            null,
@@ -7687,7 +5362,7 @@
 	        React.createElement(
 	          HeroHeader2,
 	          null,
-	          'Bootstrap on Steroids'
+	          "Bootstrap on Steroids"
 	        ),
 	        React.createElement(
 	          'div',
@@ -7715,12 +5390,12 @@
 	        React.createElement(
 	          HeroHeader,
 	          null,
-	          'Internationalization and Localization'
+	          "Internationalization and Localization"
 	        ),
 	        React.createElement(
 	          HeroHeader2,
 	          null,
-	          'Mozilla L20n.js'
+	          "Mozilla L20n.js"
 	        ),
 	        React.createElement(
 	          'div',
@@ -7739,12 +5414,12 @@
 	        React.createElement(
 	          'p',
 	          { className: 'text-center' },
-	          'Mozilla L20n is a developer friendly framework that places languages in the localizer\'s hand to create better translations. '
+	          "Mozilla L20n is a developer friendly framework that places languages in the localizer's hand to create better translations. "
 	        ),
 	        React.createElement(
 	          'p',
 	          { className: 'text-center' },
-	          'It removes the need for developers to thoroughly understand the specifics of a natural language and provides an opportunity for localizers to create better translations. Rubix ships with custom React component bindings for the framework.'
+	          "It removes the need for developers to thoroughly understand the specifics of a natural language and provides an opportunity for localizers to create better translations. Rubix ships with custom React component bindings for the framework."
 	        )
 	      ),
 	      React.createElement(
@@ -7753,7 +5428,7 @@
 	        React.createElement(
 	          HeroHeader2,
 	          null,
-	          'Rubix Charts'
+	          "Rubix Charts"
 	        ),
 	        React.createElement(
 	          'div',
@@ -7781,12 +5456,12 @@
 	        React.createElement(
 	          HeroHeader,
 	          null,
-	          'Create complex layouts easily'
+	          "Create complex layouts easily"
 	        ),
 	        React.createElement(
 	          HeroHeader2,
 	          null,
-	          'Panels'
+	          "Panels"
 	        ),
 	        React.createElement(
 	          'div',
@@ -7805,7 +5480,7 @@
 	        React.createElement(
 	          'p',
 	          { className: 'text-center' },
-	          'Rubix Panels empowers developers to create complex layouts in addition to the awesome Grid provided by Twitter Bootstrap. Pretty much every example page showcased in the demo makes use of Panels for layout.'
+	          "Rubix Panels empowers developers to create complex layouts in addition to the awesome Grid provided by Twitter Bootstrap. Pretty much every example page showcased in the demo makes use of Panels for layout."
 	        )
 	      ),
 	      React.createElement(
@@ -7817,7 +5492,7 @@
 	          React.createElement(
 	            'span',
 	            null,
-	            'The Asset Pipeline '
+	            "The Asset Pipeline "
 	          ),
 	          React.createElement(
 	            'sup',
@@ -7832,7 +5507,7 @@
 	        React.createElement(
 	          HeroHeader2,
 	          null,
-	          'Gulp, Flip and Bless!'
+	          "Gulp, Flip and Bless!"
 	        ),
 	        React.createElement(
 	          'div',
@@ -7851,30 +5526,30 @@
 	        React.createElement(
 	          'p',
 	          { className: 'text-center' },
-	          'Gulp is a streaming build system. It\'s use of streams and code-over-configuration makes for a simpler and more intuitive build system. Rubix\'s Asset Pipeline depends entirely on Gulp as its backbone. ',
+	          "Gulp is a streaming build system. It's use of streams and code-over-configuration makes for a simpler and more intuitive build system. Rubix's Asset Pipeline depends entirely on Gulp as its backbone. ",
 	          React.createElement(
 	            'strong',
 	            null,
-	            'Everything is automated'
+	            "Everything is automated"
 	          ),
-	          ': be it compiling JSX, SASS or even WebFonts!'
+	          ": be it compiling JSX, SASS or even WebFonts!"
 	        ),
 	        React.createElement(
 	          'p',
 	          { className: 'text-center' },
-	          'Rubix relies on Webpack which takes modules with dependencies and generates static assets representing those modules. We make use of Twitter\'s ',
+	          "Rubix relies on Webpack which takes modules with dependencies and generates static assets representing those modules. We make use of Twitter's ",
 	          React.createElement(
 	            'strong',
 	            null,
-	            'css-flip'
+	            "css-flip"
 	          ),
-	          ' for RTL support and the awesome ',
+	          " for RTL support and the awesome ",
 	          React.createElement(
 	            'strong',
 	            null,
-	            'blesscss'
+	            "blesscss"
 	          ),
-	          ' library for fixing IE9 selectors and stylesheet bug.'
+	          " library for fixing IE9 selectors and stylesheet bug."
 	        )
 	      ),
 	      React.createElement(
@@ -7886,7 +5561,7 @@
 	          React.createElement(
 	            'span',
 	            null,
-	            'Isomorphic Javascript '
+	            "Isomorphic Javascript "
 	          ),
 	          React.createElement(
 	            'sup',
@@ -7901,7 +5576,7 @@
 	        React.createElement(
 	          HeroHeader2,
 	          null,
-	          'Render client code on the server!'
+	          "Render client code on the server!"
 	        ),
 	        React.createElement(
 	          'div',
@@ -7920,7 +5595,7 @@
 	        React.createElement(
 	          'p',
 	          { className: 'text-center' },
-	          'Rubix uses React-Router to provide routing client side and reuses the same routing logic for rendering compiled HTML from the server making your app SEO friendly.'
+	          "Rubix uses React-Router to provide routing client side and reuses the same routing logic for rendering compiled HTML from the server making your app SEO friendly."
 	        )
 	      ),
 	      React.createElement(
@@ -7932,7 +5607,7 @@
 	          React.createElement(
 	            'span',
 	            null,
-	            'BrowserSync + React Hot Loader '
+	            "BrowserSync + React Hot Loader "
 	          ),
 	          React.createElement(
 	            'sup',
@@ -7947,7 +5622,7 @@
 	        React.createElement(
 	          HeroHeader2,
 	          null,
-	          'Time-saving synchronised browser testing!'
+	          "Time-saving synchronised browser testing!"
 	        ),
 	        React.createElement(
 	          'div',
@@ -7955,26 +5630,26 @@
 	          React.createElement(
 	            'video',
 	            { loop: true, autoPlay: true, width: '100%' },
-	            React.createElement('source', { src: '/video/homepage/livereload.mp4', type: 'video/mp4' }),
-	            React.createElement('source', { src: '/video/homepage/livereload.ogv', type: 'video/ogg' }),
+	            React.createElement('source', { src: "/video/homepage/livereload.mp4", type: "video/mp4" }),
+	            React.createElement('source', { src: "/video/homepage/livereload.ogv", type: "video/ogg" }),
 	            'Your browser does not support the video tag.'
 	          )
 	        ),
 	        React.createElement(
 	          'p',
 	          { className: 'text-center' },
-	          'When you’re making responsive websites, there’s a lot of tweaking and testing to do. BrowserSync makes your workflow faster by ',
+	          "When you’re making responsive websites, there’s a lot of tweaking and testing to do. BrowserSync makes your workflow faster by ",
 	          React.createElement(
 	            'strong',
 	            null,
 	            'synchronising URLs, interactions and code changes across multiple devices.'
 	          ),
-	          ' BrowserSync is enabled for SASS files, Image files, Locale files and WebFonts.'
+	          " BrowserSync is enabled for SASS files, Image files, Locale files and WebFonts."
 	        ),
 	        React.createElement(
 	          'p',
 	          { className: 'text-center' },
-	          'Rubix comes integrated with React Hot loader for live editing of React components using Webpack\'s Hot Module Replacement.'
+	          "Rubix comes integrated with React Hot loader for live editing of React components using Webpack's Hot Module Replacement."
 	        )
 	      ),
 	      React.createElement(
@@ -7986,7 +5661,7 @@
 	          React.createElement(
 	            'span',
 	            null,
-	            'BabelJS '
+	            "BabelJS "
 	          ),
 	          React.createElement(
 	            'sup',
@@ -8001,7 +5676,7 @@
 	        React.createElement(
 	          HeroHeader2,
 	          null,
-	          'Use the next generation Javascript, today!'
+	          "Use the next generation Javascript, today!"
 	        ),
 	        React.createElement(
 	          'div',
@@ -8011,7 +5686,7 @@
 	        React.createElement(
 	          'p',
 	          { className: 'text-center' },
-	          'Rubix uses Babel for Javascript transformations. It ships with a set of ES2015 syntax transformers. These allow you to use new syntax, right now without waiting for browser support. It also ships with built-in support for JSX.'
+	          "Rubix uses Babel for Javascript transformations. It ships with a set of ES2015 syntax transformers. These allow you to use new syntax, right now without waiting for browser support. It also ships with built-in support for JSX."
 	        )
 	      ),
 	      React.createElement(
@@ -8023,7 +5698,7 @@
 	          React.createElement(
 	            'span',
 	            null,
-	            'Multiple Language + Framework Integrations '
+	            "Multiple Language + Framework Integrations "
 	          ),
 	          React.createElement(
 	            'sup',
@@ -8043,7 +5718,7 @@
 	        React.createElement(
 	          'p',
 	          { className: 'text-center' },
-	          'We will be providing implemention of Rubix in multiple languages/frameworks to ease development. Rubix 3.0 ships with a Ruby on Rails seed project with server side rendering powered by react-rails.'
+	          "We will be providing implemention of Rubix in multiple languages/frameworks to ease development. Rubix 3.0 ships with a Ruby on Rails seed project with server side rendering powered by react-rails."
 	        )
 	      ),
 	      React.createElement(
@@ -8052,12 +5727,12 @@
 	        React.createElement(
 	          HeroHeader,
 	          null,
-	          'One Last Thing'
+	          "One Last Thing"
 	        ),
 	        React.createElement(
 	          HeroHeader2,
 	          null,
-	          'Fanatical Support!'
+	          "Fanatical Support!"
 	        ),
 	        React.createElement(
 	          'div',
@@ -8067,7 +5742,7 @@
 	        React.createElement(
 	          'p',
 	          { className: 'text-center' },
-	          'We have already provided extensive documentation on using/implementing Rubix. However, we take this a step further by ensuring version releases (which includes bug fixes, new features etc) for the next 6 months and general support for 1 year.'
+	          "We have already provided extensive documentation on using/implementing Rubix. However, we take this a step further by ensuring version releases (which includes bug fixes, new features etc) for the next 6 months and general support for 1 year."
 	        )
 	      ),
 	      React.createElement(
@@ -11423,214 +9098,150 @@
 
 	var _commonFooter2 = _interopRequireDefault(_commonFooter);
 
-	var GalleryItem = (function (_React$Component) {
-	  _inherits(GalleryItem, _React$Component);
+	var GalleryList = React.createClass({
+	  displayName: 'GalleryList',
 
-	  function GalleryItem(props) {
-	    _classCallCheck(this, GalleryItem);
+	  render: function render() {
+	    var campaignNodes = this.props.data.map(function (campaign) {
+	      console.log('campaign', campaign);
+	      return React.createElement(
+	        Col,
+	        { xs: 6, sm: 3, collapseRight: true },
+	        React.createElement(GalleryItem, { image: campaign.thumbnail_url, title: campaign.name, subtitle: '' })
+	      );
+	    });
+	    return React.createElement(
+	      'div',
+	      { className: "campaignList" },
+	      campaignNodes
+	    );
+	  }
+	});
 
-	    _get(Object.getPrototypeOf(GalleryItem.prototype), 'constructor', this).call(this, props);
-	    this.state = {
+	var GalleryItem = React.createClass({
+	  displayName: 'GalleryItem',
+
+	  getInitialState: function getInitialState() {
+	    return {
 	      active: this.props.active || false,
 	      counts: Math.round(Math.random() * 20) + 4
 	    };
-	  }
-
-	  _createClass(GalleryItem, [{
-	    key: 'handleIncrement',
-	    value: function handleIncrement(e) {
-	      if (this.state.active) return;
-	      this.setState({
-	        active: true,
-	        counts: this.state.counts + 1
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return React.createElement(
-	        PanelContainer,
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      PanelContainer,
+	      null,
+	      React.createElement(
+	        Panel,
 	        null,
 	        React.createElement(
-	          Panel,
+	          PanelHeader,
 	          null,
 	          React.createElement(
-	            PanelHeader,
-	            null,
+	            Grid,
+	            { className: 'gallery-item' },
 	            React.createElement(
-	              Grid,
-	              { className: 'gallery-item' },
+	              Row,
+	              null,
 	              React.createElement(
-	                Row,
-	                null,
+	                Col,
+	                { xs: 12, style: { padding: 0 } },
 	                React.createElement(
-	                  Col,
-	                  { xs: 12, style: { padding: 12.5 } },
+	                  'a',
+	                  { className: 'gallery-1 gallery-item-link', href: '/imgs/gallery/' + this.props.image + '.jpg', title: this.props.title },
+	                  React.createElement(Img, { responsive: true, src: this.props.image, alt: this.props.title, width: '200', height: '150' })
+	                ),
+	                React.createElement(
+	                  'div',
+	                  { className: 'campaign-details' },
 	                  React.createElement(
-	                    'a',
-	                    { className: 'gallery-1 gallery-item-link', href: '/imgs/gallery/' + this.props.image + '.jpg', title: this.props.title },
-	                    React.createElement(Img, { responsive: true, src: '/imgs/gallery/' + this.props.image + '-thumb.jpg', alt: this.props.title, width: '200', height: '150' }),
-	                    React.createElement(
-	                      'div',
-	                      { className: 'black-wrapper text-center' },
-	                      React.createElement(
-	                        Table,
-	                        { style: { height: '100%', width: '100%' } },
-	                        React.createElement(
-	                          'tbody',
-	                          null,
-	                          React.createElement(
-	                            'tr',
-	                            null,
-	                            React.createElement(
-	                              'td',
-	                              null,
-	                              React.createElement(Icon, { glyph: 'icon-outlined-magnifier-plus icon-3x' })
-	                            )
-	                          )
-	                        )
-	                      )
-	                    )
-	                  ),
-	                  React.createElement(
-	                    'div',
-	                    { className: 'text-center' },
-	                    React.createElement(
-	                      'h4',
-	                      { className: 'fg-darkgrayishblue75 hidden-xs', style: { textTransform: 'uppercase' } },
-	                      this.props.title
-	                    ),
-	                    React.createElement(
-	                      'h6',
-	                      { className: 'fg-darkgrayishblue75 visible-xs', style: { textTransform: 'uppercase' } },
-	                      this.props.title
-	                    ),
-	                    React.createElement(
-	                      'h5',
-	                      { className: 'fg-darkgray50 hidden-xs', style: { textTransform: 'uppercase' } },
-	                      this.props.subtitle
-	                    ),
-	                    React.createElement(
-	                      'h6',
-	                      { className: 'visible-xs', style: { textTransform: 'uppercase' } },
-	                      React.createElement(
-	                        'small',
-	                        { className: 'fg-darkgray50' },
-	                        this.props.subtitle
-	                      )
-	                    ),
-	                    React.createElement(
-	                      Button,
-	                      { outlined: true, onlyOnHover: true, bsStyle: 'red', className: 'fav-btn', active: this.state.active, onClick: this.handleIncrement.bind(this) },
-	                      React.createElement(Icon, { glyph: 'icon-flatline-heart' }),
-	                      React.createElement(
-	                        'span',
-	                        { className: 'counts' },
-	                        this.state.counts
-	                      )
-	                    )
+	                    'h4',
+	                    { className: 'campaign-title', style: { textTransform: 'uppercase' } },
+	                    this.props.title
 	                  )
 	                )
 	              )
 	            )
 	          )
 	        )
-	      );
-	    }
-	  }]);
-
-	  return GalleryItem;
-	})(React.Component);
-
-	var Body = (function (_React$Component2) {
-	  _inherits(Body, _React$Component2);
-
-	  function Body() {
-	    _classCallCheck(this, Body);
-
-	    _get(Object.getPrototypeOf(Body.prototype), 'constructor', this).apply(this, arguments);
+	      )
+	    );
 	  }
+	});
 
-	  _createClass(Body, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var links = document.getElementsByClassName('gallery-1');
-	      $('.gallery-1').unbind('click').bind('click', function (event) {
-	        blueimp.Gallery(links, {
-	          index: $(this).get(0),
-	          event: event
-	        });
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return React.createElement(
-	        Container,
-	        { id: 'body' },
+	var Body = React.createClass({
+	  displayName: 'Body',
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      campaigns: [],
+	      limit: 0,
+	      offset: 0,
+	      total: 0
+	    };
+	  },
+	  componentDidMount: function componentDidMount() {
+
+	    console.log("componentDidMount");
+
+	    var that = this;
+
+	    $.ajax({
+	      type: "POST",
+	      dataType: "json",
+	      url: "http://localhost:3001/auth/signin",
+	      data: { email: "fuiszmedia@gmail.com", password: "sAnta)m0nica" },
+	      success: function success(data) {
+	        console.log("data");
+	        console.log(data);
+
+	        $.get("http://localhost:3001/api/campaigns?offset=0&limit=12", (function (result) {
+	          console.log("result");
+	          console.log(result);
+	          if (this.isMounted()) {
+	            console.log('this mounted');
+	            this.setState({
+	              campaigns: result.campaigns,
+	              limit: result.limit,
+	              offset: result.offset,
+	              total: result.total
+	            });
+	          }
+	        }).bind(that));
+	      }
+	    });
+
+	    // var links = document.getElementsByClassName('gallery-1');
+	    // console.log("links",links);
+	    // $('.gallery-1').unbind('click').bind('click', function(event) {
+	    //   blueimp.Gallery(links, {
+	    //     index: $(this).get(0),
+	    //     event: event
+	    //   });
+	    // });
+	  },
+	  render: function render() {
+	    console.log('render ? ');
+	    console.log(this.state);
+	    return React.createElement(
+	      Container,
+	      { id: 'body' },
+	      React.createElement(
+	        Grid,
+	        null,
 	        React.createElement(
-	          Grid,
-	          null,
-	          React.createElement(
-	            Row,
-	            { className: 'gallery-view' },
-	            React.createElement(
-	              Col,
-	              { xs: 6, sm: 4, collapseRight: true },
-	              React.createElement(GalleryItem, { image: 'tumblr_n6es0tRk5w1st5lhmo1_1280', title: 'skyline', subtitle: '10th Dec - 12th Dec' })
-	            ),
-	            React.createElement(
-	              Col,
-	              { xs: 6, sm: 4, collapseRight: true },
-	              React.createElement(GalleryItem, { active: true, image: 'tumblr_n6eszmeQMR1st5lhmo1_1280', title: 'me at ny', subtitle: '11th Dec - 12th Dec' })
-	            ),
-	            React.createElement(
-	              Col,
-	              { xs: 6, sm: 4, collapseRight: true },
-	              React.createElement(GalleryItem, { image: 'tumblr_n6rzkfxeOR1st5lhmo1_1280', title: 'vintage cameras', subtitle: '13th Dec - 14th Dec' })
-	            ),
-	            React.createElement(
-	              Col,
-	              { xs: 6, sm: 4, collapseRight: true },
-	              React.createElement(GalleryItem, { image: 'tumblr_n6rztipoQy1st5lhmo1_1280', title: 'columns', subtitle: '13th Dec - 14th Dec' })
-	            ),
-	            React.createElement(
-	              Col,
-	              { xs: 6, sm: 4, collapseRight: true },
-	              React.createElement(GalleryItem, { image: 'tumblr_n7fg2vYZ741st5lhmo1_1280', title: 'peak', subtitle: '14th Dec - 15th Dec' })
-	            ),
-	            React.createElement(
-	              Col,
-	              { xs: 6, sm: 4, collapseRight: true },
-	              React.createElement(GalleryItem, { image: 'tumblr_n7fgnop0bz1st5lhmo1_1280', title: 'Mac', subtitle: '14th Dec - 15th Dec' })
-	            ),
-	            React.createElement(
-	              Col,
-	              { xs: 6, sm: 4, collapseRight: true },
-	              React.createElement(GalleryItem, { image: 'tumblr_n7yhe1sTa41st5lhmo1_1280', title: 'Taxi cabs', subtitle: '14th Dec - 15th Dec' })
-	            ),
-	            React.createElement(
-	              Col,
-	              { xs: 6, sm: 4, collapseRight: true },
-	              React.createElement(GalleryItem, { image: 'tumblr_n8gxs0oWZ21st5lhmo1_1280', title: 'Golden gate', subtitle: '14th Dec - 15th Dec' })
-	            ),
-	            React.createElement(
-	              Col,
-	              { xs: 6, sm: 4, collapseRight: true },
-	              React.createElement(GalleryItem, { image: 'tumblr_n9hyqfJavs1st5lhmo1_1280', title: 'Empire state', subtitle: '14th Dec - 15th Dec' })
-	            )
-	          )
-	        ),
-	        this.props.children
-	      );
-	    }
-	  }]);
+	          Row,
+	          { className: 'gallery-view' },
+	          React.createElement(GalleryList, { data: this.state.campaigns })
+	        )
+	      ),
+	      this.props.children
+	    );
+	  }
+	});
 
-	  return Body;
-	})(React.Component);
-
-	var _default = (function (_React$Component3) {
-	  _inherits(_default, _React$Component3);
+	var _default = (function (_React$Component) {
+	  _inherits(_default, _React$Component);
 
 	  function _default() {
 	    _classCallCheck(this, _default2);
@@ -11641,6 +9252,7 @@
 	  _createClass(_default, [{
 	    key: 'render',
 	    value: function render() {
+	      console.log("GalleryPage render");
 	      var classes = (0, _classnames2['default'])({
 	        'container-open': this.props.open
 	      });
@@ -11876,7 +9488,7 @@
 	                React.createElement(
 	                  PanelBody,
 	                  { style: { padding: 12.5 } },
-	                  React.createElement(Textarea, { rows: '3', placeholder: 'What\'s on your mind?', style: { border: 'none' } })
+	                  React.createElement(Textarea, { rows: '3', placeholder: "What's on your mind?", style: { border: 'none' } })
 	                ),
 	                React.createElement(
 	                  PanelFooter,
@@ -11976,7 +9588,7 @@
 	                    React.createElement(
 	                      'div',
 	                      { className: 'fg-text' },
-	                      'I\'ll be out of my mind and you\'ll be out of ideas pretty soon. So let\'s spend the afternoon in a cold hot air balloon. Leave your jacket behind. Lean out and touch the tree tops over town. I can\'t wait to kiss the ground wherever we touch back down.'
+	                      "I'll be out of my mind and you'll be out of ideas pretty soon. So let's spend the afternoon in a cold hot air balloon. Leave your jacket behind. Lean out and touch the tree tops over town. I can't wait to kiss the ground wherever we touch back down."
 	                    )
 	                  ),
 	                  React.createElement(
@@ -12372,8 +9984,8 @@
 	                    { style: { margin: -25, marginTop: 25 } },
 	                    React.createElement(
 	                      'div',
-	                      { className: 'embed-responsive embed-responsive-16by9' },
-	                      React.createElement('iframe', { className: 'embed-responsive-item', src: '//www.youtube.com/embed/lSiQA6KKyJo?rel=0', allowFullScreen: true })
+	                      { className: "embed-responsive embed-responsive-16by9" },
+	                      React.createElement('iframe', { className: "embed-responsive-item", src: '//www.youtube.com/embed/lSiQA6KKyJo?rel=0', allowFullScreen: true })
 	                    )
 	                  )
 	                ),
@@ -12899,7 +10511,7 @@
 	                      PostSummary,
 	                      {
 	                        img: '/imgs/gallery/tumblr_n7fgnop0bz1st5lhmo1_1280.jpg',
-	                        header: '10 Things You Didn\'t Know Your Mac Could Do!',
+	                        header: "10 Things You Didn't Know Your Mac Could Do!",
 	                        author: 'Anna Sanchez',
 	                        date: 'Sep 3, 2014',
 	                        minutes: '10',
@@ -13003,7 +10615,7 @@
 	                                  React.createElement(
 	                                    'div',
 	                                    { style: { paddingTop: 12.5, paddingBottom: 12.5 } },
-	                                    'Hi! My name is Anna Sanchez and I\'m an innate minimalist.'
+	                                    "Hi! My name is Anna Sanchez and I'm an innate minimalist."
 	                                  )
 	                                )
 	                              )
@@ -17552,116 +15164,116 @@
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      (function () {
-	        var ctx = $('#line-chart').get(0).getContext('2d');
+	        var ctx = $("#line-chart").get(0).getContext("2d");
 	        var data = {
-	          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+	          labels: ["January", "February", "March", "April", "May", "June", "July"],
 	          datasets: [{
-	            label: 'My First dataset',
-	            fillColor: 'rgba(220,220,220,0.2)',
-	            strokeColor: 'rgba(220,220,220,1)',
-	            pointColor: 'rgba(220,220,220,1)',
-	            pointStrokeColor: '#fff',
-	            pointHighlightFill: '#fff',
-	            pointHighlightStroke: 'rgba(220,220,220,1)',
+	            label: "My First dataset",
+	            fillColor: "rgba(220,220,220,0.2)",
+	            strokeColor: "rgba(220,220,220,1)",
+	            pointColor: "rgba(220,220,220,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(220,220,220,1)",
 	            data: [65, 59, 80, 81, 56, 55, 40]
 	          }, {
-	            label: 'My Second dataset',
-	            fillColor: 'rgba(151,187,205,0.2)',
-	            strokeColor: 'rgba(151,187,205,1)',
-	            pointColor: 'rgba(151,187,205,1)',
-	            pointStrokeColor: '#fff',
-	            pointHighlightFill: '#fff',
-	            pointHighlightStroke: 'rgba(151,187,205,1)',
+	            label: "My Second dataset",
+	            fillColor: "rgba(151,187,205,0.2)",
+	            strokeColor: "rgba(151,187,205,1)",
+	            pointColor: "rgba(151,187,205,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(151,187,205,1)",
 	            data: [28, 48, 40, 19, 86, 27, 90]
 	          }]
 	        };
 	        new Chart(ctx).Line(data);
 	      })();
 	      (function () {
-	        var ctx = $('#bar-chart').get(0).getContext('2d');
+	        var ctx = $("#bar-chart").get(0).getContext("2d");
 	        var data = {
-	          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+	          labels: ["January", "February", "March", "April", "May", "June", "July"],
 	          datasets: [{
-	            label: 'My First dataset',
-	            fillColor: 'rgba(220,220,220,0.5)',
-	            strokeColor: 'rgba(220,220,220,0.8)',
-	            highlightFill: 'rgba(220,220,220,0.75)',
-	            highlightStroke: 'rgba(220,220,220,1)',
+	            label: "My First dataset",
+	            fillColor: "rgba(220,220,220,0.5)",
+	            strokeColor: "rgba(220,220,220,0.8)",
+	            highlightFill: "rgba(220,220,220,0.75)",
+	            highlightStroke: "rgba(220,220,220,1)",
 	            data: [65, 59, 80, 81, 56, 55, 40]
 	          }, {
-	            label: 'My Second dataset',
-	            fillColor: 'rgba(151,187,205,0.5)',
-	            strokeColor: 'rgba(151,187,205,0.8)',
-	            highlightFill: 'rgba(151,187,205,0.75)',
-	            highlightStroke: 'rgba(151,187,205,1)',
+	            label: "My Second dataset",
+	            fillColor: "rgba(151,187,205,0.5)",
+	            strokeColor: "rgba(151,187,205,0.8)",
+	            highlightFill: "rgba(151,187,205,0.75)",
+	            highlightStroke: "rgba(151,187,205,1)",
 	            data: [28, 48, 40, 19, 86, 27, 90]
 	          }]
 	        };
 	        new Chart(ctx).Bar(data);
 	      })();
 	      (function () {
-	        var ctx = $('#pie-chart').get(0).getContext('2d');
+	        var ctx = $("#pie-chart").get(0).getContext("2d");
 	        var data = [{
 	          value: 300,
-	          color: '#F7464A',
-	          highlight: '#FF5A5E',
-	          label: 'Red'
+	          color: "#F7464A",
+	          highlight: "#FF5A5E",
+	          label: "Red"
 	        }, {
 	          value: 50,
-	          color: '#46BFBD',
-	          highlight: '#5AD3D1',
-	          label: 'Green'
+	          color: "#46BFBD",
+	          highlight: "#5AD3D1",
+	          label: "Green"
 	        }, {
 	          value: 100,
-	          color: '#FDB45C',
-	          highlight: '#FFC870',
-	          label: 'Yellow'
+	          color: "#FDB45C",
+	          highlight: "#FFC870",
+	          label: "Yellow"
 	        }];
 	        new Chart(ctx).Pie(data);
 	      })();
 
 	      (function () {
-	        var ctx = $('#donut-chart').get(0).getContext('2d');
+	        var ctx = $("#donut-chart").get(0).getContext("2d");
 	        var data = [{
 	          value: 300,
-	          color: '#F7464A',
-	          highlight: '#FF5A5E',
-	          label: 'Red'
+	          color: "#F7464A",
+	          highlight: "#FF5A5E",
+	          label: "Red"
 	        }, {
 	          value: 50,
-	          color: '#46BFBD',
-	          highlight: '#5AD3D1',
-	          label: 'Green'
+	          color: "#46BFBD",
+	          highlight: "#5AD3D1",
+	          label: "Green"
 	        }, {
 	          value: 100,
-	          color: '#FDB45C',
-	          highlight: '#FFC870',
-	          label: 'Yellow'
+	          color: "#FDB45C",
+	          highlight: "#FFC870",
+	          label: "Yellow"
 	        }];
 	        new Chart(ctx).Doughnut(data);
 	      })();
 
 	      (function () {
-	        var ctx = $('#radar-chart').get(0).getContext('2d');
+	        var ctx = $("#radar-chart").get(0).getContext("2d");
 	        var data = {
-	          labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
+	          labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
 	          datasets: [{
-	            label: 'My First dataset',
-	            fillColor: 'rgba(220,220,220,0.2)',
-	            strokeColor: 'rgba(220,220,220,1)',
-	            pointColor: 'rgba(220,220,220,1)',
-	            pointStrokeColor: '#fff',
-	            pointHighlightFill: '#fff',
-	            pointHighlightStroke: 'rgba(220,220,220,1)',
+	            label: "My First dataset",
+	            fillColor: "rgba(220,220,220,0.2)",
+	            strokeColor: "rgba(220,220,220,1)",
+	            pointColor: "rgba(220,220,220,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(220,220,220,1)",
 	            data: [65, 59, 90, 81, 56, 55, 40]
 	          }, {
-	            label: 'My Second dataset',
-	            fillColor: 'rgba(151,187,205,0.2)',
-	            strokeColor: 'rgba(151,187,205,1)',
-	            pointColor: 'rgba(151,187,205,1)',
-	            pointStrokeColor: '#fff',
-	            pointHighlightFill: '#fff',
-	            pointHighlightStroke: 'rgba(151,187,205,1)',
+	            label: "My Second dataset",
+	            fillColor: "rgba(151,187,205,0.2)",
+	            strokeColor: "rgba(151,187,205,1)",
+	            pointColor: "rgba(151,187,205,1)",
+	            pointStrokeColor: "#fff",
+	            pointHighlightFill: "#fff",
+	            pointHighlightStroke: "rgba(151,187,205,1)",
 	            data: [28, 48, 40, 19, 96, 27, 100]
 	          }]
 	        };
@@ -17669,32 +15281,32 @@
 	      })();
 
 	      (function () {
-	        var ctx = $('#polar-chart').get(0).getContext('2d');
+	        var ctx = $("#polar-chart").get(0).getContext("2d");
 	        var data = [{
 	          value: 300,
-	          color: '#F7464A',
-	          highlight: '#FF5A5E',
-	          label: 'Red'
+	          color: "#F7464A",
+	          highlight: "#FF5A5E",
+	          label: "Red"
 	        }, {
 	          value: 50,
-	          color: '#46BFBD',
-	          highlight: '#5AD3D1',
-	          label: 'Green'
+	          color: "#46BFBD",
+	          highlight: "#5AD3D1",
+	          label: "Green"
 	        }, {
 	          value: 100,
-	          color: '#FDB45C',
-	          highlight: '#FFC870',
-	          label: 'Yellow'
+	          color: "#FDB45C",
+	          highlight: "#FFC870",
+	          label: "Yellow"
 	        }, {
 	          value: 40,
-	          color: '#949FB1',
-	          highlight: '#A8B3C5',
-	          label: 'Grey'
+	          color: "#949FB1",
+	          highlight: "#A8B3C5",
+	          label: "Grey"
 	        }, {
 	          value: 120,
-	          color: '#4D5360',
-	          highlight: '#616774',
-	          label: 'Dark Grey'
+	          color: "#4D5360",
+	          highlight: "#616774",
+	          label: "Dark Grey"
 	        }];
 	        new Chart(ctx).PolarArea(data);
 	      })();
@@ -17913,21 +15525,21 @@
 	        var chart = c3.generate({
 	          bindto: '#timeseries-chart',
 	          data: {
-	            x: 'x',
-	            columns: ['x 2013-01-01 2013-01-02 2013-01-03 2013-01-04 2013-01-05 2013-01-06'.split(' '), ['data1', 30, 200, 100, 400, 150, 250], ['data2', 130, 340, 200, 500, 250, 350]]
+	            x: "x",
+	            columns: ["x 2013-01-01 2013-01-02 2013-01-03 2013-01-04 2013-01-05 2013-01-06".split(" "), ["data1", 30, 200, 100, 400, 150, 250], ["data2", 130, 340, 200, 500, 250, 350]]
 	          },
 	          axis: {
 	            x: {
-	              type: 'timeseries',
+	              type: "timeseries",
 	              tick: {
-	                format: '%Y-%m-%d'
+	                format: "%Y-%m-%d"
 	              }
 	            }
 	          }
 	        });
 	        setTimeout(function () {
 	          chart.load({
-	            columns: [['data3', 400, 500, 450, 700, 600, 500]]
+	            columns: [["data3", 400, 500, 450, 700, 600, 500]]
 	          });
 	        }, 2000);
 	      })();
@@ -18022,7 +15634,7 @@
 	              versicolor: 'versicolor_x'
 	            },
 	            // iris data from R
-	            columns: [['setosa_x', 3.5, 3.0, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4, 2.9, 3.1, 3.7, 3.4, 3.0, 3.0, 4.0, 4.4, 3.9, 3.5, 3.8, 3.8, 3.4, 3.7, 3.6, 3.3, 3.4, 3.0, 3.4, 3.5, 3.4, 3.2, 3.1, 3.4, 4.1, 4.2, 3.1, 3.2, 3.5, 3.6, 3.0, 3.4, 3.5, 2.3, 3.2, 3.5, 3.8, 3.0, 3.8, 3.2, 3.7, 3.3], ['versicolor_x', 3.2, 3.2, 3.1, 2.3, 2.8, 2.8, 3.3, 2.4, 2.9, 2.7, 2.0, 3.0, 2.2, 2.9, 2.9, 3.1, 3.0, 2.7, 2.2, 2.5, 3.2, 2.8, 2.5, 2.8, 2.9, 3.0, 2.8, 3.0, 2.9, 2.6, 2.4, 2.4, 2.7, 2.7, 3.0, 3.4, 3.1, 2.3, 3.0, 2.5, 2.6, 3.0, 2.6, 2.3, 2.7, 3.0, 2.9, 2.9, 2.5, 2.8], ['setosa', 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2], ['versicolor', 1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3]],
+	            columns: [["setosa_x", 3.5, 3.0, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4, 2.9, 3.1, 3.7, 3.4, 3.0, 3.0, 4.0, 4.4, 3.9, 3.5, 3.8, 3.8, 3.4, 3.7, 3.6, 3.3, 3.4, 3.0, 3.4, 3.5, 3.4, 3.2, 3.1, 3.4, 4.1, 4.2, 3.1, 3.2, 3.5, 3.6, 3.0, 3.4, 3.5, 2.3, 3.2, 3.5, 3.8, 3.0, 3.8, 3.2, 3.7, 3.3], ["versicolor_x", 3.2, 3.2, 3.1, 2.3, 2.8, 2.8, 3.3, 2.4, 2.9, 2.7, 2.0, 3.0, 2.2, 2.9, 2.9, 3.1, 3.0, 2.7, 2.2, 2.5, 3.2, 2.8, 2.5, 2.8, 2.9, 3.0, 2.8, 3.0, 2.9, 2.6, 2.4, 2.4, 2.7, 2.7, 3.0, 3.4, 3.1, 2.3, 3.0, 2.5, 2.6, 3.0, 2.6, 2.3, 2.7, 3.0, 2.9, 2.9, 2.5, 2.8], ["setosa", 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2], ["versicolor", 1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3]],
 	            type: 'scatter'
 	          },
 	          axis: {
@@ -18043,7 +15655,7 @@
 	            xs: {
 	              virginica: 'virginica_x'
 	            },
-	            columns: [['virginica_x', 3.3, 2.7, 3.0, 2.9, 3.0, 3.0, 2.5, 2.9, 2.5, 3.6, 3.2, 2.7, 3.0, 2.5, 2.8, 3.2, 3.0, 3.8, 2.6, 2.2, 3.2, 2.8, 2.8, 2.7, 3.3, 3.2, 2.8, 3.0, 2.8, 3.0, 2.8, 3.8, 2.8, 2.8, 2.6, 3.0, 3.4, 3.1, 3.0, 3.1, 3.1, 3.1, 2.7, 3.2, 3.3, 3.0, 2.5, 3.0, 3.4, 3.0], ['virginica', 2.5, 1.9, 2.1, 1.8, 2.2, 2.1, 1.7, 1.8, 1.8, 2.5, 2.0, 1.9, 2.1, 2.0, 2.4, 2.3, 1.8, 2.2, 2.3, 1.5, 2.3, 2.0, 2.0, 1.8, 2.1, 1.8, 1.8, 1.8, 2.1, 1.6, 1.9, 2.0, 2.2, 1.5, 1.4, 2.3, 2.4, 1.8, 1.8, 2.1, 2.4, 2.3, 1.9, 2.3, 2.5, 2.3, 1.9, 2.0, 2.3, 1.8]]
+	            columns: [["virginica_x", 3.3, 2.7, 3.0, 2.9, 3.0, 3.0, 2.5, 2.9, 2.5, 3.6, 3.2, 2.7, 3.0, 2.5, 2.8, 3.2, 3.0, 3.8, 2.6, 2.2, 3.2, 2.8, 2.8, 2.7, 3.3, 3.2, 2.8, 3.0, 2.8, 3.0, 2.8, 3.8, 2.8, 2.8, 2.6, 3.0, 3.4, 3.1, 3.0, 3.1, 3.1, 3.1, 2.7, 3.2, 3.3, 3.0, 2.5, 3.0, 3.4, 3.0], ["virginica", 2.5, 1.9, 2.1, 1.8, 2.2, 2.1, 1.7, 1.8, 1.8, 2.5, 2.0, 1.9, 2.1, 2.0, 2.4, 2.3, 1.8, 2.2, 2.3, 1.5, 2.3, 2.0, 2.0, 1.8, 2.1, 1.8, 1.8, 1.8, 2.1, 1.6, 1.9, 2.0, 2.2, 1.5, 1.4, 2.3, 2.4, 1.8, 1.8, 2.1, 2.4, 2.3, 1.9, 2.3, 2.5, 2.3, 1.9, 2.0, 2.3, 1.8]]
 	          });
 	        }, 5000);
 
@@ -18055,7 +15667,7 @@
 
 	        setTimeout(function () {
 	          chart.load({
-	            columns: [['virginica', 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2]]
+	            columns: [["virginica", 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2]]
 	          });
 	        }, 9000);
 	      })();
@@ -18276,7 +15888,7 @@
 	    value: function componentDidMount() {
 	      (function () {
 	        // data stolen from http://howmanyleft.co.uk/vehicle/jaguar_'e'_type
-	        var tax_data = [{ 'period': '2011 Q3', 'licensed': 3407, 'sorned': 660 }, { 'period': '2011 Q2', 'licensed': 3351, 'sorned': 629 }, { 'period': '2011 Q1', 'licensed': 3269, 'sorned': 618 }, { 'period': '2010 Q4', 'licensed': 3246, 'sorned': 661 }, { 'period': '2009 Q4', 'licensed': 3171, 'sorned': 676 }, { 'period': '2008 Q4', 'licensed': 3155, 'sorned': 681 }, { 'period': '2007 Q4', 'licensed': 3226, 'sorned': 620 }, { 'period': '2006 Q4', 'licensed': 3245, 'sorned': null }, { 'period': '2005 Q4', 'licensed': 3289, 'sorned': null }];
+	        var tax_data = [{ "period": "2011 Q3", "licensed": 3407, "sorned": 660 }, { "period": "2011 Q2", "licensed": 3351, "sorned": 629 }, { "period": "2011 Q1", "licensed": 3269, "sorned": 618 }, { "period": "2010 Q4", "licensed": 3246, "sorned": 661 }, { "period": "2009 Q4", "licensed": 3171, "sorned": 676 }, { "period": "2008 Q4", "licensed": 3155, "sorned": 681 }, { "period": "2007 Q4", "licensed": 3226, "sorned": 620 }, { "period": "2006 Q4", "licensed": 3245, "sorned": null }, { "period": "2005 Q4", "licensed": 3289, "sorned": null }];
 	        Morris.Line({
 	          element: 'hero-graph',
 	          data: tax_data,
@@ -18289,7 +15901,7 @@
 	          element: 'hero-donut',
 	          data: [{ label: 'Jam', value: 25 }, { label: 'Frosted', value: 40 }, { label: 'Custard', value: 25 }, { label: 'Sugar', value: 10 }],
 	          formatter: function formatter(y) {
-	            return y + '%';
+	            return y + "%";
 	          }
 	        });
 
@@ -18330,7 +15942,7 @@
 	            React.createElement(
 	              Col,
 	              { sm: 6, collapseRight: true },
-	              React.createElement(ChartContainer, { id: 'hero-graph', name: 'Jaguar \'E\' Type vehicles in the UK' }),
+	              React.createElement(ChartContainer, { id: 'hero-graph', name: "Jaguar 'E' Type vehicles in the UK" }),
 	              React.createElement(ChartContainer, { id: 'hero-area', name: 'Quarterly Apple iOS device unit sales' })
 	            ),
 	            React.createElement(
@@ -26968,7 +24580,7 @@
 	      ruleText += hyphenate(property) + ':' + value + ';';
 	    }
 	    ruleText += '}';
-	    rules[i] = ruleText.replace('\\', '');
+	    rules[i] = ruleText.replace("\\", '');
 	    i++;
 	  }
 
@@ -27175,17 +24787,17 @@
 	        draw: function draw() {
 	          // 'tron' case
 	          if (this.$.data('skin') == 'tron') {
-	            var a = this.angle(this.cv) // Angle
-	            ,
-	                sa = this.startAngle // Previous start angle
-	            ,
-	                sat = this.startAngle // Start angle
-	            ,
-	                ea // Previous end angle
-	            ,
-	                eat = sat + a // End angle
-	            ,
-	                r = true;
+	            var a = this.angle(this.cv),
+	                // Angle
+	            sa = this.startAngle,
+	                // Previous start angle
+	            sat = this.startAngle,
+	                // Start angle
+	            ea,
+	                // Previous end angle
+	            eat = sat + a,
+	                // End angle
+	            r = true;
 
 	            this.g.lineWidth = this.lineWidth;
 
@@ -27577,9 +25189,9 @@
 
 	      vex.dialog.open({
 	        message: 'Select a date and color.',
-	        input: '<style>\n    .vex-custom-field-wrapper {\n        margin: 1em 0;\n    }\n    .vex-custom-field-wrapper > label {\n        display: inline-block;\n        margin-bottom: .2em;\n    }\n</style>\n<div class="vex-custom-field-wrapper">\n    <label for="date">Date</label>\n    <div class="vex-custom-input-wrapper">\n        <input name="date" type="date" value="' + todayDateString + '" />\n    </div>\n</div>\n<div class="vex-custom-field-wrapper">\n    <label for="color">Color</label>\n    <div class="vex-custom-input-wrapper">\n        <input name="color" type="color" value="#ff00cc" />\n    </div>\n</div>',
+	        input: "<style>\n    .vex-custom-field-wrapper {\n        margin: 1em 0;\n    }\n    .vex-custom-field-wrapper > label {\n        display: inline-block;\n        margin-bottom: .2em;\n    }\n</style>\n<div class=\"vex-custom-field-wrapper\">\n    <label for=\"date\">Date</label>\n    <div class=\"vex-custom-input-wrapper\">\n        <input name=\"date\" type=\"date\" value=\"" + todayDateString + "\" />\n    </div>\n</div>\n<div class=\"vex-custom-field-wrapper\">\n    <label for=\"color\">Color</label>\n    <div class=\"vex-custom-input-wrapper\">\n        <input name=\"color\" type=\"color\" value=\"#ff00cc\" />\n    </div>\n</div>",
 	        callback: function callback(data) {
-	          vex.dialog.alert('<h4>Result</h4>\n<p>\n    Date: <b>' + data.date + '</b><br/>\n    Color: <span style=\'position:absolute;width:20px;height:20px;background:' + data.color + ';margin:5px;\'></span>\n</p>');
+	          vex.dialog.alert("<h4>Result</h4>\n<p>\n    Date: <b>" + data.date + "</b><br/>\n    Color: <span style='position:absolute;width:20px;height:20px;background:" + data.color + ";margin:5px;'></span>\n</p>");
 	        }
 	      });
 	    }
@@ -28362,7 +25974,7 @@
 	    value: function actionRetryNotification() {
 	      var msg;
 	      msg = Messenger().post({
-	        message: 'This is your last chance. After this, there is no turning back. You take the blue pill—the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill—you stay in Wonderland, and I show you how deep the rabbit hole goes. Remember, all I\'m offering is the truth—nothing more.',
+	        message: "This is your last chance. After this, there is no turning back. You take the blue pill—the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill—you stay in Wonderland, and I show you how deep the rabbit hole goes. Remember, all I'm offering is the truth—nothing more.",
 	        singleton: false,
 	        id: 'neo',
 	        hideAfter: 10000000000,
@@ -30832,7 +28444,7 @@
 	    });
 
 	    var countries = [];
-	    $.each({ 'BD': 'Bangladesh', 'BE': 'Belgium', 'BF': 'Burkina Faso', 'BG': 'Bulgaria', 'BA': 'Bosnia and Herzegovina', 'BB': 'Barbados', 'WF': 'Wallis and Futuna', 'BL': 'Saint Bartelemey', 'BM': 'Bermuda', 'BN': 'Brunei Darussalam', 'BO': 'Bolivia', 'BH': 'Bahrain', 'BI': 'Burundi', 'BJ': 'Benin', 'BT': 'Bhutan', 'JM': 'Jamaica', 'BV': 'Bouvet Island', 'BW': 'Botswana', 'WS': 'Samoa', 'BR': 'Brazil', 'BS': 'Bahamas', 'JE': 'Jersey', 'BY': 'Belarus', 'O1': 'Other Country', 'LV': 'Latvia', 'RW': 'Rwanda', 'RS': 'Serbia', 'TL': 'Timor-Leste', 'RE': 'Reunion', 'LU': 'Luxembourg', 'TJ': 'Tajikistan', 'RO': 'Romania', 'PG': 'Papua New Guinea', 'GW': 'Guinea-Bissau', 'GU': 'Guam', 'GT': 'Guatemala', 'GS': 'South Georgia and the South Sandwich Islands', 'GR': 'Greece', 'GQ': 'Equatorial Guinea', 'GP': 'Guadeloupe', 'JP': 'Japan', 'GY': 'Guyana', 'GG': 'Guernsey', 'GF': 'French Guiana', 'GE': 'Georgia', 'GD': 'Grenada', 'GB': 'United Kingdom', 'GA': 'Gabon', 'SV': 'El Salvador', 'GN': 'Guinea', 'GM': 'Gambia', 'GL': 'Greenland', 'GI': 'Gibraltar', 'GH': 'Ghana', 'OM': 'Oman', 'TN': 'Tunisia', 'JO': 'Jordan', 'HR': 'Croatia', 'HT': 'Haiti', 'HU': 'Hungary', 'HK': 'Hong Kong', 'HN': 'Honduras', 'HM': 'Heard Island and McDonald Islands', 'VE': 'Venezuela', 'PR': 'Puerto Rico', 'PS': 'Palestinian Territory', 'PW': 'Palau', 'PT': 'Portugal', 'SJ': 'Svalbard and Jan Mayen', 'PY': 'Paraguay', 'IQ': 'Iraq', 'PA': 'Panama', 'PF': 'French Polynesia', 'BZ': 'Belize', 'PE': 'Peru', 'PK': 'Pakistan', 'PH': 'Philippines', 'PN': 'Pitcairn', 'TM': 'Turkmenistan', 'PL': 'Poland', 'PM': 'Saint Pierre and Miquelon', 'ZM': 'Zambia', 'EH': 'Western Sahara', 'RU': 'Russian Federation', 'EE': 'Estonia', 'EG': 'Egypt', 'TK': 'Tokelau', 'ZA': 'South Africa', 'EC': 'Ecuador', 'IT': 'Italy', 'VN': 'Vietnam', 'SB': 'Solomon Islands', 'EU': 'Europe', 'ET': 'Ethiopia', 'SO': 'Somalia', 'ZW': 'Zimbabwe', 'SA': 'Saudi Arabia', 'ES': 'Spain', 'ER': 'Eritrea', 'ME': 'Montenegro', 'MD': 'Moldova, Republic of', 'MG': 'Madagascar', 'MF': 'Saint Martin', 'MA': 'Morocco', 'MC': 'Monaco', 'UZ': 'Uzbekistan', 'MM': 'Myanmar', 'ML': 'Mali', 'MO': 'Macao', 'MN': 'Mongolia', 'MH': 'Marshall Islands', 'MK': 'Macedonia', 'MU': 'Mauritius', 'MT': 'Malta', 'MW': 'Malawi', 'MV': 'Maldives', 'MQ': 'Martinique', 'MP': 'Northern Mariana Islands', 'MS': 'Montserrat', 'MR': 'Mauritania', 'IM': 'Isle of Man', 'UG': 'Uganda', 'TZ': 'Tanzania, United Republic of', 'MY': 'Malaysia', 'MX': 'Mexico', 'IL': 'Israel', 'FR': 'France', 'IO': 'British Indian Ocean Territory', 'FX': 'France, Metropolitan', 'SH': 'Saint Helena', 'FI': 'Finland', 'FJ': 'Fiji', 'FK': 'Falkland Islands (Malvinas)', 'FM': 'Micronesia, Federated States of', 'FO': 'Faroe Islands', 'NI': 'Nicaragua', 'NL': 'Netherlands', 'NO': 'Norway', 'NA': 'Namibia', 'VU': 'Vanuatu', 'NC': 'New Caledonia', 'NE': 'Niger', 'NF': 'Norfolk Island', 'NG': 'Nigeria', 'NZ': 'New Zealand', 'NP': 'Nepal', 'NR': 'Nauru', 'NU': 'Niue', 'CK': 'Cook Islands', 'CI': 'Cote d\'Ivoire', 'CH': 'Switzerland', 'CO': 'Colombia', 'CN': 'China', 'CM': 'Cameroon', 'CL': 'Chile', 'CC': 'Cocos (Keeling) Islands', 'CA': 'Canada', 'CG': 'Congo', 'CF': 'Central African Republic', 'CD': 'Congo, The Democratic Republic of the', 'CZ': 'Czech Republic', 'CY': 'Cyprus', 'CX': 'Christmas Island', 'CR': 'Costa Rica', 'CV': 'Cape Verde', 'CU': 'Cuba', 'SZ': 'Swaziland', 'SY': 'Syrian Arab Republic', 'KG': 'Kyrgyzstan', 'KE': 'Kenya', 'SR': 'Suriname', 'KI': 'Kiribati', 'KH': 'Cambodia', 'KN': 'Saint Kitts and Nevis', 'KM': 'Comoros', 'ST': 'Sao Tome and Principe', 'SK': 'Slovakia', 'KR': 'Korea, Republic of', 'SI': 'Slovenia', 'KP': 'Korea, Democratic People\'s Republic of', 'KW': 'Kuwait', 'SN': 'Senegal', 'SM': 'San Marino', 'SL': 'Sierra Leone', 'SC': 'Seychelles', 'KZ': 'Kazakhstan', 'KY': 'Cayman Islands', 'SG': 'Singapore', 'SE': 'Sweden', 'SD': 'Sudan', 'DO': 'Dominican Republic', 'DM': 'Dominica', 'DJ': 'Djibouti', 'DK': 'Denmark', 'VG': 'Virgin Islands, British', 'DE': 'Germany', 'YE': 'Yemen', 'DZ': 'Algeria', 'US': 'United States', 'UY': 'Uruguay', 'YT': 'Mayotte', 'UM': 'United States Minor Outlying Islands', 'LB': 'Lebanon', 'LC': 'Saint Lucia', 'LA': 'Lao People\'s Democratic Republic', 'TV': 'Tuvalu', 'TW': 'Taiwan', 'TT': 'Trinidad and Tobago', 'TR': 'Turkey', 'LK': 'Sri Lanka', 'LI': 'Liechtenstein', 'A1': 'Anonymous Proxy', 'TO': 'Tonga', 'LT': 'Lithuania', 'A2': 'Satellite Provider', 'LR': 'Liberia', 'LS': 'Lesotho', 'TH': 'Thailand', 'TF': 'French Southern Territories', 'TG': 'Togo', 'TD': 'Chad', 'TC': 'Turks and Caicos Islands', 'LY': 'Libyan Arab Jamahiriya', 'VA': 'Holy See (Vatican City State)', 'VC': 'Saint Vincent and the Grenadines', 'AE': 'United Arab Emirates', 'AD': 'Andorra', 'AG': 'Antigua and Barbuda', 'AF': 'Afghanistan', 'AI': 'Anguilla', 'VI': 'Virgin Islands, U.S.', 'IS': 'Iceland', 'IR': 'Iran, Islamic Republic of', 'AM': 'Armenia', 'AL': 'Albania', 'AO': 'Angola', 'AN': 'Netherlands Antilles', 'AQ': 'Antarctica', 'AP': 'Asia/Pacific Region', 'AS': 'American Samoa', 'AR': 'Argentina', 'AU': 'Australia', 'AT': 'Austria', 'AW': 'Aruba', 'IN': 'India', 'AX': 'Aland Islands', 'AZ': 'Azerbaijan', 'IE': 'Ireland', 'ID': 'Indonesia', 'UA': 'Ukraine', 'QA': 'Qatar', 'MZ': 'Mozambique' }, function (k, v) {
+	    $.each({ "BD": "Bangladesh", "BE": "Belgium", "BF": "Burkina Faso", "BG": "Bulgaria", "BA": "Bosnia and Herzegovina", "BB": "Barbados", "WF": "Wallis and Futuna", "BL": "Saint Bartelemey", "BM": "Bermuda", "BN": "Brunei Darussalam", "BO": "Bolivia", "BH": "Bahrain", "BI": "Burundi", "BJ": "Benin", "BT": "Bhutan", "JM": "Jamaica", "BV": "Bouvet Island", "BW": "Botswana", "WS": "Samoa", "BR": "Brazil", "BS": "Bahamas", "JE": "Jersey", "BY": "Belarus", "O1": "Other Country", "LV": "Latvia", "RW": "Rwanda", "RS": "Serbia", "TL": "Timor-Leste", "RE": "Reunion", "LU": "Luxembourg", "TJ": "Tajikistan", "RO": "Romania", "PG": "Papua New Guinea", "GW": "Guinea-Bissau", "GU": "Guam", "GT": "Guatemala", "GS": "South Georgia and the South Sandwich Islands", "GR": "Greece", "GQ": "Equatorial Guinea", "GP": "Guadeloupe", "JP": "Japan", "GY": "Guyana", "GG": "Guernsey", "GF": "French Guiana", "GE": "Georgia", "GD": "Grenada", "GB": "United Kingdom", "GA": "Gabon", "SV": "El Salvador", "GN": "Guinea", "GM": "Gambia", "GL": "Greenland", "GI": "Gibraltar", "GH": "Ghana", "OM": "Oman", "TN": "Tunisia", "JO": "Jordan", "HR": "Croatia", "HT": "Haiti", "HU": "Hungary", "HK": "Hong Kong", "HN": "Honduras", "HM": "Heard Island and McDonald Islands", "VE": "Venezuela", "PR": "Puerto Rico", "PS": "Palestinian Territory", "PW": "Palau", "PT": "Portugal", "SJ": "Svalbard and Jan Mayen", "PY": "Paraguay", "IQ": "Iraq", "PA": "Panama", "PF": "French Polynesia", "BZ": "Belize", "PE": "Peru", "PK": "Pakistan", "PH": "Philippines", "PN": "Pitcairn", "TM": "Turkmenistan", "PL": "Poland", "PM": "Saint Pierre and Miquelon", "ZM": "Zambia", "EH": "Western Sahara", "RU": "Russian Federation", "EE": "Estonia", "EG": "Egypt", "TK": "Tokelau", "ZA": "South Africa", "EC": "Ecuador", "IT": "Italy", "VN": "Vietnam", "SB": "Solomon Islands", "EU": "Europe", "ET": "Ethiopia", "SO": "Somalia", "ZW": "Zimbabwe", "SA": "Saudi Arabia", "ES": "Spain", "ER": "Eritrea", "ME": "Montenegro", "MD": "Moldova, Republic of", "MG": "Madagascar", "MF": "Saint Martin", "MA": "Morocco", "MC": "Monaco", "UZ": "Uzbekistan", "MM": "Myanmar", "ML": "Mali", "MO": "Macao", "MN": "Mongolia", "MH": "Marshall Islands", "MK": "Macedonia", "MU": "Mauritius", "MT": "Malta", "MW": "Malawi", "MV": "Maldives", "MQ": "Martinique", "MP": "Northern Mariana Islands", "MS": "Montserrat", "MR": "Mauritania", "IM": "Isle of Man", "UG": "Uganda", "TZ": "Tanzania, United Republic of", "MY": "Malaysia", "MX": "Mexico", "IL": "Israel", "FR": "France", "IO": "British Indian Ocean Territory", "FX": "France, Metropolitan", "SH": "Saint Helena", "FI": "Finland", "FJ": "Fiji", "FK": "Falkland Islands (Malvinas)", "FM": "Micronesia, Federated States of", "FO": "Faroe Islands", "NI": "Nicaragua", "NL": "Netherlands", "NO": "Norway", "NA": "Namibia", "VU": "Vanuatu", "NC": "New Caledonia", "NE": "Niger", "NF": "Norfolk Island", "NG": "Nigeria", "NZ": "New Zealand", "NP": "Nepal", "NR": "Nauru", "NU": "Niue", "CK": "Cook Islands", "CI": "Cote d'Ivoire", "CH": "Switzerland", "CO": "Colombia", "CN": "China", "CM": "Cameroon", "CL": "Chile", "CC": "Cocos (Keeling) Islands", "CA": "Canada", "CG": "Congo", "CF": "Central African Republic", "CD": "Congo, The Democratic Republic of the", "CZ": "Czech Republic", "CY": "Cyprus", "CX": "Christmas Island", "CR": "Costa Rica", "CV": "Cape Verde", "CU": "Cuba", "SZ": "Swaziland", "SY": "Syrian Arab Republic", "KG": "Kyrgyzstan", "KE": "Kenya", "SR": "Suriname", "KI": "Kiribati", "KH": "Cambodia", "KN": "Saint Kitts and Nevis", "KM": "Comoros", "ST": "Sao Tome and Principe", "SK": "Slovakia", "KR": "Korea, Republic of", "SI": "Slovenia", "KP": "Korea, Democratic People's Republic of", "KW": "Kuwait", "SN": "Senegal", "SM": "San Marino", "SL": "Sierra Leone", "SC": "Seychelles", "KZ": "Kazakhstan", "KY": "Cayman Islands", "SG": "Singapore", "SE": "Sweden", "SD": "Sudan", "DO": "Dominican Republic", "DM": "Dominica", "DJ": "Djibouti", "DK": "Denmark", "VG": "Virgin Islands, British", "DE": "Germany", "YE": "Yemen", "DZ": "Algeria", "US": "United States", "UY": "Uruguay", "YT": "Mayotte", "UM": "United States Minor Outlying Islands", "LB": "Lebanon", "LC": "Saint Lucia", "LA": "Lao People's Democratic Republic", "TV": "Tuvalu", "TW": "Taiwan", "TT": "Trinidad and Tobago", "TR": "Turkey", "LK": "Sri Lanka", "LI": "Liechtenstein", "A1": "Anonymous Proxy", "TO": "Tonga", "LT": "Lithuania", "A2": "Satellite Provider", "LR": "Liberia", "LS": "Lesotho", "TH": "Thailand", "TF": "French Southern Territories", "TG": "Togo", "TD": "Chad", "TC": "Turks and Caicos Islands", "LY": "Libyan Arab Jamahiriya", "VA": "Holy See (Vatican City State)", "VC": "Saint Vincent and the Grenadines", "AE": "United Arab Emirates", "AD": "Andorra", "AG": "Antigua and Barbuda", "AF": "Afghanistan", "AI": "Anguilla", "VI": "Virgin Islands, U.S.", "IS": "Iceland", "IR": "Iran, Islamic Republic of", "AM": "Armenia", "AL": "Albania", "AO": "Angola", "AN": "Netherlands Antilles", "AQ": "Antarctica", "AP": "Asia/Pacific Region", "AS": "American Samoa", "AR": "Argentina", "AU": "Australia", "AT": "Austria", "AW": "Aruba", "IN": "India", "AX": "Aland Islands", "AZ": "Azerbaijan", "IE": "Ireland", "ID": "Indonesia", "UA": "Ukraine", "QA": "Qatar", "MZ": "Mozambique" }, function (k, v) {
 	      countries.push({ id: k, text: v });
 	    });
 	    $('#country').editable({
@@ -31369,10 +28981,10 @@
 	      autoFocus: true
 	    });
 
-	    $('#form-2').validate({
+	    $("#form-2").validate({
 	      rules: {
 	        confirm_password: {
-	          equalTo: '#password'
+	          equalTo: "#password"
 	        }
 	      }
 	    });
@@ -31397,7 +29009,7 @@
 	    });
 
 	    $('#wizard-4').steps({
-	      stepsOrientation: 'vertical'
+	      stepsOrientation: "vertical"
 	    });
 
 	    $('#create-step').bind('submit', this.createStep);
@@ -37941,7 +35553,7 @@
 	                          ),
 	                          React.createElement(
 	                            Table,
-	                            { striped: true, bordered: true, className: 'tablesaw', 'data-mode': 'swipe', 'data-sortable': true, 'data-sortable-switch': true, 'data-mode-switch': true },
+	                            { striped: true, bordered: true, className: 'tablesaw', 'data-mode': "swipe", 'data-sortable': true, 'data-sortable-switch': true, 'data-mode-switch': true },
 	                            React.createElement(
 	                              'thead',
 	                              null,
@@ -39948,61 +37560,61 @@
 	                          React.createElement('br', null),
 	                          React.createElement(
 	                            Form,
-	                            { id: 'coords',
-	                              className: 'coords' },
+	                            { id: "coords",
+	                              className: "coords" },
 	                            React.createElement(
 	                              'div',
-	                              { className: 'inline-labels' },
+	                              { className: "inline-labels" },
 	                              React.createElement(
 	                                Label,
 	                                { inline: true },
 	                                'X1 ',
-	                                React.createElement(Input, { defaultValue: 0, className: 'form-control', type: 'text', size: '4', id: 'x1', name: 'x1' })
+	                                React.createElement(Input, { defaultValue: 0, className: 'form-control', type: "text", size: "4", id: "x1", name: "x1" })
 	                              ),
 	                              React.createElement(
 	                                Label,
 	                                { inline: true },
 	                                'Y1 ',
-	                                React.createElement(Input, { defaultValue: 0, className: 'form-control', type: 'text', size: '4', id: 'y1', name: 'y1' })
+	                                React.createElement(Input, { defaultValue: 0, className: 'form-control', type: "text", size: "4", id: "y1", name: "y1" })
 	                              ),
 	                              React.createElement(
 	                                Label,
 	                                { inline: true },
 	                                'X2 ',
-	                                React.createElement(Input, { defaultValue: 0, className: 'form-control', type: 'text', size: '4', id: 'x2', name: 'x2' })
+	                                React.createElement(Input, { defaultValue: 0, className: 'form-control', type: "text", size: "4", id: "x2", name: "x2" })
 	                              ),
 	                              React.createElement(
 	                                Label,
 	                                { inline: true },
 	                                'Y2 ',
-	                                React.createElement(Input, { defaultValue: 0, className: 'form-control', type: 'text', size: '4', id: 'y2', name: 'y2' })
+	                                React.createElement(Input, { defaultValue: 0, className: 'form-control', type: "text", size: "4", id: "y2", name: "y2" })
 	                              ),
 	                              React.createElement(
 	                                Label,
 	                                { inline: true },
 	                                'W ',
-	                                React.createElement(Input, { defaultValue: 0, className: 'form-control', type: 'text', size: '4', id: 'w', name: 'w' })
+	                                React.createElement(Input, { defaultValue: 0, className: 'form-control', type: "text", size: "4", id: "w", name: "w" })
 	                              ),
 	                              React.createElement(
 	                                Label,
 	                                { inline: true },
 	                                'H ',
-	                                React.createElement(Input, { defaultValue: 0, className: 'form-control', type: 'text', size: '4', id: 'h', name: 'h' })
+	                                React.createElement(Input, { defaultValue: 0, className: 'form-control', type: "text", size: "4", id: "h", name: "h" })
 	                              )
 	                            )
 	                          ),
 	                          React.createElement(
 	                            'div',
-	                            { className: 'description' },
+	                            { className: "description" },
 	                            React.createElement(
 	                              'p',
 	                              null,
 	                              React.createElement(
 	                                'b',
 	                                null,
-	                                'An example with a basic event handler.'
+	                                "An example with a basic event handler."
 	                              ),
-	                              'Here we\'ve tied several form values together with a simple event handler invocation. The result is that the form values are updated in real-time as the selection is changed using Jcrop\'s ',
+	                              "Here we've tied several form values together with a simple event handler invocation. The result is that the form values are updated in real-time as the selection is changed using Jcrop's ",
 	                              React.createElement(
 	                                'em',
 	                                null,
@@ -40013,7 +37625,7 @@
 	                            React.createElement(
 	                              'p',
 	                              null,
-	                              'That\'s how easily Jcrop can be integrated into a traditional web form!'
+	                              "That's how easily Jcrop can be integrated into a traditional web form!"
 	                            )
 	                          )
 	                        )
@@ -40166,10 +37778,10 @@
 	                                React.createElement('br', null),
 	                                React.createElement(
 	                                  'div',
-	                                  { className: 'description' },
+	                                  { className: "description" },
 	                                  React.createElement(
 	                                    'p',
-	                                    { id: 'shadetxt', style: { display: 'none', color: '#900' } },
+	                                    { id: "shadetxt", style: { display: 'none', color: '#900' } },
 	                                    React.createElement(
 	                                      'b',
 	                                      null,
@@ -40178,7 +37790,7 @@
 	                                    React.createElement(
 	                                      'span',
 	                                      null,
-	                                      'Jcrop now includes a shading mode that facilitates building better transparent Jcrop instances. The experimental shader is less robust than Jcrop\'s default shading method and should only be used if you require this functionality.'
+	                                      "Jcrop now includes a shading mode that facilitates building better transparent Jcrop instances. The experimental shader is less robust than Jcrop's default shading method and should only be used if you require this functionality."
 	                                    )
 	                                  ),
 	                                  React.createElement(
@@ -40192,14 +37804,14 @@
 	                                    React.createElement(
 	                                      'span',
 	                                      null,
-	                                      'Demonstration of animateTo API method and transitions for bgColor and bgOpacity options. Color fading requires inclusion of John Resig\'s jQuery'
+	                                      "Demonstration of animateTo API method and transitions for bgColor and bgOpacity options. Color fading requires inclusion of John Resig's jQuery"
 	                                    ),
 	                                    React.createElement(
 	                                      'a',
-	                                      { href: 'http://plugins.jquery.com/project/color' },
+	                                      { href: "http://plugins.jquery.com/project/color" },
 	                                      'Color  Animations'
 	                                    ),
-	                                    ' plugin. If it is not included, colors will not fade.'
+	                                    " plugin. If it is not included, colors will not fade."
 	                                  )
 	                                )
 	                              ),
@@ -42652,7 +40264,7 @@
 	                          React.createElement(
 	                            'p',
 	                            null,
-	                            'To get started, head over to the Node.JS official website and download the installer for the platform of your choice: '
+	                            "To get started, head over to the Node.JS official website and download the installer for the platform of your choice: "
 	                          ),
 	                          React.createElement(
 	                            'h3',
@@ -42675,23 +40287,23 @@
 	                            React.createElement(
 	                              'span',
 	                              null,
-	                              'NPM is needed for installing the dependencies defined in package.json (found in the root of Rubix folder). It should be bundled by default in the Node.JS installation for Windows (if you downloaded and installed the MSI) / MacOSX (if you downloaded and installed the PKG file) / if you built from source.'
+	                              "NPM is needed for installing the dependencies defined in package.json (found in the root of Rubix folder). It should be bundled by default in the Node.JS installation for Windows (if you downloaded and installed the MSI) / MacOSX (if you downloaded and installed the PKG file) / if you built from source."
 	                            )
 	                          ),
 	                          React.createElement(
 	                            'p',
 	                            null,
-	                            'If it isn\'t available in your environment for some reason you can try one of the fancy installs suggested in the NPM documentation located here: ',
+	                            "If it isn't available in your environment for some reason you can try one of the fancy installs suggested in the NPM documentation located here: ",
 	                            React.createElement(
 	                              'a',
 	                              { target: '_blank', href: 'https://github.com/npm/npm#fancy-install-unix' },
-	                              'https://github.com/npm/npm#fancy-install-unix'
+	                              "https://github.com/npm/npm#fancy-install-unix"
 	                            )
 	                          ),
 	                          React.createElement(
 	                            'p',
 	                            null,
-	                            'Windows users need to ensure they have Python 2.7.3 installed along with Microsoft Visual Studio C++ 2010/2012/2013 for building some node modules that have C/C++ bindings.'
+	                            "Windows users need to ensure they have Python 2.7.3 installed along with Microsoft Visual Studio C++ 2010/2012/2013 for building some node modules that have C/C++ bindings."
 	                          )
 	                        )
 	                      )
@@ -42741,7 +40353,7 @@
 	                          React.createElement(
 	                            'p',
 	                            null,
-	                            'Change directory to root of Rubix and run the following command (this launches the \'app\' starter project) depending on your OS environment:'
+	                            "Change directory to root of Rubix and run the following command (this launches the 'app' starter project) depending on your OS environment:"
 	                          ),
 	                          React.createElement(
 	                            'p',
@@ -42761,7 +40373,7 @@
 	                              React.createElement(
 	                                'code',
 	                                { className: 'language-bash' },
-	                                '> cd default\\rubix-3.0\n> npm install .\n> npm install -g gulp\n> gulp'
+	                                "> cd default\\rubix-3.0\n> npm install .\n> npm install -g gulp\n> gulp"
 	                              )
 	                            )
 	                          ),
@@ -42785,7 +40397,7 @@
 	                              React.createElement(
 	                                'code',
 	                                { className: 'language-bash' },
-	                                '> gulp --rtl --name demo'
+	                                "> gulp --rtl --name demo"
 	                              )
 	                            )
 	                          ),
@@ -42807,7 +40419,7 @@
 	                              React.createElement(
 	                                'code',
 	                                { className: 'language-bash' },
-	                                '$ cd default/rubix-3.0\n$ npm install .\n$ npm install -g gulp\n$ gulp'
+	                                "$ cd default/rubix-3.0\n$ npm install .\n$ npm install -g gulp\n$ gulp"
 	                              )
 	                            )
 	                          ),
@@ -42831,7 +40443,7 @@
 	                              React.createElement(
 	                                'code',
 	                                { className: 'language-bash' },
-	                                '$ gulp --rtl --name demo'
+	                                "$ gulp --rtl --name demo"
 	                              )
 	                            )
 	                          ),
@@ -43164,7 +40776,7 @@
 	                          React.createElement(
 	                            'p',
 	                            null,
-	                            'To get started, head over to the Node.JS official website and download the installer for the platform of your choice: '
+	                            "To get started, head over to the Node.JS official website and download the installer for the platform of your choice: "
 	                          ),
 	                          React.createElement(
 	                            'h3',
@@ -43187,23 +40799,23 @@
 	                            React.createElement(
 	                              'span',
 	                              null,
-	                              'NPM is needed for installing the dependencies defined in package.json (found in the root of Rubix folder). It should be bundled by default in the Node.JS installation for Windows (if you downloaded and installed the MSI) / MacOSX (if you downloaded and installed the PKG file) / if you built from source.'
+	                              "NPM is needed for installing the dependencies defined in package.json (found in the root of Rubix folder). It should be bundled by default in the Node.JS installation for Windows (if you downloaded and installed the MSI) / MacOSX (if you downloaded and installed the PKG file) / if you built from source."
 	                            )
 	                          ),
 	                          React.createElement(
 	                            'p',
 	                            null,
-	                            'If it isn\'t available in your environment for some reason you can try one of the fancy installs suggested in the NPM documentation located here: ',
+	                            "If it isn't available in your environment for some reason you can try one of the fancy installs suggested in the NPM documentation located here: ",
 	                            React.createElement(
 	                              'a',
 	                              { target: '_blank', href: 'https://github.com/npm/npm#fancy-install-unix' },
-	                              'https://github.com/npm/npm#fancy-install-unix'
+	                              "https://github.com/npm/npm#fancy-install-unix"
 	                            )
 	                          ),
 	                          React.createElement(
 	                            'p',
 	                            null,
-	                            'Windows users need to ensure they have Python 2.7.3 installed along with Microsoft Visual Studio C++ 2010/2012/2013 for building some node modules that have C/C++ bindings.'
+	                            "Windows users need to ensure they have Python 2.7.3 installed along with Microsoft Visual Studio C++ 2010/2012/2013 for building some node modules that have C/C++ bindings."
 	                          )
 	                        )
 	                      )
@@ -43253,7 +40865,7 @@
 	                          React.createElement(
 	                            'p',
 	                            null,
-	                            'To get started, head over to the Ruby on Rails official website\'s download section and install Rails by following the instructions as detailed here: ',
+	                            "To get started, head over to the Ruby on Rails official website's download section and install Rails by following the instructions as detailed here: ",
 	                            React.createElement(
 	                              'a',
 	                              { target: '_blank', href: 'http://rubyonrails.org/download/' },
@@ -43308,7 +40920,7 @@
 	                          React.createElement(
 	                            'p',
 	                            null,
-	                            'Change to the demo directory in your rails folder and run the following commands (depending on your OS environment):'
+	                            "Change to the demo directory in your rails folder and run the following commands (depending on your OS environment):"
 	                          ),
 	                          React.createElement(
 	                            'p',
@@ -43328,7 +40940,7 @@
 	                              React.createElement(
 	                                'code',
 	                                { className: 'language-bash' },
-	                                '> cd rails\\demo\n> npm install .\n> npm install -g gulp\n> rails server'
+	                                "> cd rails\\demo\n> npm install .\n> npm install -g gulp\n> rails server"
 	                              )
 	                            )
 	                          ),
@@ -43346,7 +40958,7 @@
 	                              React.createElement(
 	                                'code',
 	                                { className: 'language-bash' },
-	                                '> cd rails\\demo\n> gulp'
+	                                "> cd rails\\demo\n> gulp"
 	                              )
 	                            )
 	                          ),
@@ -43368,7 +40980,7 @@
 	                              React.createElement(
 	                                'code',
 	                                { className: 'language-bash' },
-	                                '$ cd rails/demo\n$ npm install .\n$ npm install -g gulp\n$ rails server'
+	                                "$ cd rails/demo\n$ npm install .\n$ npm install -g gulp\n$ rails server"
 	                              )
 	                            )
 	                          ),
@@ -43386,7 +40998,7 @@
 	                              React.createElement(
 	                                'code',
 	                                { className: 'language-bash' },
-	                                '$ cd rails/demo\n$ gulp'
+	                                "$ cd rails/demo\n$ gulp"
 	                              )
 	                            )
 	                          ),
@@ -43500,7 +41112,7 @@
 	                              React.createElement(
 	                                'code',
 	                                { className: 'language-javascript' },
-	                                '<%= render partial: \'rubix/render\', locals: {response: @response} %>\n'
+	                                "<%= render partial: 'rubix/render', locals: {response: @response} %>\n"
 	                              )
 	                            )
 	                          ),
@@ -43511,7 +41123,7 @@
 	                            React.createElement(
 	                              'code',
 	                              null,
-	                              '@response'
+	                              "@response"
 	                            ),
 	                            ' local must contain a ',
 	                            React.createElement(
@@ -43703,12 +41315,12 @@
 	                          React.createElement(
 	                            'p',
 	                            null,
-	                            'The Gulpfile is divided into 4 main sections: One that handles SASS to CSS compilation, JSX to JS compilation, WebFont compilation and the Development server for quick testing and debugging.'
+	                            "The Gulpfile is divided into 4 main sections: One that handles SASS to CSS compilation, JSX to JS compilation, WebFont compilation and the Development server for quick testing and debugging."
 	                          ),
 	                          React.createElement(
 	                            'p',
 	                            null,
-	                            'We\'ll handle each section in its own individual doc pages later. However, before we get to that lets discuss the environment options provided:'
+	                            "We'll handle each section in its own individual doc pages later. However, before we get to that lets discuss the environment options provided:"
 	                          ),
 	                          React.createElement(
 	                            Table,
@@ -43806,12 +41418,12 @@
 	                                    React.createElement(
 	                                      'p',
 	                                      null,
-	                                      'A name for your project/app. The necessary file structures need to exist before you can call this command. Consult the documentation on how to scaffold one if you\'re starting a blank project.'
+	                                      "A name for your project/app. The necessary file structures need to exist before you can call this command. Consult the documentation on how to scaffold one if you're starting a blank project."
 	                                    ),
 	                                    React.createElement(
 	                                      'p',
 	                                      null,
-	                                      'By default we ship a ',
+	                                      "By default we ship a ",
 	                                      React.createElement(
 	                                        'strong',
 	                                        null,
@@ -43828,7 +41440,7 @@
 	                                    React.createElement(
 	                                      'p',
 	                                      null,
-	                                      'Use the demo project as a reference while creating your own project'
+	                                      "Use the demo project as a reference while creating your own project"
 	                                    )
 	                                  )
 	                                )
@@ -43892,7 +41504,7 @@
 	                                    React.createElement(
 	                                      'p',
 	                                      null,
-	                                      'A switch that automatically generates an RTL equivalent of the compiled CSS files using Twitter\'s css-flip. This is turned off by default. To access the RTL resource point your browser to http://localhost:8080/rtl/'
+	                                      "A switch that automatically generates an RTL equivalent of the compiled CSS files using Twitter's css-flip. This is turned off by default. To access the RTL resource point your browser to http://localhost:8080/rtl/"
 	                                    )
 	                                  )
 	                                )
@@ -43956,7 +41568,7 @@
 	                                    React.createElement(
 	                                      'p',
 	                                      null,
-	                                      'Development server port.'
+	                                      "Development server port."
 	                                    )
 	                                  )
 	                                )
@@ -44020,7 +41632,7 @@
 	                                    React.createElement(
 	                                      'p',
 	                                      null,
-	                                      'Webpack dev server hostname.'
+	                                      "Webpack dev server hostname."
 	                                    )
 	                                  )
 	                                )
@@ -44084,7 +41696,7 @@
 	                                    React.createElement(
 	                                      'p',
 	                                      null,
-	                                      'Webpack dev server port.'
+	                                      "Webpack dev server port."
 	                                    )
 	                                  )
 	                                )
@@ -44148,23 +41760,23 @@
 	                                    React.createElement(
 	                                      'p',
 	                                      null,
-	                                      'A boolean flag like ',
+	                                      "A boolean flag like ",
 	                                      React.createElement(
 	                                        'strong',
 	                                        null,
-	                                        '--rtl'
+	                                        "--rtl"
 	                                      ),
-	                                      '. Run this when you are done with development as it compiles, minifies and bundles all the source CSS and JS files. For bundling external plugins please consult ',
+	                                      ". Run this when you are done with development as it compiles, minifies and bundles all the source CSS and JS files. For bundling external plugins please consult ",
 	                                      React.createElement(
 	                                        'strong',
 	                                        null,
 	                                        React.createElement(
 	                                          _reactRouter.Link,
 	                                          { to: '/app/docs/gulpfile/externalplugins' },
-	                                          'Gulpfile.js > External Plugins'
+	                                          "Gulpfile.js > External Plugins"
 	                                        )
 	                                      ),
-	                                      ' doc page.'
+	                                      " doc page."
 	                                    )
 	                                  )
 	                                )
@@ -44346,7 +41958,7 @@
 	                          React.createElement(
 	                            'p',
 	                            null,
-	                            'The Sass section in the Gulpfile is delimited by a ',
+	                            "The Sass section in the Gulpfile is delimited by a ",
 	                            React.createElement(
 	                              'code',
 	                              null,
@@ -44452,7 +42064,7 @@
 	                                  React.createElement(
 	                                    'p',
 	                                    null,
-	                                    'We have included autoprefixer so that you can keep your sass files clean by not using mixins or specific browser/vendor prefixes. Autoprefixer takes care of that for you and you should generally avoid hardcoding prefixes which are bound to get deprecated in the future.'
+	                                    "We have included autoprefixer so that you can keep your sass files clean by not using mixins or specific browser/vendor prefixes. Autoprefixer takes care of that for you and you should generally avoid hardcoding prefixes which are bound to get deprecated in the future."
 	                                  )
 	                                )
 	                              ),
@@ -44487,23 +42099,23 @@
 	                                  React.createElement(
 	                                    'p',
 	                                    null,
-	                                    'The second gulp task called "sass:app:rtl" depends on "sass:app". This task is only called if the argument ',
+	                                    "The second gulp task called \"sass:app:rtl\" depends on \"sass:app\". This task is only called if the argument ",
 	                                    React.createElement(
 	                                      'strong',
 	                                      null,
 	                                      '--rtl'
 	                                    ),
-	                                    ' is passed to gulp command (See: ',
+	                                    " is passed to gulp command (See: ",
 	                                    React.createElement(
 	                                      _reactRouter.Link,
 	                                      { to: '/app/docs/gulpfile/basics' },
 	                                      React.createElement(
 	                                        'strong',
 	                                        null,
-	                                        'Gulpfile.js > Basics'
+	                                        "Gulpfile.js > Basics"
 	                                      )
 	                                    ),
-	                                    ' for more info). This task collects all the files generated from Task 1 above and flips them to RTL format and the final modified output is written to the destination folder ',
+	                                    " for more info). This task collects all the files generated from Task 1 above and flips them to RTL format and the final modified output is written to the destination folder ",
 	                                    React.createElement(
 	                                      'code',
 	                                      null,
@@ -44530,19 +42142,19 @@
 	                                  React.createElement(
 	                                    'p',
 	                                    null,
-	                                    'The third and fourth gulp task are run during production (if argument ',
+	                                    "The third and fourth gulp task are run during production (if argument ",
 	                                    React.createElement(
 	                                      'strong',
 	                                      null,
 	                                      '--production'
 	                                    ),
-	                                    ' is passed to gulp command). The fourth task also depends on ',
+	                                    " is passed to gulp command). The fourth task also depends on ",
 	                                    React.createElement(
 	                                      'strong',
 	                                      null,
 	                                      '--rtl'
 	                                    ),
-	                                    ' argument being passed to gulp command. These tasks minify the CSS generated from Task 1 and Task 2.'
+	                                    " argument being passed to gulp command. These tasks minify the CSS generated from Task 1 and Task 2."
 	                                  )
 	                                )
 	                              ),
@@ -44564,19 +42176,19 @@
 	                                  React.createElement(
 	                                    'p',
 	                                    null,
-	                                    'The fifth and sixth gulp task are run during production (if argument ',
+	                                    "The fifth and sixth gulp task are run during production (if argument ",
 	                                    React.createElement(
 	                                      'strong',
 	                                      null,
 	                                      '--production'
 	                                    ),
-	                                    ' is passed to gulp command). The sixth task also depends on ',
+	                                    " is passed to gulp command). The sixth task also depends on ",
 	                                    React.createElement(
 	                                      'strong',
 	                                      null,
 	                                      '--rtl'
 	                                    ),
-	                                    ' argument being passed to gulp command. These tasks take care of a very specific and lesser known IE9 related stylesheet bug. IE9 has hard limits on the number of selectors allowed in a CSS file. Once the limit is reached, IE silently fails and just ignores any further CSS leaving parts of your site totally unstyled. To fix this issue we use the awesome ',
+	                                    " argument being passed to gulp command. These tasks take care of a very specific and lesser known IE9 related stylesheet bug. IE9 has hard limits on the number of selectors allowed in a CSS file. Once the limit is reached, IE silently fails and just ignores any further CSS leaving parts of your site totally unstyled. To fix this issue we use the awesome ",
 	                                    React.createElement(
 	                                      'a',
 	                                      { target: '_blank', href: 'http://blesscss.com/' },
@@ -44587,13 +42199,13 @@
 	                                  React.createElement(
 	                                    'p',
 	                                    null,
-	                                    'The blessed files are written to ',
+	                                    "The blessed files are written to ",
 	                                    React.createElement(
 	                                      'code',
 	                                      null,
 	                                      'public/css/app/blessed/ltr'
 	                                    ),
-	                                    ' and <',
+	                                    " and <",
 	                                    React.createElement(
 	                                      'code',
 	                                      null,
@@ -44604,13 +42216,13 @@
 	                                  React.createElement(
 	                                    'p',
 	                                    null,
-	                                    'The blessed files are ordered (ex: main-blessed1.css, main.css). These stylesheets should be placed, in a descending order, before the closing of the ',
+	                                    "The blessed files are ordered (ex: main-blessed1.css, main.css). These stylesheets should be placed, in a descending order, before the closing of the ",
 	                                    React.createElement(
 	                                      'code',
 	                                      null,
-	                                      '<head>'
+	                                      "<head>"
 	                                    ),
-	                                    ' tag. Here is an example snippet:'
+	                                    " tag. Here is an example snippet:"
 	                                  )
 	                                )
 	                              )
@@ -44622,12 +42234,12 @@
 	                            React.createElement(
 	                              'code',
 	                              { className: 'language-markup' },
-	                              '  <link rel=\'stylesheet\' type=\'text/css\' media=\'screen,print\' href=\'/css/app/blessed/ltr/main-blessed1.css\' />\n',
-	                              '  <link rel=\'stylesheet\' type=\'text/css\' media=\'screen,print\' href=\'/css/app/blessed/ltr/main.css\' />\n',
-	                              '  <link rel=\'stylesheet\' type=\'text/css\' media=\'screen\' href=\'/css/app/blessed/ltr/theme.css\' />\n',
-	                              '  <link rel=\'stylesheet\' type=\'text/css\' media=\'screen\' href=\'/css/app/blessed/ltr/colors-blessed1.css\' />\n',
-	                              '  <link rel=\'stylesheet\' type=\'text/css\' media=\'screen\' href=\'/css/app/blessed/ltr/colors.css\' />\n',
-	                              '  <link rel=\'stylesheet\' type=\'text/css\' media=\'screen\' href=\'/css/app/blessed/ltr/font-faces.css\' />\n'
+	                              "  <link rel='stylesheet' type='text/css' media='screen,print' href='/css/app/blessed/ltr/main-blessed1.css' />\n",
+	                              "  <link rel='stylesheet' type='text/css' media='screen,print' href='/css/app/blessed/ltr/main.css' />\n",
+	                              "  <link rel='stylesheet' type='text/css' media='screen' href='/css/app/blessed/ltr/theme.css' />\n",
+	                              "  <link rel='stylesheet' type='text/css' media='screen' href='/css/app/blessed/ltr/colors-blessed1.css' />\n",
+	                              "  <link rel='stylesheet' type='text/css' media='screen' href='/css/app/blessed/ltr/colors.css' />\n",
+	                              "  <link rel='stylesheet' type='text/css' media='screen' href='/css/app/blessed/ltr/font-faces.css' />\n"
 	                            )
 	                          ),
 	                          React.createElement('br', null)
@@ -44788,7 +42400,7 @@
 	                          React.createElement(
 	                            'p',
 	                            null,
-	                            'The JSX section in the Gulpfile is delimited by a ',
+	                            "The JSX section in the Gulpfile is delimited by a ",
 	                            React.createElement(
 	                              'code',
 	                              null,
@@ -44838,7 +42450,7 @@
 	                              null,
 	                              'public/css/fonts/app/fonts.css'
 	                            ),
-	                            '. This is the preferred way of including web fonts in your project. You\'ll notice performance improvements immediately and you needn\'t worry about maintaining and serving 5 different font types.'
+	                            ". This is the preferred way of including web fonts in your project. You'll notice performance improvements immediately and you needn't worry about maintaining and serving 5 different font types."
 	                          )
 	                        )
 	                      )
@@ -45380,13 +42992,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Once you have everything setup (if you haven\'t go back to the ',
+	              "Once you have everything setup (if you haven't go back to the ",
 	              React.createElement(
 	                _reactRouter.Link,
 	                { to: '/app/docs/installation' },
 	                'Installation'
 	              ),
-	              ' page and finish the installation) you\'ll notice a file structure similar to this:'
+	              " page and finish the installation) you'll notice a file structure similar to this:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -45507,42 +43119,42 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'This file is the starting point of your app. Look for it in the ',
+	              "This file is the starting point of your app. Look for it in the ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'src/jsx/app'
 	              ),
-	              ' folder.'
+	              " folder."
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'The first few lines of the file contain a snippet of code that initializes Mozilla L20n. The first parameter passed to the locale is your project name (this variable is replaced at compilation time with your project name). So if your project\'s name is ap, then all your locales are stored in ',
+	              "The first few lines of the file contain a snippet of code that initializes Mozilla L20n. The first parameter passed to the locale is your project name (this variable is replaced at compilation time with your project name). So if your project's name is ap, then all your locales are stored in ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'public/locales/app'
 	              ),
-	              ' (For reference see the locales stored in ',
+	              " (For reference see the locales stored in ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'public/locales/demo'
 	              ),
-	              '). You can pass your locales to the ',
+	              "). You can pass your locales to the ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'locales'
 	              ),
-	              ' option and also set the ',
+	              " option and also set the ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'default'
 	              ),
-	              ' locale.'
+	              " locale."
 	            ),
 	            React.createElement(
 	              'div',
@@ -45553,23 +43165,23 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-javascript' },
-	                  'l20n.initializeLocales(__APPNAME__, {\n',
-	                  '  \'locales\': [\'en-US\'],\n',
-	                  '  \'default\': \'en-US\'\n',
-	                  '}});\n'
+	                  "l20n.initializeLocales(__APPNAME__, {\n",
+	                  "  'locales': ['en-US'],\n",
+	                  "  'default': 'en-US'\n",
+	                  "}});\n"
 	                )
 	              )
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'Store all your routes in ',
+	              "Store all your routes in ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'src/jsx/app/routes'
 	              ),
-	              ' folder and require them in src/jsx/app/routes.jsx. An example route pointing to a blank page is show in the routes.jsx file:'
+	              " folder and require them in src/jsx/app/routes.jsx. An example route pointing to a blank page is show in the routes.jsx file:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -45580,25 +43192,25 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-javascript' },
-	                  'import Blank from \'routes/blank\';\n'
+	                  "import Blank from 'routes/blank';\n"
 	                )
 	              )
 	            ),
 	            React.createElement(
 	              Alert,
 	              { info: true },
-	              'For routing we make use of the excellent ',
+	              "For routing we make use of the excellent ",
 	              React.createElement(
 	                AlertLink,
 	                { href: 'http://rackt.github.io/react-router/tags/v1.0.0-beta3.html', target: '_blank' },
 	                'react-router'
 	              ),
-	              ' library. Its advised that you go through the documentation for react-router before reading this section.'
+	              " library. Its advised that you go through the documentation for react-router before reading this section."
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'Now, we define routes to the blank page. You can see from this snippet that we have referenced the variable to the blank page we required earlier.'
+	              "Now, we define routes to the blank page. You can see from this snippet that we have referenced the variable to the blank page we required earlier."
 	            ),
 	            React.createElement(
 	              'div',
@@ -45609,26 +43221,26 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-javascript' },
-	                  'export default (withHistory, onUpdate) => {\n',
-	                  '  const history = withHistory? new BrowserHistory : null;\n',
-	                  '  return (\n',
-	                  '    <Router history={history} onUpdate={onUpdate}>\n',
-	                  '      <Route path=\'/\' component={Blank} />\n',
-	                  '    </Route>\n',
-	                  '  );\n',
-	                  ');\n'
+	                  "export default (withHistory, onUpdate) => {\n",
+	                  "  const history = withHistory? new BrowserHistory : null;\n",
+	                  "  return (\n",
+	                  "    <Router history={history} onUpdate={onUpdate}>\n",
+	                  "      <Route path='/' component={Blank} />\n",
+	                  "    </Route>\n",
+	                  "  );\n",
+	                  ");\n"
 	                )
 	              ),
 	              React.createElement(
 	                'p',
 	                null,
-	                'The page itself is rendered within the ',
+	                "The page itself is rendered within the ",
 	                React.createElement(
 	                  'strong',
 	                  null,
 	                  'div#app-container'
 	                ),
-	                ' element.'
+	                " element."
 	              )
 	            )
 	          ),
@@ -45638,7 +43250,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'This is an example file and should serve as a starting point for creating various routes in your app. When you open the file you\'ll immediately notice that there are 5 files required:'
+	              "This is an example file and should serve as a starting point for creating various routes in your app. When you open the file you'll immediately notice that there are 5 files required:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -45649,29 +43261,29 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-javascript' },
-	                  'import classNames from \'classnames\';\n',
-	                  'import SidebarMixin from \'global/jsx/sidebar_component\';\n\n',
-	                  'import Header from \'common/header\';\n',
-	                  'import Sidebar from \'common/sidebar\';\n',
-	                  'import Footer from \'common/footer\';\n'
+	                  "import classNames from 'classnames';\n",
+	                  "import SidebarMixin from 'global/jsx/sidebar_component';\n\n",
+	                  "import Header from 'common/header';\n",
+	                  "import Sidebar from 'common/sidebar';\n",
+	                  "import Footer from 'common/footer';\n"
 	                )
 	              )
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'Of the above 5, three files (header.jsx, sidebar.jsx and footer.jsx) are stored in the ',
+	              "Of the above 5, three files (header.jsx, sidebar.jsx and footer.jsx) are stored in the ",
 	              React.createElement(
 	                'strong',
 	                null,
 	                'common'
 	              ),
-	              ' folder for the app. All of the above files are optional and are only required if you want a full blown dashboard layout. For instance, when designing a homepage you wouldn\'t need any of the above files.'
+	              " folder for the app. All of the above files are optional and are only required if you want a full blown dashboard layout. For instance, when designing a homepage you wouldn't need any of the above files."
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'Then we have a Body component which contains a Container#body component. All your main application code should be written within this component.'
+	              "Then we have a Body component which contains a Container#body component. All your main application code should be written within this component."
 	            ),
 	            React.createElement(
 	              'div',
@@ -45682,39 +43294,39 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  'class Body extends React.Component {\n',
-	                  '  render() {\n',
-	                  '    return (\n',
-	                  '      <Container id=\'body\'>\n',
-	                  '        <Grid>\n',
-	                  '          <Row>\n',
-	                  '            <Col sm={12}>\n',
-	                  '              <PanelContainer>\n',
-	                  '                <Panel>\n',
-	                  '                  <PanelBody className=\'text-center\'>\n',
-	                  '                    <p>BLANK PAGE</p>\n',
-	                  '                  </PanelBody>\n',
-	                  '                </Panel>\n',
-	                  '              </PanelContainer>\n',
-	                  '            </Col>\n',
-	                  '          </Row>\n',
-	                  '        </Grid>\n',
-	                  '      </Container>\n',
-	                  '    );\n',
-	                  '  }\n',
-	                  '}\n'
+	                  "class Body extends React.Component {\n",
+	                  "  render() {\n",
+	                  "    return (\n",
+	                  "      <Container id='body'>\n",
+	                  "        <Grid>\n",
+	                  "          <Row>\n",
+	                  "            <Col sm={12}>\n",
+	                  "              <PanelContainer>\n",
+	                  "                <Panel>\n",
+	                  "                  <PanelBody className='text-center'>\n",
+	                  "                    <p>BLANK PAGE</p>\n",
+	                  "                  </PanelBody>\n",
+	                  "                </Panel>\n",
+	                  "              </PanelContainer>\n",
+	                  "            </Col>\n",
+	                  "          </Row>\n",
+	                  "        </Grid>\n",
+	                  "      </Container>\n",
+	                  "    );\n",
+	                  "  }\n",
+	                  "}\n"
 	                )
 	              )
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'Finally we have a default component class which renders the entire page. It contains a Container#container component which has Sidebar, Header, Body and Footer components.'
+	              "Finally we have a default component class which renders the entire page. It contains a Container#container component which has Sidebar, Header, Body and Footer components."
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'It is important to note that we also include a SidebarMixin which takes care of all the boilerplate code required to show/hide the sidebar on smaller viewport. The variable \'classes\' stores the state of the Sidebar and is used for toggling the Sidebar.'
+	              "It is important to note that we also include a SidebarMixin which takes care of all the boilerplate code required to show/hide the sidebar on smaller viewport. The variable 'classes' stores the state of the Sidebar and is used for toggling the Sidebar."
 	            ),
 	            React.createElement(
 	              'div',
@@ -45725,22 +43337,22 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-javascript' },
-	                  '@SidebarMixin\n',
-	                  'export default class extends React.Component {\n',
-	                  '  render() {\n',
-	                  '    var classes = classNames({\n',
-	                  '      \'container-open\': this.props.open\n',
-	                  '    });\n\n',
-	                  '    return (\n',
-	                  '      <Container id=\'container\' className={classes}>\n',
-	                  '        <Sidebar />\n',
-	                  '        <Header />\n',
-	                  '        <Body />\n',
-	                  '        <Footer />\n',
-	                  '      </Container>\n',
-	                  '    );\n',
-	                  '  }\n',
-	                  '}\n'
+	                  "@SidebarMixin\n",
+	                  "export default class extends React.Component {\n",
+	                  "  render() {\n",
+	                  "    var classes = classNames({\n",
+	                  "      'container-open': this.props.open\n",
+	                  "    });\n\n",
+	                  "    return (\n",
+	                  "      <Container id='container' className={classes}>\n",
+	                  "        <Sidebar />\n",
+	                  "        <Header />\n",
+	                  "        <Body />\n",
+	                  "        <Footer />\n",
+	                  "      </Container>\n",
+	                  "    );\n",
+	                  "  }\n",
+	                  "}\n"
 	                )
 	              )
 	            )
@@ -45751,41 +43363,41 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'sidebar.jsx file contains the Sidebar section of the page. The sidebar section consits of a div#avatar container, SidebarControls component and the div#sidebar-container.'
+	              "sidebar.jsx file contains the Sidebar section of the page. The sidebar section consits of a div#avatar container, SidebarControls component and the div#sidebar-container."
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'The SidebarControls component is optional (if you\'re going to have only 1 sidebar) and can be removed. If you are going to be removing it, you need to also make a small change in ',
+	              "The SidebarControls component is optional (if you're going to have only 1 sidebar) and can be removed. If you are going to be removing it, you need to also make a small change in ",
 	              React.createElement(
 	                'strong',
 	                null,
 	                'src/global/sass/rubix/overrides/_variables.scss'
 	              ),
-	              ' by making sure the variable ',
+	              " by making sure the variable ",
 	              React.createElement(
 	                'code',
 	                null,
 	                '$sidebar-controls-visibility'
 	              ),
-	              ' is set to ',
+	              " is set to ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'hidden'
 	              ),
-	              '. If you don\'t want a global setting that affects all your projects you can add it to the top of your ',
+	              ". If you don't want a global setting that affects all your projects you can add it to the top of your ",
 	              React.createElement(
 	                'strong',
 	                null,
 	                'src/sass/app/main.scss'
 	              ),
-	              ' file which restricts the setting to the specific project.'
+	              " file which restricts the setting to the specific project."
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'The sidebar props passed to each SidebarControlBtn controls the relevant Sidebar component.'
+	              "The sidebar props passed to each SidebarControlBtn controls the relevant Sidebar component."
 	            ),
 	            React.createElement(
 	              'div',
@@ -45796,32 +43408,32 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-javascript' },
-	                  'export default class extends React.Component {\n',
-	                  '  render() {\n',
-	                  '    return (\n',
-	                  '      <div id=\'sidebar\' {...props}>\n',
-	                  '        <div id=\'avatar\'>\n',
-	                  '          ...\n',
-	                  '        </div>\n',
-	                  '        <SidebarControls>\n',
-	                  '          <SidebarControlBtn bundle=\'fontello\' glyph=\'docs\' sidebar={0} />\n',
-	                  '        </SidebarControls>\n',
-	                  '        <div id=\'sidebar-container\'>\n',
-	                  '          <Sidebar sidebar={0} active>\n',
-	                  '            <ApplicationSidebar />\n',
-	                  '          </Sidebar>\n',
-	                  '        </div>\n',
-	                  '      </div>\n',
-	                  '    );\n',
-	                  '  }\n',
-	                  '}\n'
+	                  "export default class extends React.Component {\n",
+	                  "  render() {\n",
+	                  "    return (\n",
+	                  "      <div id='sidebar' {...props}>\n",
+	                  "        <div id='avatar'>\n",
+	                  "          ...\n",
+	                  "        </div>\n",
+	                  "        <SidebarControls>\n",
+	                  "          <SidebarControlBtn bundle='fontello' glyph='docs' sidebar={0} />\n",
+	                  "        </SidebarControls>\n",
+	                  "        <div id='sidebar-container'>\n",
+	                  "          <Sidebar sidebar={0} active>\n",
+	                  "            <ApplicationSidebar />\n",
+	                  "          </Sidebar>\n",
+	                  "        </div>\n",
+	                  "      </div>\n",
+	                  "    );\n",
+	                  "  }\n",
+	                  "}\n"
 	                )
 	              )
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'Here is an example of a Sidebar navigation component defined in ApplicationSidebar component. You can nest multiple SidebarNav\'s to have multiple menu levels.'
+	              "Here is an example of a Sidebar navigation component defined in ApplicationSidebar component. You can nest multiple SidebarNav's to have multiple menu levels."
 	            ),
 	            React.createElement(
 	              'div',
@@ -45832,16 +43444,16 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<SidebarNav>\n',
-	                  '  <SidebarNavItem glyph=\'icon-fontello-gauge\' name=\'Blank\' href=\'/\' />\n',
-	                  '  <SidebarNavItem glyph=\'icon-feather-mail\' name={<span>Menu <BLabel className=\'bg-darkgreen45 fg-white\'>3</BLabel></span>}>\n',
-	                  '    <SidebarNav>\n',
-	                  '      <SidebarNavItem glyph=\'icon-feather-inbox\' name=\'Inbox\' href=\'#\' />\n',
-	                  '      <SidebarNavItem glyph=\'icon-outlined-mail-open\' name=\'Mail\' href=\'#\' />\n',
-	                  '      <SidebarNavItem glyph=\'icon-dripicons-message\' name=\'Compose\' href=\'#\' />\n',
-	                  '    </SidebarNav>\n',
-	                  '  </SidebarNavItem>\n',
-	                  '</SidebarNav>\n'
+	                  "<SidebarNav>\n",
+	                  "  <SidebarNavItem glyph='icon-fontello-gauge' name='Blank' href='/' />\n",
+	                  "  <SidebarNavItem glyph='icon-feather-mail' name={<span>Menu <BLabel className='bg-darkgreen45 fg-white'>3</BLabel></span>}>\n",
+	                  "    <SidebarNav>\n",
+	                  "      <SidebarNavItem glyph='icon-feather-inbox' name='Inbox' href='#' />\n",
+	                  "      <SidebarNavItem glyph='icon-outlined-mail-open' name='Mail' href='#' />\n",
+	                  "      <SidebarNavItem glyph='icon-dripicons-message' name='Compose' href='#' />\n",
+	                  "    </SidebarNav>\n",
+	                  "  </SidebarNavItem>\n",
+	                  "</SidebarNav>\n"
 	                )
 	              )
 	            )
@@ -46097,13 +43709,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Once you have everything setup (if you haven\'t go back to the ',
+	              "Once you have everything setup (if you haven't go back to the ",
 	              React.createElement(
 	                _reactRouter.Link,
 	                { to: '/app/docs/installation' },
 	                'Installation'
 	              ),
-	              ' page and finish the installation) you\'ll notice a file structure similar to this in your ',
+	              " page and finish the installation) you'll notice a file structure similar to this in your ",
 	              React.createElement(
 	                'code',
 	                null,
@@ -46131,53 +43743,53 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'This file contains a list of color combinations that are provided by default along with Rubix. You can add/remove from this list. We have provided a handy mixin called ',
+	              "This file contains a list of color combinations that are provided by default along with Rubix. You can add/remove from this list. We have provided a handy mixin called ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'generateColors($name, $color, $hover-color)'
 	              ),
-	              ' that colors different components like lists, navs, buttons, menus, timeline etc.'
+	              " that colors different components like lists, navs, buttons, menus, timeline etc."
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'You can also override the forground color of any element by prefixing the color name with ',
+	              "You can also override the forground color of any element by prefixing the color name with ",
 	              React.createElement(
 	                'strong',
 	                null,
 	                'fg-'
 	              ),
-	              ' (ex: ',
+	              " (ex: ",
 	              React.createElement(
 	                'strong',
 	                null,
 	                'fg-deepred'
 	              ),
-	              ') and background color by prefixing color name with ',
+	              ") and background color by prefixing color name with ",
 	              React.createElement(
 	                'strong',
 	                null,
 	                'bg-'
 	              ),
-	              ' (ex: ',
+	              " (ex: ",
 	              React.createElement(
 	                'strong',
 	                null,
 	                'bg-darkgreen45'
 	              ),
-	              ').'
+	              ")."
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'Similary we have also provided classnames for borders and different states (like hover/focus/active etc). Please refer to the demo JSX files for usage of these different color combinations on various components. Certain components have a bsStyle property (ex: Button) which takes the color name directly and generates the appropriate classname behind the scenes. Also, please refer to the ',
+	              "Similary we have also provided classnames for borders and different states (like hover/focus/active etc). Please refer to the demo JSX files for usage of these different color combinations on various components. Certain components have a bsStyle property (ex: Button) which takes the color name directly and generates the appropriate classname behind the scenes. Also, please refer to the ",
 	              React.createElement(
 	                'strong',
 	                null,
-	                'sass/app/theme/_colors.scss'
+	                "sass/app/theme/_colors.scss"
 	              ),
-	              ' file for the color mixin definition.'
+	              " file for the color mixin definition."
 	            )
 	          ),
 	          React.createElement(
@@ -46186,13 +43798,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'This file contains a list of web icon fonts that come packaged with Rubix. You can add/remove fonts from this list. If you are going to add a new icon font make sure you add a font partial in ',
+	              "This file contains a list of web icon fonts that come packaged with Rubix. You can add/remove fonts from this list. If you are going to add a new icon font make sure you add a font partial in ",
 	              React.createElement(
 	                'strong',
 	                null,
 	                'src/sass/app/fonts'
 	              ),
-	              '. Also make sure you have dropped a corresponding TTF file into the dropbox located at: ',
+	              ". Also make sure you have dropped a corresponding TTF file into the dropbox located at: ",
 	              React.createElement(
 	                'strong',
 	                null,
@@ -46202,25 +43814,25 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'As an example lets take the case of Climacons font. The TTF file dropped into ',
+	              "As an example lets take the case of Climacons font. The TTF file dropped into ",
 	              React.createElement(
 	                'strong',
 	                null,
 	                'public/fonts/dropbox/app'
 	              ),
-	              ' is ',
+	              " is ",
 	              React.createElement(
 	                'strong',
 	                null,
 	                'Climacons-Font.ttf'
 	              ),
-	              '. The corresponding partial ',
+	              ". The corresponding partial ",
 	              React.createElement(
 	                'strong',
 	                null,
 	                'src/sass/app/fonts/_climacons.scss'
 	              ),
-	              ' contains a reference to this filename in the font-family:'
+	              " contains a reference to this filename in the font-family:"
 	            ),
 	            React.createElement(
 	              'pre',
@@ -46228,16 +43840,16 @@
 	              React.createElement(
 	                'code',
 	                { className: 'language-css' },
-	                '.climacon:before{\n',
-	                '  font-family: \'Climacons-Font\';\n',
-	                '  ...\n',
-	                '}\n'
+	                ".climacon:before{\n",
+	                "  font-family: 'Climacons-Font';\n",
+	                "  ...\n",
+	                "}\n"
 	              )
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'If you are using text web fonts like Lato/Open Sans there is no need to create a separate partial file and can directly reference it in your stylesheets after dropping the required TTF file into your project\'s font dropbox.'
+	              "If you are using text web fonts like Lato/Open Sans there is no need to create a separate partial file and can directly reference it in your stylesheets after dropping the required TTF file into your project's font dropbox."
 	            )
 	          ),
 	          React.createElement(
@@ -46246,19 +43858,19 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'This file contains a list of all third party plugin styles which come packaged with Rubix that you can add/remove from. To provide page specfic styling please create partials in ',
+	              "This file contains a list of all third party plugin styles which come packaged with Rubix that you can add/remove from. To provide page specfic styling please create partials in ",
 	              React.createElement(
 	                'strong',
 	                null,
 	                'src/sass/app/pages'
 	              ),
-	              ' and require them in the ',
+	              " and require them in the ",
 	              React.createElement(
 	                'strong',
 	                null,
 	                'src/sass/app/pages/_pages.scss'
 	              ),
-	              ' partial. Similarly include your print styles in the print partial located at ',
+	              " partial. Similarly include your print styles in the print partial located at ",
 	              React.createElement(
 	                'strong',
 	                null,
@@ -46272,19 +43884,19 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'This file a mixin called ',
+	              "This file a mixin called ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'theme-maker($name, $list)'
 	              ),
-	              ' which takes two parameters: a name and a list of default settings. This mixin includes another mixin called ',
+	              " which takes two parameters: a name and a list of default settings. This mixin includes another mixin called ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'theme-mixin($name, $list)'
 	              ),
-	              '. The theme-maker mixin is used to for creating individual themes with its own styles while theme-mixin is used for setting global property values for styles across themes. As is evident in the file we have provided 6 different themes with a base color: default (orange), green, blue, purple, brown and cyan. You can remove themes that you don\'t like and add the ones you do. You can even modify the themes to whatever color combination you desire.'
+	              ". The theme-maker mixin is used to for creating individual themes with its own styles while theme-mixin is used for setting global property values for styles across themes. As is evident in the file we have provided 6 different themes with a base color: default (orange), green, blue, purple, brown and cyan. You can remove themes that you don't like and add the ones you do. You can even modify the themes to whatever color combination you desire."
 	            )
 	          )
 	        )
@@ -46477,7 +44089,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. Rubix leverages the power of React to write composable, semantic components. By default the Grid is fluid but you\'ll soon see that you can pass different options to control the look and feel of your Grid. The basic syntax of a Grid in JSX is:'
+	              "Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. Rubix leverages the power of React to write composable, semantic components. By default the Grid is fluid but you'll soon see that you can pass different options to control the look and feel of your Grid. The basic syntax of a Grid in JSX is:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -46592,7 +44204,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'You can of course nest grids (we\'ll be covering Cols and Rows soon! Don\'t worry :) )',
+	              "You can of course nest grids (we'll be covering Cols and Rows soon! Don't worry :) )",
 	              ':'
 	            ),
 	            React.createElement(
@@ -46627,7 +44239,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Rows in a Grid are used to create horizontal groups of Columns. To create a Row the syntax is:'
+	              "Rows in a Grid are used to create horizontal groups of Columns. To create a Row the syntax is:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -46654,7 +44266,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Columns in a Grid are containers that house your content. These columns create gutters via padding. The basic syntax to create a column is:'
+	              "Columns in a Grid are containers that house your content. These columns create gutters via padding. The basic syntax to create a column is:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -46672,7 +44284,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'xs, sm, md and lg options are defined breakpoints which alters the layout depending on the type of device you are viewing the site on.'
+	              "xs, sm, md and lg options are defined breakpoints which alters the layout depending on the type of device you are viewing the site on."
 	            ),
 	            React.createElement('hr', null),
 	            React.createElement(
@@ -46683,7 +44295,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Clear the columns if their content doesn\'t match in height:'
+	              "Clear the columns if their content doesn't match in height:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -46707,7 +44319,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Pass a delimited list of options to hidden and visible properties:'
+	              "Pass a delimited list of options to hidden and visible properties:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -46731,7 +44343,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Move columns to the right using offsets. Example:'
+	              "Move columns to the right using offsets. Example:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -46755,7 +44367,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Easily change the order of the built-in grid columns with Push and Pull properties. Example:'
+	              "Easily change the order of the built-in grid columns with Push and Pull properties. Example:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -46779,7 +44391,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Collapse paddings on your Columns. Example:'
+	              "Collapse paddings on your Columns. Example:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -47198,31 +44810,31 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'All HTML headings, ',
+	              "All HTML headings, ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<h1>'
+	                "<h1>"
 	              ),
-	              ' through ',
+	              " through ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<h6>'
+	                "<h6>"
 	              ),
-	              ', are available. ',
+	              ", are available. ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '.h1'
+	                ".h1"
 	              ),
-	              ' through ',
+	              " through ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '.h6'
+	                ".h6"
 	              ),
-	              ' classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.'
+	              " classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline."
 	            ),
 	            React.createElement(
 	              Well,
@@ -47302,12 +44914,12 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<h1>h1. Bootstrap heading <small>Secondary text</small></h1>\n',
-	                  '<h2>h2. Bootstrap heading <small>Secondary text</small></h2>\n',
-	                  '<h3>h3. Bootstrap heading <small>Secondary text</small></h3>\n',
-	                  '<h4>h4. Bootstrap heading <small>Secondary text</small></h4>\n',
-	                  '<h5>h5. Bootstrap heading <small>Secondary text</small></h5>\n',
-	                  '<h6>h6. Bootstrap heading <small>Secondary text</small></h6>\n'
+	                  "<h1>h1. Bootstrap heading <small>Secondary text</small></h1>\n",
+	                  "<h2>h2. Bootstrap heading <small>Secondary text</small></h2>\n",
+	                  "<h3>h3. Bootstrap heading <small>Secondary text</small></h3>\n",
+	                  "<h4>h4. Bootstrap heading <small>Secondary text</small></h4>\n",
+	                  "<h5>h5. Bootstrap heading <small>Secondary text</small></h5>\n",
+	                  "<h6>h6. Bootstrap heading <small>Secondary text</small></h6>\n"
 	                )
 	              )
 	            )
@@ -47318,7 +44930,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'A sample of default body copy. Note the handy lorem ipsum generator :)'
+	              "A sample of default body copy. Note the handy lorem ipsum generator :)"
 	            ),
 	            React.createElement(
 	              Well,
@@ -47348,15 +44960,15 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<p>\n',
-	                  '  <LoremIpsum query=\'2s\' />\n',
-	                  '</p>\n',
-	                  '<p>\n',
-	                  '  <LoremIpsum query=\'3s\' />\n',
-	                  '</p>\n',
-	                  '<p>\n',
-	                  '  <LoremIpsum query=\'2s\' />\n',
-	                  '</p>\n'
+	                  "<p>\n",
+	                  "  <LoremIpsum query='2s' />\n",
+	                  "</p>\n",
+	                  "<p>\n",
+	                  "  <LoremIpsum query='3s' />\n",
+	                  "</p>\n",
+	                  "<p>\n",
+	                  "  <LoremIpsum query='2s' />\n",
+	                  "</p>\n"
 	                )
 	              )
 	            )
@@ -47367,7 +44979,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Make a paragraph stand out by using the Lead component.'
+	              "Make a paragraph stand out by using the Lead component."
 	            ),
 	            React.createElement(
 	              Well,
@@ -47387,9 +44999,9 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Lead>\n',
-	                  '  <LoremIpsum query=\'2s\' />\n',
-	                  '</Lead>\n'
+	                  "<Lead>\n",
+	                  "  <LoremIpsum query='2s' />\n",
+	                  "</Lead>\n"
 	                )
 	              )
 	            )
@@ -47405,13 +45017,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'For highlighting a run of text due to its relevance in another context, use the ',
+	              "For highlighting a run of text due to its relevance in another context, use the ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<mark>'
+	                "<mark>"
 	              ),
-	              ' tag.'
+	              " tag."
 	            ),
 	            React.createElement(
 	              Well,
@@ -47433,7 +45045,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  'You can use the mark tag to <mark>highlight</mark> text.\n'
+	                  "You can use the mark tag to <mark>highlight</mark> text.\n"
 	                )
 	              )
 	            ),
@@ -47446,13 +45058,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'For indicating blocks of text that have been deleted use the ',
+	              "For indicating blocks of text that have been deleted use the ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<del>'
+	                "<del>"
 	              ),
-	              ' tag.'
+	              " tag."
 	            ),
 	            React.createElement(
 	              Well,
@@ -47472,7 +45084,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<del>This line of text is meant to be treated as deleted text.</del>\n'
+	                  "<del>This line of text is meant to be treated as deleted text.</del>\n"
 	                )
 	              )
 	            ),
@@ -47485,13 +45097,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'For indicating blocks of text that are no longer relevant use the ',
+	              "For indicating blocks of text that are no longer relevant use the ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<s>'
+	                "<s>"
 	              ),
-	              ' tag.'
+	              " tag."
 	            ),
 	            React.createElement(
 	              Well,
@@ -47511,7 +45123,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<s>This line of text is meant to be treated as no longer accurate.</s>\n'
+	                  "<s>This line of text is meant to be treated as no longer accurate.</s>\n"
 	                )
 	              )
 	            ),
@@ -47524,13 +45136,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'For indicating additions to the document use the ',
+	              "For indicating additions to the document use the ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<ins>'
+	                "<ins>"
 	              ),
-	              ' tag.'
+	              " tag."
 	            ),
 	            React.createElement(
 	              Well,
@@ -47550,7 +45162,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ins>This line of text is meant to be treated as an addition to the document.</ins>\n'
+	                  "<ins>This line of text is meant to be treated as an addition to the document.</ins>\n"
 	                )
 	              )
 	            ),
@@ -47563,13 +45175,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'To underline text use the ',
+	              "To underline text use the ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<u>'
+	                "<u>"
 	              ),
-	              ' tag.'
+	              " tag."
 	            ),
 	            React.createElement(
 	              Well,
@@ -47589,7 +45201,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<u>This line of text will render as underlined</u>\n'
+	                  "<u>This line of text will render as underlined</u>\n"
 	                )
 	              )
 	            ),
@@ -47602,34 +45214,34 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'For de-emphasizing inline or blocks of text, use the ',
+	              "For de-emphasizing inline or blocks of text, use the ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<small>'
+	                "<small>"
 	              ),
-	              ' tag to set text at 85% the size of the parent. Heading elements receive their own font-size for nested ',
+	              " tag to set text at 85% the size of the parent. Heading elements receive their own font-size for nested ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<small>'
+	                "<small>"
 	              ),
-	              ' elements.'
+	              " elements."
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'You may alternatively use an inline element with ',
+	              "You may alternatively use an inline element with ",
 	              React.createElement(
 	                'code',
 	                null,
 	                '.small'
 	              ),
-	              ' in place of any ',
+	              " in place of any ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<small>'
+	                "<small>"
 	              ),
 	              '.'
 	            ),
@@ -47651,7 +45263,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<small>This line of text is meant to be treated as fine print.</small>\n'
+	                  "<small>This line of text is meant to be treated as fine print.</small>\n"
 	                )
 	              )
 	            ),
@@ -47664,7 +45276,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'For emphasizing a snippet of text with a heavier font-weight.'
+	              "For emphasizing a snippet of text with a heavier font-weight."
 	            ),
 	            React.createElement(
 	              Well,
@@ -47686,7 +45298,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  'The following snippet of text is <strong>rendered as bold text</strong>.\n'
+	                  "The following snippet of text is <strong>rendered as bold text</strong>.\n"
 	                )
 	              )
 	            ),
@@ -47699,7 +45311,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'For emphasizing a snippet of text with italics.'
+	              "For emphasizing a snippet of text with italics."
 	            ),
 	            React.createElement(
 	              Well,
@@ -47721,7 +45333,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  'The following snippet of text is <em>rendered as italicized text</em>.\n'
+	                  "The following snippet of text is <em>rendered as italicized text</em>.\n"
 	                )
 	              )
 	            )
@@ -47732,7 +45344,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Easily realign text to components with text alignment classes. NOTE: React uses className instead of class.'
+	              "Easily realign text to components with text alignment classes. NOTE: React uses className instead of class."
 	            ),
 	            React.createElement(
 	              Well,
@@ -47772,11 +45384,11 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<p className=\'text-left\'>Left aligned text.</p>\n',
-	                  '<p className=\'text-center\'>Center aligned text.</p>\n',
-	                  '<p className=\'text-right\'>Right aligned text.</p>\n',
-	                  '<p className=\'text-justify\'>Justified text.</p>\n',
-	                  '<p className=\'text-nowrap\'>No wrap text.</p>\n'
+	                  "<p className='text-left'>Left aligned text.</p>\n",
+	                  "<p className='text-center'>Center aligned text.</p>\n",
+	                  "<p className='text-right'>Right aligned text.</p>\n",
+	                  "<p className='text-justify'>Justified text.</p>\n",
+	                  "<p className='text-nowrap'>No wrap text.</p>\n"
 	                )
 	              )
 	            )
@@ -47787,7 +45399,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Transform text in components with text capitalization classes. NOTE: React uses className instead of class.'
+	              "Transform text in components with text capitalization classes. NOTE: React uses className instead of class."
 	            ),
 	            React.createElement(
 	              Well,
@@ -47817,9 +45429,9 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<p className=\'text-lowercase\'>Lowercased text.</p>\n',
-	                  '<p className=\'text-uppercase\'>Uppercased text.</p>\n',
-	                  '<p className=\'text-capitalize\'>capitalized text.</p>\n'
+	                  "<p className='text-lowercase'>Lowercased text.</p>\n",
+	                  "<p className='text-uppercase'>Uppercased text.</p>\n",
+	                  "<p className='text-capitalize'>capitalized text.</p>\n"
 	                )
 	              )
 	            )
@@ -47830,13 +45442,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Stylized implementation of HTML\'s ',
+	              "Stylized implementation of HTML's ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<abbr>'
+	                "<abbr>"
 	              ),
-	              ' element for abbreviations and acronyms to show the expanded version on hover.'
+	              " element for abbreviations and acronyms to show the expanded version on hover."
 	            ),
 	            React.createElement(
 	              Well,
@@ -47858,7 +45470,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<abbr title=\'attribute\'>attr</abbr>\n'
+	                  "<abbr title='attribute'>attr</abbr>\n"
 	                )
 	              )
 	            ),
@@ -47871,13 +45483,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add ',
+	              "Add ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '.initialism'
+	                ".initialism"
 	              ),
-	              ' to an abbreviation for a slightly smaller font-size.'
+	              " to an abbreviation for a slightly smaller font-size."
 	            ),
 	            React.createElement(
 	              Well,
@@ -47898,7 +45510,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<abbr title=\'HyperText Markup Language\' className=\'initialism\'>HTML</abbr>\n'
+	                  "<abbr title='HyperText Markup Language' className='initialism'>HTML</abbr>\n"
 	                )
 	              )
 	            )
@@ -47909,11 +45521,11 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with ',
+	              "Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<br/>'
+	                "<br/>"
 	              ),
 	              '.'
 	            ),
@@ -47965,16 +45577,16 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<address>\n',
-	                  '  <strong>Twitter, Inc.</strong><br/>\n',
-	                  '  795 Folsom Ave, Suite 600<br/>\n',
-	                  '  San Francisco, CA 94107<br/>\n',
-	                  '  <abbr title=\'Phone\'>P:</abbr> (123) 456-7890\n',
-	                  '</address>\n',
-	                  '<address>\n',
-	                  '  <strong>Full Name</strong><br/>\n',
-	                  '  <a href=\'mailto:support@sketchpixy.com\'>support@sketchpixy.com</a>\n',
-	                  '</address>\n'
+	                  "<address>\n",
+	                  "  <strong>Twitter, Inc.</strong><br/>\n",
+	                  "  795 Folsom Ave, Suite 600<br/>\n",
+	                  "  San Francisco, CA 94107<br/>\n",
+	                  "  <abbr title='Phone'>P:</abbr> (123) 456-7890\n",
+	                  "</address>\n",
+	                  "<address>\n",
+	                  "  <strong>Full Name</strong><br/>\n",
+	                  "  <a href='mailto:support@sketchpixy.com'>support@sketchpixy.com</a>\n",
+	                  "</address>\n"
 	                )
 	              )
 	            )
@@ -47990,17 +45602,17 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Wrap ',
+	              "Wrap ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<blockquote>'
+	                "<blockquote>"
 	              ),
-	              ' around any HTML as the quote. For straight quotes, we recommend a ',
+	              " around any HTML as the quote. For straight quotes, we recommend a ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<br/>'
+	                "<br/>"
 	              ),
 	              '.'
 	            ),
@@ -48026,9 +45638,9 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<blockquote>\n',
-	                  '  <p><LoremIpsum query=\'1s\' /></p> \n',
-	                  '</blockquote>\n'
+	                  "<blockquote>\n",
+	                  "  <p><LoremIpsum query='1s' /></p> \n",
+	                  "</blockquote>\n"
 	                )
 	              )
 	            ),
@@ -48041,17 +45653,17 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add a ',
+	              "Add a ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<footer>'
+	                "<footer>"
 	              ),
-	              ' for identifying the source. Wrap the name of the source work in ',
+	              " for identifying the source. Wrap the name of the source work in ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<cite>'
+	                "<cite>"
 	              ),
 	              '.'
 	            ),
@@ -48087,10 +45699,10 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<blockquote>\n',
-	                  '  <p><LoremIpsum query=\'1s\' /></p> \n',
-	                  '  <footer>Someone famous in <cite title=\'Source Title\'>Source Title</cite></footer>\n',
-	                  '</blockquote>\n'
+	                  "<blockquote>\n",
+	                  "  <p><LoremIpsum query='1s' /></p> \n",
+	                  "  <footer>Someone famous in <cite title='Source Title'>Source Title</cite></footer>\n",
+	                  "</blockquote>\n"
 	                )
 	              )
 	            ),
@@ -48103,13 +45715,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add ',
+	              "Add ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '.blockquote-reverse'
+	                ".blockquote-reverse"
 	              ),
-	              ' for a blockquote with right-aligned content. NOTE: React uses className instead of the class property.'
+	              " for a blockquote with right-aligned content. NOTE: React uses className instead of the class property."
 	            ),
 	            React.createElement(
 	              Well,
@@ -48143,10 +45755,10 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<blockquote className=\'blockquote-reverse\'>\n',
-	                  '  <p><LoremIpsum query=\'1s\' /></p> \n',
-	                  '  <footer>Someone famous in <cite title=\'Source Title\'>Source Title</cite></footer>\n',
-	                  '</blockquote>\n'
+	                  "<blockquote className='blockquote-reverse'>\n",
+	                  "  <p><LoremIpsum query='1s' /></p> \n",
+	                  "  <footer>Someone famous in <cite title='Source Title'>Source Title</cite></footer>\n",
+	                  "</blockquote>\n"
 	                )
 	              )
 	            )
@@ -48162,7 +45774,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'A list of items in which the order does not explicitly matter.'
+	              "A list of items in which the order does not explicitly matter."
 	            ),
 	            React.createElement(
 	              Well,
@@ -48245,24 +45857,24 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ul>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li>\n',
-	                  '    <LoremIpsum query=\'1s\' />\n',
-	                  '    <ul>\n',
-	                  '      <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '      <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '      <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '      <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '    </ul>\n',
-	                  '  </li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '</ul>\n'
+	                  "<ul>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li>\n",
+	                  "    <LoremIpsum query='1s' />\n",
+	                  "    <ul>\n",
+	                  "      <li><LoremIpsum query='1s' /></li>\n",
+	                  "      <li><LoremIpsum query='1s' /></li>\n",
+	                  "      <li><LoremIpsum query='1s' /></li>\n",
+	                  "      <li><LoremIpsum query='1s' /></li>\n",
+	                  "    </ul>\n",
+	                  "  </li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "</ul>\n"
 	                )
 	              )
 	            ),
@@ -48275,7 +45887,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'A list of items in which the order does explicitly matter.'
+	              "A list of items in which the order does explicitly matter."
 	            ),
 	            React.createElement(
 	              Well,
@@ -48334,16 +45946,16 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ol>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '</ol>\n'
+	                  "<ol>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "</ol>\n"
 	                )
 	              )
 	            ),
@@ -48356,7 +45968,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Remove the default list-style and left margin on list items (immediate children only). This only applies to immediate children list items, meaning you will need to add the class for any nested lists as well.'
+	              "Remove the default list-style and left margin on list items (immediate children only). This only applies to immediate children list items, meaning you will need to add the class for any nested lists as well."
 	            ),
 	            React.createElement(
 	              Well,
@@ -48439,24 +46051,24 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ul className=\'list-unstyled\'>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li>\n',
-	                  '    <LoremIpsum query=\'1s\' />\n',
-	                  '    <ul>\n',
-	                  '      <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '      <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '      <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '      <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '    </ul>\n',
-	                  '  </li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'1s\' /></li>\n',
-	                  '</ul>\n'
+	                  "<ul className='list-unstyled'>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li>\n",
+	                  "    <LoremIpsum query='1s' />\n",
+	                  "    <ul>\n",
+	                  "      <li><LoremIpsum query='1s' /></li>\n",
+	                  "      <li><LoremIpsum query='1s' /></li>\n",
+	                  "      <li><LoremIpsum query='1s' /></li>\n",
+	                  "      <li><LoremIpsum query='1s' /></li>\n",
+	                  "    </ul>\n",
+	                  "  </li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "  <li><LoremIpsum query='1s' /></li>\n",
+	                  "</ul>\n"
 	                )
 	              )
 	            ),
@@ -48469,7 +46081,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Place all list items on a single line with display: inline-block; and some light padding.'
+	              "Place all list items on a single line with display: inline-block; and some light padding."
 	            ),
 	            React.createElement(
 	              Well,
@@ -48503,11 +46115,11 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ul className=\'list-inline\'>\n',
-	                  '  <li><LoremIpsum query=\'2w\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'2w\' /></li>\n',
-	                  '  <li><LoremIpsum query=\'2w\' /></li>\n',
-	                  '</ul>\n'
+	                  "<ul className='list-inline'>\n",
+	                  "  <li><LoremIpsum query='2w' /></li>\n",
+	                  "  <li><LoremIpsum query='2w' /></li>\n",
+	                  "  <li><LoremIpsum query='2w' /></li>\n",
+	                  "</ul>\n"
 	                )
 	              )
 	            ),
@@ -48520,7 +46132,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'A list of terms with their associated descriptions.'
+	              "A list of terms with their associated descriptions."
 	            ),
 	            React.createElement(
 	              Well,
@@ -48574,15 +46186,15 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<dl>\n',
-	                  '  <dt>Description lists</dt>\n',
-	                  '  <dd>A description list is perfect for defining terms.</dd>\n',
-	                  '  <dt>Euismod</dt>\n',
-	                  '  <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>\n',
-	                  '  <dd>Donec id elit non mi porta gravida at eget metus.</dd>\n',
-	                  '  <dt>Malesuada porta</dt>\n',
-	                  '  <dd>Etiam porta sem malesuada magna mollis euismod.</dd>\n',
-	                  '</dl>\n'
+	                  "<dl>\n",
+	                  "  <dt>Description lists</dt>\n",
+	                  "  <dd>A description list is perfect for defining terms.</dd>\n",
+	                  "  <dt>Euismod</dt>\n",
+	                  "  <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>\n",
+	                  "  <dd>Donec id elit non mi porta gravida at eget metus.</dd>\n",
+	                  "  <dt>Malesuada porta</dt>\n",
+	                  "  <dd>Etiam porta sem malesuada magna mollis euismod.</dd>\n",
+	                  "</dl>\n"
 	                )
 	              )
 	            ),
@@ -48595,7 +46207,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Make terms and descriptions in <dl> line up side-by-side. Starts off stacked like default <dl>s, but when the navbar expands, so do these.'
+	              "Make terms and descriptions in <dl> line up side-by-side. Starts off stacked like default <dl>s, but when the navbar expands, so do these."
 	            ),
 	            React.createElement(
 	              Well,
@@ -48659,17 +46271,17 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<dl className=\'dl-horizontal\'>\n',
-	                  '  <dt>Description lists</dt>\n',
-	                  '  <dd>A description list is perfect for defining terms.</dd>\n',
-	                  '  <dt>Euismod</dt>\n',
-	                  '  <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>\n',
-	                  '  <dd>Donec id elit non mi porta gravida at eget metus.</dd>\n',
-	                  '  <dt>Malesuada porta</dt>\n',
-	                  '  <dd>Etiam porta sem malesuada magna mollis euismod.</dd>\n',
-	                  '  <dt>Felis euismod semper eget lacinia</dt>\n',
-	                  '  <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>\n',
-	                  '</dl>\n'
+	                  "<dl className='dl-horizontal'>\n",
+	                  "  <dt>Description lists</dt>\n",
+	                  "  <dd>A description list is perfect for defining terms.</dd>\n",
+	                  "  <dt>Euismod</dt>\n",
+	                  "  <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>\n",
+	                  "  <dd>Donec id elit non mi porta gravida at eget metus.</dd>\n",
+	                  "  <dt>Malesuada porta</dt>\n",
+	                  "  <dd>Etiam porta sem malesuada magna mollis euismod.</dd>\n",
+	                  "  <dt>Felis euismod semper eget lacinia</dt>\n",
+	                  "  <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>\n",
+	                  "</dl>\n"
 	                )
 	              )
 	            )
@@ -48800,7 +46412,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Wrap inline snippets of code with <code>.'
+	              "Wrap inline snippets of code with <code>."
 	            ),
 	            React.createElement(
 	              Well,
@@ -48809,7 +46421,7 @@
 	              React.createElement(
 	                'code',
 	                null,
-	                '<section>'
+	                "<section>"
 	              ),
 	              ' should be wrapped as inline.'
 	            ),
@@ -48835,7 +46447,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Use the <kbd> to indicate input that is typically entered via keyboard.'
+	              "Use the <kbd> to indicate input that is typically entered via keyboard."
 	            ),
 	            React.createElement(
 	              Well,
@@ -48871,8 +46483,8 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<div>To switch directories, type <kbd>cd</kbd> followed by the name of the directory.</div>\n',
-	                  '<div>To edit settings, press <kbd>ctrl + ,</kbd></div>\n'
+	                  "<div>To switch directories, type <kbd>cd</kbd> followed by the name of the directory.</div>\n",
+	                  "<div>To edit settings, press <kbd>ctrl + ,</kbd></div>\n"
 	                )
 	              )
 	            ),
@@ -48885,7 +46497,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Use <pre> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.'
+	              "Use <pre> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering."
 	            ),
 	            React.createElement(
 	              Well,
@@ -48893,7 +46505,7 @@
 	              React.createElement(
 	                'pre',
 	                null,
-	                '<p>Sample text here...</p>'
+	                "<p>Sample text here...</p>"
 	              )
 	            ),
 	            React.createElement(
@@ -48912,8 +46524,8 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'You may optionally add the .pre-scrollable class, ',
-	              'which will set a max-height of 350px and provide a y-axis scrollbar.'
+	              "You may optionally add the .pre-scrollable class, ",
+	              "which will set a max-height of 350px and provide a y-axis scrollbar."
 	            ),
 	            React.createElement('hr', null),
 	            React.createElement(
@@ -48924,7 +46536,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'For indicating variables use the <var> tag.'
+	              "For indicating variables use the <var> tag."
 	            ),
 	            React.createElement(
 	              Well,
@@ -48961,7 +46573,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<var>y</var> = <var>m</var><var>x</var> + <var>b</var>'
+	                  "<var>y</var> = <var>m</var><var>x</var> + <var>b</var>"
 	                )
 	              )
 	            ),
@@ -48974,7 +46586,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'For indicating blocks sample output from a program use the <samp> tag.'
+	              "For indicating blocks sample output from a program use the <samp> tag."
 	            ),
 	            React.createElement(
 	              Well,
@@ -48994,7 +46606,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<samp>This text is meant to be treated as sample output from a computer program.</samp>'
+	                  "<samp>This text is meant to be treated as sample output from a computer program.</samp>"
 	                )
 	              )
 	            )
@@ -49129,7 +46741,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'For basic styling—light padding and only horizontal dividers use the <Table> component.'
+	              "For basic styling—light padding and only horizontal dividers use the <Table> component."
 	            ),
 	            React.createElement(
 	              Well,
@@ -49252,36 +46864,36 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Table>\n',
-	                  '  <thead>\n',
-	                  '    <tr>\n',
-	                  '      <th>#</th>\n',
-	                  '      <th>First Name</th>\n',
-	                  '      <th>Last Name</th>\n',
-	                  '      <th>Username</th>\n',
-	                  '    </tr>\n',
-	                  '  </thead>\n',
-	                  '  <tbody>\n',
-	                  '    <tr>\n',
-	                  '      <td>1</td>\n',
-	                  '      <td>Mark</td>\n',
-	                  '      <td>Otto</td>\n',
-	                  '      <td>@mdo</td>\n',
-	                  '    </tr>\n',
-	                  '    <tr>\n',
-	                  '      <td>2</td>\n',
-	                  '      <td>Jacob</td>\n',
-	                  '      <td>Thornton</td>\n',
-	                  '      <td>@fat</td>\n',
-	                  '    </tr>\n',
-	                  '    <tr>\n',
-	                  '      <td>3</td>\n',
-	                  '      <td>Larry</td>\n',
-	                  '      <td>the Bird</td>\n',
-	                  '      <td>@twitter</td>\n',
-	                  '    </tr>\n',
-	                  '  </tbody>\n',
-	                  '</Table>\n'
+	                  "<Table>\n",
+	                  "  <thead>\n",
+	                  "    <tr>\n",
+	                  "      <th>#</th>\n",
+	                  "      <th>First Name</th>\n",
+	                  "      <th>Last Name</th>\n",
+	                  "      <th>Username</th>\n",
+	                  "    </tr>\n",
+	                  "  </thead>\n",
+	                  "  <tbody>\n",
+	                  "    <tr>\n",
+	                  "      <td>1</td>\n",
+	                  "      <td>Mark</td>\n",
+	                  "      <td>Otto</td>\n",
+	                  "      <td>@mdo</td>\n",
+	                  "    </tr>\n",
+	                  "    <tr>\n",
+	                  "      <td>2</td>\n",
+	                  "      <td>Jacob</td>\n",
+	                  "      <td>Thornton</td>\n",
+	                  "      <td>@fat</td>\n",
+	                  "    </tr>\n",
+	                  "    <tr>\n",
+	                  "      <td>3</td>\n",
+	                  "      <td>Larry</td>\n",
+	                  "      <td>the Bird</td>\n",
+	                  "      <td>@twitter</td>\n",
+	                  "    </tr>\n",
+	                  "  </tbody>\n",
+	                  "</Table>\n"
 	                )
 	              )
 	            ),
@@ -49294,13 +46906,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Use ',
+	              "Use ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'striped'
+	                "striped"
 	              ),
-	              ' option to add zebra-striping to any table row within the <tbody>.'
+	              " option to add zebra-striping to any table row within the <tbody>."
 	            ),
 	            React.createElement(
 	              Well,
@@ -49423,9 +47035,9 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Table striped>\n',
-	                  '  ...\n',
-	                  '</Table>\n'
+	                  "<Table striped>\n",
+	                  "  ...\n",
+	                  "</Table>\n"
 	                )
 	              )
 	            ),
@@ -49438,13 +47050,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add ',
+	              "Add ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'bordered'
+	                "bordered"
 	              ),
-	              ' option for borders on all sides of the table and cells.'
+	              " option for borders on all sides of the table and cells."
 	            ),
 	            React.createElement(
 	              Well,
@@ -49586,9 +47198,9 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Table bordered>\n',
-	                  '  ...\n',
-	                  '</Table>\n'
+	                  "<Table bordered>\n",
+	                  "  ...\n",
+	                  "</Table>\n"
 	                )
 	              )
 	            ),
@@ -49601,13 +47213,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add ',
+	              "Add ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'hover'
+	                "hover"
 	              ),
-	              ' to enable a hover state on table rows within a <tbody>.'
+	              " to enable a hover state on table rows within a <tbody>."
 	            ),
 	            React.createElement(
 	              Well,
@@ -49730,9 +47342,9 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Table hover>\n',
-	                  '  ...\n',
-	                  '</Table>\n'
+	                  "<Table hover>\n",
+	                  "  ...\n",
+	                  "</Table>\n"
 	                )
 	              )
 	            ),
@@ -49745,13 +47357,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add ',
+	              "Add ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'condensed'
+	                "condensed"
 	              ),
-	              ' to make tables more compact by cutting cell padding in half.'
+	              " to make tables more compact by cutting cell padding in half."
 	            ),
 	            React.createElement(
 	              Well,
@@ -49874,9 +47486,9 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Table condensed>\n',
-	                  '  ...\n',
-	                  '</Table>\n'
+	                  "<Table condensed>\n",
+	                  "  ...\n",
+	                  "</Table>\n"
 	                )
 	              )
 	            ),
@@ -49889,7 +47501,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Use contextual classes to color table rows or individual cells.'
+	              "Use contextual classes to color table rows or individual cells."
 	            ),
 	            React.createElement(
 	              Well,
@@ -50156,20 +47768,20 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<!-- On rows -->\n',
-	                  '<tr className=\'active\'>...</tr>\n',
-	                  '<tr className=\'success\'>...</tr>\n',
-	                  '<tr className=\'warning\'>...</tr>\n',
-	                  '<tr className=\'danger\'>...</tr>\n',
-	                  '<tr className=\'info\'>...</tr>\n\n',
-	                  '<!-- On cells (`td` or `th`) -->\n',
-	                  '<tr>\n',
-	                  '  <td className=\'active\'>...</td>\n',
-	                  '  <td className=\'success\'>...</td>\n',
-	                  '  <td className=\'warning\'>...</td>\n',
-	                  '  <td className=\'danger\'>...</td>\n',
-	                  '  <td className=\'info\'>...</td>\n',
-	                  '</tr>\n'
+	                  "<!-- On rows -->\n",
+	                  "<tr className='active'>...</tr>\n",
+	                  "<tr className='success'>...</tr>\n",
+	                  "<tr className='warning'>...</tr>\n",
+	                  "<tr className='danger'>...</tr>\n",
+	                  "<tr className='info'>...</tr>\n\n",
+	                  "<!-- On cells (`td` or `th`) -->\n",
+	                  "<tr>\n",
+	                  "  <td className='active'>...</td>\n",
+	                  "  <td className='success'>...</td>\n",
+	                  "  <td className='warning'>...</td>\n",
+	                  "  <td className='danger'>...</td>\n",
+	                  "  <td className='info'>...</td>\n",
+	                  "</tr>\n"
 	                )
 	              )
 	            ),
@@ -50182,7 +47794,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Create responsive tables by adding responsive option to any <Table> to make them scroll horizontally on small devices.'
+	              "Create responsive tables by adding responsive option to any <Table> to make them scroll horizontally on small devices."
 	            ),
 	            React.createElement(
 	              Well,
@@ -50365,9 +47977,9 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Table responsive>\n',
-	                  '  ...\n',
-	                  '</Table>\n'
+	                  "<Table responsive>\n",
+	                  "  ...\n",
+	                  "</Table>\n"
 	                )
 	              )
 	            )
@@ -50383,7 +47995,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              '<Table> component with zero margins'
+	              "<Table> component with zero margins"
 	            ),
 	            React.createElement(
 	              Well,
@@ -50506,9 +48118,9 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Table collapsed>\n',
-	                  '  ...\n',
-	                  '</Table>\n'
+	                  "<Table collapsed>\n",
+	                  "  ...\n",
+	                  "</Table>\n"
 	                )
 	              )
 	            ),
@@ -50521,7 +48133,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              '<Table> alignment (alignTop/alignMiddle/alignBottom)'
+	              "<Table> alignment (alignTop/alignMiddle/alignBottom)"
 	            ),
 	            React.createElement(
 	              Well,
@@ -50644,9 +48256,9 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Table alignBottom>\n',
-	                  '  ...\n',
-	                  '</Table>\n'
+	                  "<Table alignBottom>\n",
+	                  "  ...\n",
+	                  "</Table>\n"
 	                )
 	              )
 	            ),
@@ -50822,23 +48434,23 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Form>\n',
-	                  '  <FormGroup>\n',
-	                  '    <Label htmlFor=\'exampleInputEmail1\'>Email address</Label>\n',
-	                  '    <Input type=\'email\' id=\'exampleInputEmail1\' placeholder=\'Enter email\' />\n',
-	                  '  </FormGroup>\n',
-	                  '  <FormGroup>\n',
-	                  '    <Label htmlFor=\'exampleInputPassword1\'>Password</Label>\n',
-	                  '    <Input type=\'password\' id=\'exampleInputPassword1\' placeholder=\'Password\' />\n',
-	                  '  </FormGroup>\n',
-	                  '  <FormGroup>\n',
-	                  '    <Label htmlFor=\'exampleInputFile\'>File input</Label>\n',
-	                  '    <Input type=\'file\' id=\'exampleInputFile\' />\n',
-	                  '    <HelpBlock>Example block-level help text here.</HelpBlock>\n',
-	                  '  </FormGroup>\n',
-	                  '  <Checkbox>Check me out</Checkbox>\n',
-	                  '  <Button type=\'submit\'>Submit</Button>\n',
-	                  '</Form>\n'
+	                  "<Form>\n",
+	                  "  <FormGroup>\n",
+	                  "    <Label htmlFor='exampleInputEmail1'>Email address</Label>\n",
+	                  "    <Input type='email' id='exampleInputEmail1' placeholder='Enter email' />\n",
+	                  "  </FormGroup>\n",
+	                  "  <FormGroup>\n",
+	                  "    <Label htmlFor='exampleInputPassword1'>Password</Label>\n",
+	                  "    <Input type='password' id='exampleInputPassword1' placeholder='Password' />\n",
+	                  "  </FormGroup>\n",
+	                  "  <FormGroup>\n",
+	                  "    <Label htmlFor='exampleInputFile'>File input</Label>\n",
+	                  "    <Input type='file' id='exampleInputFile' />\n",
+	                  "    <HelpBlock>Example block-level help text here.</HelpBlock>\n",
+	                  "  </FormGroup>\n",
+	                  "  <Checkbox>Check me out</Checkbox>\n",
+	                  "  <Button type='submit'>Submit</Button>\n",
+	                  "</Form>\n"
 	                )
 	              )
 	            ),
@@ -50851,13 +48463,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add ',
+	              "Add ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'inline'
 	              ),
-	              ' to your <Form> for left-aligned and inline-block controls'
+	              " to your <Form> for left-aligned and inline-block controls"
 	            ),
 	            React.createElement(
 	              Well,
@@ -50920,24 +48532,24 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Form inline>\n',
-	                  '  <FormGroup>\n',
-	                  '    <Label className=\'sr-only\' htmlFor=\'exampleInputEmail2\'>Email address</Label>\n',
-	                  '    <Input type=\'email\' id=\'exampleInputEmail2\' placeholder=\'Enter email\' />\n',
-	                  '  </FormGroup>\n',
-	                  '  <FormGroup>\n',
-	                  '    <InputGroup>\n',
-	                  '      <InputGroupAddon>@</InputGroupAddon>\n',
-	                  '      <Input type=\'text\' placeholder=\'Enter username\' />\n',
-	                  '    </InputGroup>\n',
-	                  '  </FormGroup>\n',
-	                  '  <FormGroup>\n',
-	                  '    <Label className=\'sr-only\' htmlFor=\'exampleInputPassword2\'>Password</Label>\n',
-	                  '    <Input type=\'password\' id=\'exampleInputPassword2\' placeholder=\'Password\' />\n',
-	                  '  </FormGroup>\n',
-	                  '  <Checkbox>Remember me</Checkbox>\n',
-	                  '  <Button type=\'submit\'>Sign in</Button>\n',
-	                  '</Form>'
+	                  "<Form inline>\n",
+	                  "  <FormGroup>\n",
+	                  "    <Label className='sr-only' htmlFor='exampleInputEmail2'>Email address</Label>\n",
+	                  "    <Input type='email' id='exampleInputEmail2' placeholder='Enter email' />\n",
+	                  "  </FormGroup>\n",
+	                  "  <FormGroup>\n",
+	                  "    <InputGroup>\n",
+	                  "      <InputGroupAddon>@</InputGroupAddon>\n",
+	                  "      <Input type='text' placeholder='Enter username' />\n",
+	                  "    </InputGroup>\n",
+	                  "  </FormGroup>\n",
+	                  "  <FormGroup>\n",
+	                  "    <Label className='sr-only' htmlFor='exampleInputPassword2'>Password</Label>\n",
+	                  "    <Input type='password' id='exampleInputPassword2' placeholder='Password' />\n",
+	                  "  </FormGroup>\n",
+	                  "  <Checkbox>Remember me</Checkbox>\n",
+	                  "  <Button type='submit'>Sign in</Button>\n",
+	                  "</Form>"
 	                )
 	              )
 	            ),
@@ -50950,13 +48562,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add ',
+	              "Add ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'horizontal'
 	              ),
-	              ' to your <Form> to align labels and groups of form controls in a horizontal layout'
+	              " to your <Form> to align labels and groups of form controls in a horizontal layout"
 	            ),
 	            React.createElement(
 	              Well,
@@ -51029,30 +48641,30 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Form horizontal>\n',
-	                  '  <FormGroup>\n',
-	                  '    <Label sm={2} htmlFor=\'inputEmail3\' control>Email</Label>\n',
-	                  '    <Col sm={10}>\n',
-	                  '      <Input type=\'email\' id=\'inputEmail3\' placeholder=\'Email\' />\n',
-	                  '    </Col>\n',
-	                  '  </FormGroup>\n',
-	                  '  <FormGroup>\n',
-	                  '    <Label sm={2} htmlFor=\'inputPassword3\' control>Password</Label>\n',
-	                  '    <Col sm={10}>\n',
-	                  '      <Input type=\'password\' id=\'inputPassword3\' placeholder=\'Password\' />\n',
-	                  '    </Col>\n',
-	                  '  </FormGroup>\n',
-	                  '  <FormGroup>\n',
-	                  '    <Col smOffset={2} sm={10}>\n',
-	                  '      <Checkbox>Remember me</Checkbox>\n',
-	                  '    </Col>\n',
-	                  '  </FormGroup>\n',
-	                  '  <FormGroup>\n',
-	                  '    <Col smOffset={2} sm={10}>\n',
-	                  '      <Button type=\'submit\'>Sign in</Button>\n',
-	                  '    </Col>\n',
-	                  '  </FormGroup>\n',
-	                  '</Form>\n'
+	                  "<Form horizontal>\n",
+	                  "  <FormGroup>\n",
+	                  "    <Label sm={2} htmlFor='inputEmail3' control>Email</Label>\n",
+	                  "    <Col sm={10}>\n",
+	                  "      <Input type='email' id='inputEmail3' placeholder='Email' />\n",
+	                  "    </Col>\n",
+	                  "  </FormGroup>\n",
+	                  "  <FormGroup>\n",
+	                  "    <Label sm={2} htmlFor='inputPassword3' control>Password</Label>\n",
+	                  "    <Col sm={10}>\n",
+	                  "      <Input type='password' id='inputPassword3' placeholder='Password' />\n",
+	                  "    </Col>\n",
+	                  "  </FormGroup>\n",
+	                  "  <FormGroup>\n",
+	                  "    <Col smOffset={2} sm={10}>\n",
+	                  "      <Checkbox>Remember me</Checkbox>\n",
+	                  "    </Col>\n",
+	                  "  </FormGroup>\n",
+	                  "  <FormGroup>\n",
+	                  "    <Col smOffset={2} sm={10}>\n",
+	                  "      <Button type='submit'>Sign in</Button>\n",
+	                  "    </Col>\n",
+	                  "  </FormGroup>\n",
+	                  "</Form>\n"
 	                )
 	              )
 	            ),
@@ -51065,13 +48677,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'When you need to place plain text next to a form label within a horizontal form, use the ',
+	              "When you need to place plain text next to a form label within a horizontal form, use the ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'Static'
 	              ),
-	              ' component.'
+	              " component."
 	            ),
 	            React.createElement(
 	              Well,
@@ -51122,20 +48734,20 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Form horizontal>\n',
-	                  '  <FormGroup>\n',
-	                  '    <Label sm={2} control>Email</Label>\n',
-	                  '    <Col sm={10}>\n',
-	                  '      <Static>email@example.com</Static>\n',
-	                  '    </Col>\n',
-	                  '  </FormGroup>\n',
-	                  '  <FormGroup>\n',
-	                  '    <Label sm={2} htmlFor=\'inputPassword4\' control>Password</Label>\n',
-	                  '    <Col sm={10}>\n',
-	                  '      <Input type=\'password\' id=\'inputPassword4\' placeholder=\'Password\' />\n',
-	                  '    </Col>\n',
-	                  '  </FormGroup>\n',
-	                  '</Form>\n'
+	                  "<Form horizontal>\n",
+	                  "  <FormGroup>\n",
+	                  "    <Label sm={2} control>Email</Label>\n",
+	                  "    <Col sm={10}>\n",
+	                  "      <Static>email@example.com</Static>\n",
+	                  "    </Col>\n",
+	                  "  </FormGroup>\n",
+	                  "  <FormGroup>\n",
+	                  "    <Label sm={2} htmlFor='inputPassword4' control>Password</Label>\n",
+	                  "    <Col sm={10}>\n",
+	                  "      <Input type='password' id='inputPassword4' placeholder='Password' />\n",
+	                  "    </Col>\n",
+	                  "  </FormGroup>\n",
+	                  "</Form>\n"
 	                )
 	              )
 	            )
@@ -51151,7 +48763,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'By default, browser\'s native auto-complete is disabled for email and password fields as more often than not the browser populates these fields when it wasn\'t required. However, you can selectively enable them back again by passing the option: ',
+	              "By default, browser's native auto-complete is disabled for email and password fields as more often than not the browser populates these fields when it wasn't required. However, you can selectively enable them back again by passing the option: ",
 	              React.createElement(
 	                'code',
 	                null,
@@ -51210,21 +48822,21 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Form allowAutoComplete>\n',
-	                  '  <FormGroup>\n',
-	                  '    <Label htmlFor=\'exampleInputText1\'>Username</Label>\n',
-	                  '    <Input type=\'text\' id=\'exampleInputText1\' placeholder=\'Enter username\' />\n',
-	                  '  </FormGroup>\n',
-	                  '  <FormGroup>\n',
-	                  '    <Label htmlFor=\'exampleInputEmail3\'>Email address</Label>\n',
-	                  '    <Input type=\'email\' id=\'exampleInputEmail3\' placeholder=\'Enter email\' />\n',
-	                  '  </FormGroup>\n',
-	                  '  <FormGroup>\n',
-	                  '    <Label htmlFor=\'exampleInputPassword3\'>Password</Label>\n',
-	                  '    <Input type=\'password\' id=\'exampleInputPassword3\' placeholder=\'Password\' />\n',
-	                  '  </FormGroup>\n',
-	                  '  <Button type=\'submit\'>Submit</Button>\n',
-	                  '</Form>\n'
+	                  "<Form allowAutoComplete>\n",
+	                  "  <FormGroup>\n",
+	                  "    <Label htmlFor='exampleInputText1'>Username</Label>\n",
+	                  "    <Input type='text' id='exampleInputText1' placeholder='Enter username' />\n",
+	                  "  </FormGroup>\n",
+	                  "  <FormGroup>\n",
+	                  "    <Label htmlFor='exampleInputEmail3'>Email address</Label>\n",
+	                  "    <Input type='email' id='exampleInputEmail3' placeholder='Enter email' />\n",
+	                  "  </FormGroup>\n",
+	                  "  <FormGroup>\n",
+	                  "    <Label htmlFor='exampleInputPassword3'>Password</Label>\n",
+	                  "    <Input type='password' id='exampleInputPassword3' placeholder='Password' />\n",
+	                  "  </FormGroup>\n",
+	                  "  <Button type='submit'>Submit</Button>\n",
+	                  "</Form>\n"
 	                )
 	              )
 	            ),
@@ -51253,11 +48865,11 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Form>\n',
-	                  '  <FormInput id=\'inputSuccess2\' label=\'Input with success\' hintType=\'success\' hintText=\'Successful!\' control/>\n',
-	                  '  <FormInput id=\'inputWarning2\' label=\'Input with warning\' hintType=\'warning\' hintText=\'Warning!\' control />\n',
-	                  '  <FormInput id=\'inputError2\' label=\'Input with error\' hintType=\'error\' hintText=\'Error!\' control />\n',
-	                  '</Form>\n'
+	                  "<Form>\n",
+	                  "  <FormInput id='inputSuccess2' label='Input with success' hintType='success' hintText='Successful!' control/>\n",
+	                  "  <FormInput id='inputWarning2' label='Input with warning' hintType='warning' hintText='Warning!' control />\n",
+	                  "  <FormInput id='inputError2' label='Input with error' hintType='error' hintText='Error!' control />\n",
+	                  "</Form>\n"
 	                )
 	              )
 	            )
@@ -51404,102 +49016,102 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Most common form control, text-based Input fields. Includes support for all HTML5 types: ',
+	              "Most common form control, text-based Input fields. Includes support for all HTML5 types: ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'text'
+	                "text"
 	              ),
-	              ', ',
+	              ", ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'password'
+	                "password"
 	              ),
-	              ', ',
+	              ", ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'datetime'
+	                "datetime"
 	              ),
-	              ', ',
+	              ", ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'datetime-local'
+	                "datetime-local"
 	              ),
-	              ', ',
+	              ", ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'date'
+	                "date"
 	              ),
-	              ', ',
+	              ", ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'month'
+	                "month"
 	              ),
-	              ', ',
+	              ", ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'time'
+	                "time"
 	              ),
-	              ', ',
+	              ", ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'week'
+	                "week"
 	              ),
-	              ', ',
+	              ", ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'number'
+	                "number"
 	              ),
-	              ', ',
+	              ", ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'email'
+	                "email"
 	              ),
-	              ', ',
+	              ", ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'url'
+	                "url"
 	              ),
-	              ', ',
+	              ", ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'search'
+	                "search"
 	              ),
-	              ', ',
+	              ", ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'tel'
+	                "tel"
 	              ),
-	              ', and ',
+	              ", and ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'color'
+	                "color"
 	              ),
-	              '.'
+	              "."
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'NOTE: The Input component defined here is case sensitive. We have provided this component so that it saves you time by having to write less. The classname ',
+	              "NOTE: The Input component defined here is case sensitive. We have provided this component so that it saves you time by having to write less. The classname ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'form-control'
 	              ),
-	              ' is added by default to all types defined above.'
+	              " is added by default to all types defined above."
 	            ),
 	            React.createElement(
 	              Well,
@@ -51515,7 +49127,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Input type=\'password\' placeholder=\'Password\' />\n'
+	                  "<Input type='password' placeholder='Password' />\n"
 	                )
 	              )
 	            ),
@@ -51528,13 +49140,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add the ',
+	              "Add the ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'disabled'
 	              ),
-	              ' boolean attribute on an input to prevent user input and trigger a slightly different look.'
+	              " boolean attribute on an input to prevent user input and trigger a slightly different look."
 	            ),
 	            React.createElement(
 	              Well,
@@ -51550,7 +49162,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Input disabled type=\'password\' placeholder=\'Password\' />\n'
+	                  "<Input disabled type='password' placeholder='Password' />\n"
 	                )
 	              )
 	            ),
@@ -51563,13 +49175,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add the ',
+	              "Add the ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'readOnly'
 	              ),
-	              ' boolean attribute on an input to prevent user input and style the input as disabled.'
+	              " boolean attribute on an input to prevent user input and style the input as disabled."
 	            ),
 	            React.createElement(
 	              Well,
@@ -51585,7 +49197,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Input readOnly type=\'password\' placeholder=\'Password\' />\n'
+	                  "<Input readOnly type='password' placeholder='Password' />\n"
 	                )
 	              )
 	            )
@@ -51596,17 +49208,17 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Set heights using properties like: ',
+	              "Set heights using properties like: ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'lg'
+	                "lg"
 	              ),
-	              ' and ',
+	              " and ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'sm'
+	                "sm"
 	              )
 	            ),
 	            React.createElement(
@@ -51625,8 +49237,8 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Input lg type=\'text\' placeholder=\'Large Input\' />\n',
-	                  '<Input sm type=\'text\' placeholder=\'Small Input\' />\n'
+	                  "<Input lg type='text' placeholder='Large Input' />\n",
+	                  "<Input sm type='text' placeholder='Small Input' />\n"
 	                )
 	              )
 	            )
@@ -51646,7 +49258,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Access the raw DOM Node. Example:'
+	              "Access the raw DOM Node. Example:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -51674,7 +49286,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Access the checked state of a checkbox or radio primitive. Example:'
+	              "Access the checked state of a checkbox or radio primitive. Example:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -51702,7 +49314,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Set the checked state of a checkbox or radio primitive. Example:'
+	              "Set the checked state of a checkbox or radio primitive. Example:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -51730,7 +49342,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Convenience function to get the value of the raw input dom element. Example:'
+	              "Convenience function to get the value of the raw input dom element. Example:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -51907,13 +49519,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Form control which supports multiple lines of text. Change ',
+	              "Form control which supports multiple lines of text. Change ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'rows'
 	              ),
-	              ' attribute as necessary.'
+	              " attribute as necessary."
 	            ),
 	            React.createElement(
 	              Well,
@@ -51929,7 +49541,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Textarea rows=\'3\' />\n'
+	                  "<Textarea rows='3' />\n"
 	                )
 	              )
 	            )
@@ -51949,7 +49561,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Access the raw DOM Node. Example:'
+	              "Access the raw DOM Node. Example:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -51977,7 +49589,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Convenience function to get the value of the raw input dom element. Example:'
+	              "Convenience function to get the value of the raw input dom element. Example:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -52151,12 +49763,12 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.'
+	              "Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many."
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'We provide ',
+	              "We provide ",
 	              React.createElement(
 	                'code',
 	                null,
@@ -52168,7 +49780,7 @@
 	                null,
 	                'Radio'
 	              ),
-	              ' component that reduces a lot of redundant code. This is preferred to using native Input checkbox/radio elements.'
+	              " component that reduces a lot of redundant code. This is preferred to using native Input checkbox/radio elements."
 	            ),
 	            React.createElement(
 	              Well,
@@ -52176,31 +49788,31 @@
 	              React.createElement(
 	                Checkbox,
 	                null,
-	                'Option one is this and that',
+	                "Option one is this and that",
 	                '—',
-	                'be sure to include why it\'s great'
+	                "be sure to include why it's great"
 	              ),
 	              React.createElement(
 	                Checkbox,
 	                { disabled: true },
-	                'Option two is disabled'
+	                "Option two is disabled"
 	              ),
 	              React.createElement(
 	                Radio,
 	                { name: 'optionsRadios', value: 'option1' },
-	                'Option one is this and that',
+	                "Option one is this and that",
 	                '—',
-	                'be sure to include why it\'s great'
+	                "be sure to include why it's great"
 	              ),
 	              React.createElement(
 	                Radio,
 	                { name: 'optionsRadios', value: 'option2' },
-	                'Option two can be something else and selecting it will deselect option one'
+	                "Option two can be something else and selecting it will deselect option one"
 	              ),
 	              React.createElement(
 	                Radio,
 	                { disabled: true, name: 'optionsRadios', value: 'option3' },
-	                'Option three is disabled'
+	                "Option three is disabled"
 	              )
 	            ),
 	            React.createElement(
@@ -52212,11 +49824,11 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Checkbox>\n  Option one is this and that&mdash;be sure to include why it\'s great\n</Checkbox>\n',
-	                  '<Checkbox disabled>\n  Option two is disabled\n</Checkbox>\n',
-	                  '<Radio name=\'optionsRadios\' value=\'option1\'>\n  Option one is this and that&mdash;be sure to include why it\'s great\n</Radio>\n',
-	                  '<Radio name=\'optionsRadios\' value=\'option2\'>\n  Option two can be something else and selecting it will deselect option one\n</Radio>\n',
-	                  '<Radio disabled name=\'optionsRadios\' value=\'option3\'>\n  Option three is disabled\n</Radio>'
+	                  "<Checkbox>\n  Option one is this and that&mdash;be sure to include why it's great\n</Checkbox>\n",
+	                  "<Checkbox disabled>\n  Option two is disabled\n</Checkbox>\n",
+	                  "<Radio name='optionsRadios' value='option1'>\n  Option one is this and that&mdash;be sure to include why it's great\n</Radio>\n",
+	                  "<Radio name='optionsRadios' value='option2'>\n  Option two can be something else and selecting it will deselect option one\n</Radio>\n",
+	                  "<Radio disabled name='optionsRadios' value='option3'>\n  Option three is disabled\n</Radio>"
 	                )
 	              )
 	            ),
@@ -52229,13 +49841,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Use the attribute ',
+	              "Use the attribute ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'inline'
 	              ),
-	              ' on a series of checkboxes or radios for controls that appear on the same line.'
+	              " on a series of checkboxes or radios for controls that appear on the same line."
 	            ),
 	            React.createElement(
 	              Well,
@@ -52298,18 +49910,18 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<div>\n',
-	                  '  <Checkbox inline defaultChecked>1</Checkbox>\n',
-	                  '  <Checkbox inline>2</Checkbox>\n',
-	                  '  <Checkbox inline>3</Checkbox>\n',
-	                  '  <Checkbox inline disabled>4</Checkbox>\n',
-	                  '</div>\n',
-	                  '<div>\n',
-	                  ' <Radio inline name=\'inline\' value=\'option1\'>1</Radio>\n',
-	                  ' <Radio inline defaultChecked name=\'inline\' value=\'option2\'>2</Radio>\n',
-	                  ' <Radio inline name=\'inline\' value=\'option3\'>3</Radio>\n',
-	                  ' <Radio inline disabled name=\'inline\' value=\'option4\'>4</Radio>\n',
-	                  '</div>'
+	                  "<div>\n",
+	                  "  <Checkbox inline defaultChecked>1</Checkbox>\n",
+	                  "  <Checkbox inline>2</Checkbox>\n",
+	                  "  <Checkbox inline>3</Checkbox>\n",
+	                  "  <Checkbox inline disabled>4</Checkbox>\n",
+	                  "</div>\n",
+	                  "<div>\n",
+	                  " <Radio inline name='inline' value='option1'>1</Radio>\n",
+	                  " <Radio inline defaultChecked name='inline' value='option2'>2</Radio>\n",
+	                  " <Radio inline name='inline' value='option3'>3</Radio>\n",
+	                  " <Radio inline disabled name='inline' value='option4'>4</Radio>\n",
+	                  "</div>"
 	                )
 	              )
 	            )
@@ -52329,7 +49941,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Access checked state of checkbox/radio. Example:'
+	              "Access checked state of checkbox/radio. Example:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -52357,7 +49969,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Set checked state of checkbox/radio. Example:'
+	              "Set checked state of checkbox/radio. Example:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -52385,7 +49997,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Test if checked. Example:'
+	              "Test if checked. Example:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -52413,7 +50025,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Convenience function to get the value of the inner span element. Example:'
+	              "Convenience function to get the value of the inner span element. Example:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -52582,13 +50194,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Use the default option, or add ',
+	              "Use the default option, or add ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'multiple'
 	              ),
-	              ' to show multiple options at once.'
+	              " to show multiple options at once."
 	            ),
 	            React.createElement(
 	              Well,
@@ -52662,20 +50274,20 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Select>\n',
-	                  '  <option>1</option>\n',
-	                  '  <option>2</option>\n',
-	                  '  <option>3</option>\n',
-	                  '  <option>4</option>\n',
-	                  '  <option>5</option>\n',
-	                  '</Select>\n',
-	                  '<Select multiple>\n',
-	                  '  <option>1</option>\n',
-	                  '  <option>2</option>\n',
-	                  '  <option>3</option>\n',
-	                  '  <option>4</option>\n',
-	                  '  <option>5</option>\n',
-	                  '</Select>'
+	                  "<Select>\n",
+	                  "  <option>1</option>\n",
+	                  "  <option>2</option>\n",
+	                  "  <option>3</option>\n",
+	                  "  <option>4</option>\n",
+	                  "  <option>5</option>\n",
+	                  "</Select>\n",
+	                  "<Select multiple>\n",
+	                  "  <option>1</option>\n",
+	                  "  <option>2</option>\n",
+	                  "  <option>3</option>\n",
+	                  "  <option>4</option>\n",
+	                  "  <option>5</option>\n",
+	                  "</Select>"
 	                )
 	              )
 	            )
@@ -52686,17 +50298,17 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Set heights using properties like: ',
+	              "Set heights using properties like: ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'lg'
+	                "lg"
 	              ),
-	              ' and ',
+	              " and ",
 	              React.createElement(
 	                'code',
 	                null,
-	                'sm'
+	                "sm"
 	              )
 	            ),
 	            React.createElement(
@@ -52771,20 +50383,20 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Select sm>\n',
-	                  '  <option>1</option>\n',
-	                  '  <option>2</option>\n',
-	                  '  <option>3</option>\n',
-	                  '  <option>4</option>\n',
-	                  '  <option>5</option>\n',
-	                  '</Select>\n',
-	                  '<Select lg>\n',
-	                  '  <option>1</option>\n',
-	                  '  <option>2</option>\n',
-	                  '  <option>3</option>\n',
-	                  '  <option>4</option>\n',
-	                  '  <option>5</option>\n',
-	                  '</Select>'
+	                  "<Select sm>\n",
+	                  "  <option>1</option>\n",
+	                  "  <option>2</option>\n",
+	                  "  <option>3</option>\n",
+	                  "  <option>4</option>\n",
+	                  "  <option>5</option>\n",
+	                  "</Select>\n",
+	                  "<Select lg>\n",
+	                  "  <option>1</option>\n",
+	                  "  <option>2</option>\n",
+	                  "  <option>3</option>\n",
+	                  "  <option>4</option>\n",
+	                  "  <option>5</option>\n",
+	                  "</Select>"
 	                )
 	              )
 	            )
@@ -52915,13 +50527,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'To style a button use the ',
+	              "To style a button use the ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'bsStyle'
 	              ),
-	              ' attribute. More colors are available (Check the colors.scss file for more).'
+	              " attribute. More colors are available (Check the colors.scss file for more)."
 	            ),
 	            React.createElement(
 	              Well,
@@ -52977,13 +50589,13 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Button>Default</Button>\n',
-	                  '<Button bsStyle=\'primary\'>Primary</Button>\n',
-	                  '<Button bsStyle=\'success\'>Success</Button>\n',
-	                  '<Button bsStyle=\'info\'>Info</Button>\n',
-	                  '<Button bsStyle=\'warning\'>Warning</Button>\n',
-	                  '<Button bsStyle=\'danger\'>Danger</Button>\n',
-	                  '<Button bsStyle=\'link\'>Link</Button>'
+	                  "<Button>Default</Button>\n",
+	                  "<Button bsStyle='primary'>Primary</Button>\n",
+	                  "<Button bsStyle='success'>Success</Button>\n",
+	                  "<Button bsStyle='info'>Info</Button>\n",
+	                  "<Button bsStyle='warning'>Warning</Button>\n",
+	                  "<Button bsStyle='danger'>Danger</Button>\n",
+	                  "<Button bsStyle='link'>Link</Button>"
 	                )
 	              )
 	            ),
@@ -52996,7 +50608,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Fancy larger or smaller buttons? Add ',
+	              "Fancy larger or smaller buttons? Add ",
 	              React.createElement(
 	                'code',
 	                null,
@@ -53014,7 +50626,7 @@
 	                null,
 	                'xs'
 	              ),
-	              ' attribute for additional sizes.'
+	              " attribute for additional sizes."
 	            ),
 	            React.createElement(
 	              Well,
@@ -53065,18 +50677,18 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<p>\n',
-	                  '  <Button lg bsStyle=\'primary\'>Large Button</Button>\n',
-	                  '</p>\n',
-	                  '<p>\n',
-	                  '  <Button bsStyle=\'primary\'>Default Button</Button>\n',
-	                  '</p>\n',
-	                  '<p>\n',
-	                  '  <Button sm bsStyle=\'primary\'>Small Button</Button>\n',
-	                  '</p>\n',
-	                  '<p>\n',
-	                  '  <Button xs bsStyle=\'primary\'>Extra small Button</Button>\n',
-	                  '</p>\n'
+	                  "<p>\n",
+	                  "  <Button lg bsStyle='primary'>Large Button</Button>\n",
+	                  "</p>\n",
+	                  "<p>\n",
+	                  "  <Button bsStyle='primary'>Default Button</Button>\n",
+	                  "</p>\n",
+	                  "<p>\n",
+	                  "  <Button sm bsStyle='primary'>Small Button</Button>\n",
+	                  "</p>\n",
+	                  "<p>\n",
+	                  "  <Button xs bsStyle='primary'>Extra small Button</Button>\n",
+	                  "</p>\n"
 	                )
 	              )
 	            ),
@@ -53089,7 +50701,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Create block level buttons—those that span the full width of a parent— by adding ',
+	              "Create block level buttons—those that span the full width of a parent— by adding ",
 	              React.createElement(
 	                'code',
 	                null,
@@ -53118,9 +50730,9 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<p>\n',
-	                  '  <Button lg block bsStyle=\'primary\'>Large Block Level Button</Button>\n',
-	                  '</p>\n'
+	                  "<p>\n",
+	                  "  <Button lg block bsStyle='primary'>Large Block Level Button</Button>\n",
+	                  "</p>\n"
 	                )
 	              )
 	            ),
@@ -53133,7 +50745,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active'
+	              "Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active"
 	            ),
 	            React.createElement(
 	              Well,
@@ -53163,10 +50775,10 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<p>\n',
-	                  '  <Button lg bsStyle=\'primary\'>Normal Button</Button>{\' \'}\n',
-	                  '  <Button lg bsStyle=\'primary\' active>Active Button</Button>\n',
-	                  '</p>\n'
+	                  "<p>\n",
+	                  "  <Button lg bsStyle='primary'>Normal Button</Button>{' '}\n",
+	                  "  <Button lg bsStyle='primary' active>Active Button</Button>\n",
+	                  "</p>\n"
 	                )
 	              )
 	            ),
@@ -53179,7 +50791,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Make buttons look unclickable by fading them back 50%.'
+	              "Make buttons look unclickable by fading them back 50%."
 	            ),
 	            React.createElement(
 	              Well,
@@ -53209,10 +50821,10 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<p>\n',
-	                  '  <Button lg bsStyle=\'primary\'>Normal Button</Button>{\' \'}\n',
-	                  '  <Button lg bsStyle=\'primary\' disabled>Disabled Button</Button>\n',
-	                  '</p>\n'
+	                  "<p>\n",
+	                  "  <Button lg bsStyle='primary'>Normal Button</Button>{' '}\n",
+	                  "  <Button lg bsStyle='primary' disabled>Disabled Button</Button>\n",
+	                  "</p>\n"
 	                )
 	              )
 	            )
@@ -53228,7 +50840,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Outlined button.'
+	              "Outlined button."
 	            ),
 	            React.createElement(
 	              Well,
@@ -53248,7 +50860,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Button bsStyle=\'darkgreen45\' outlined>45% Dark Green Button</Button>'
+	                  "<Button bsStyle='darkgreen45' outlined>45% Dark Green Button</Button>"
 	                )
 	              )
 	            ),
@@ -53261,7 +50873,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Inverse foreground/background colors.'
+	              "Inverse foreground/background colors."
 	            ),
 	            React.createElement(
 	              Well,
@@ -53281,7 +50893,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Button bsStyle=\'desaturateddarkblue75\' inverse>75% Desaturated Dark Blue</Button>'
+	                  "<Button bsStyle='desaturateddarkblue75' inverse>75% Desaturated Dark Blue</Button>"
 	                )
 	              )
 	            ),
@@ -53294,7 +50906,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Rounded button.'
+	              "Rounded button."
 	            ),
 	            React.createElement(
 	              Well,
@@ -53326,9 +50938,9 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Button bsStyle=\'green\' rounded><Icon glyph=\'icon-fontello-mail\' /></Button>{\' \'}\n',
-	                  '<Button bsStyle=\'blue\' rounded><Icon glyph=\'icon-fontello-rss-1\' /></Button>{\' \'}\n',
-	                  '<Button bsStyle=\'red\' rounded><Icon glyph=\'icon-fontello-cog\' /></Button>'
+	                  "<Button bsStyle='green' rounded><Icon glyph='icon-fontello-mail' /></Button>{' '}\n",
+	                  "<Button bsStyle='blue' rounded><Icon glyph='icon-fontello-rss-1' /></Button>{' '}\n",
+	                  "<Button bsStyle='red' rounded><Icon glyph='icon-fontello-cog' /></Button>"
 	                )
 	              )
 	            ),
@@ -53341,7 +50953,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add styles only on button hover/focus.'
+	              "Add styles only on button hover/focus."
 	            ),
 	            React.createElement(
 	              Well,
@@ -53361,7 +50973,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Button bsStyle=\'pink\' onlyOnHover>Pink Button (only on hover)</Button>\n'
+	                  "<Button bsStyle='pink' onlyOnHover>Pink Button (only on hover)</Button>\n"
 	                )
 	              )
 	            ),
@@ -53374,7 +50986,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Outlined white border and color in the default state but behaves like non-outlined, colored background + border and white foreground on hover/focused state.'
+	              "Outlined white border and color in the default state but behaves like non-outlined, colored background + border and white foreground on hover/focused state."
 	            ),
 	            React.createElement(
 	              Well,
@@ -53394,7 +51006,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Button bsStyle=\'darkcyan\' retainBackground>Dark Cyan Button</Button>\n'
+	                  "<Button bsStyle='darkcyan' retainBackground>Dark Cyan Button</Button>\n"
 	                )
 	              )
 	            )
@@ -53543,80 +51155,80 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Toggleable, contextual menu for displaying lists of links. The ',
+	              "Toggleable, contextual menu for displaying lists of links. The ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'Dropdown'
 	              ),
-	              ' component contains the entire menu with a special ',
+	              " component contains the entire menu with a special ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'Button'
 	              ),
-	              ' subclass ',
+	              " subclass ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'DropdownButton'
 	              ),
 	              '.',
-	              ' Whatever property/attribute you can pass to ',
+	              " Whatever property/attribute you can pass to ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'Button'
 	              ),
-	              ' component can also be passed to ',
+	              " component can also be passed to ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'DropdownButton'
 	              ),
-	              '. However ',
+	              ". However ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'DropdownButton'
 	              ),
-	              ' has two special props: ',
+	              " has two special props: ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'container'
 	              ),
-	              ' and ',
+	              " and ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'menu'
 	              ),
-	              '. The ',
+	              ". The ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'container'
 	              ),
-	              ' points to the current React class and ',
+	              " points to the current React class and ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'menu'
 	              ),
-	              ' points to the menu you would like to toggle. ',
+	              " points to the menu you would like to toggle. ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'Dropdown'
 	              ),
-	              ' component also contains a ',
+	              " component also contains a ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'Menu'
 	              ),
-	              ' component which is a container for all ',
+	              " component which is a container for all ",
 	              React.createElement(
 	                'code',
 	                null,
@@ -53628,12 +51240,12 @@
 	                null,
 	                'Caret'
 	              ),
-	              ' component adds a caret to the dropdown button.'
+	              " component adds a caret to the dropdown button."
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'As you can see it\'s much shorter than it\'s Bootstrap counterpart. We\'ll be covering individual parts (DropdownButton, Menu, MenuItem) later in the documentation.'
+	              "As you can see it's much shorter than it's Bootstrap counterpart. We'll be covering individual parts (DropdownButton, Menu, MenuItem) later in the documentation."
 	            ),
 	            React.createElement(
 	              Well,
@@ -53700,13 +51312,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. Add ',
+	              "By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. Add ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'alignRight'
 	              ),
-	              ' to right align the dropdown menu.'
+	              " to right align the dropdown menu."
 	            ),
 	            React.createElement(
 	              Well,
@@ -53773,7 +51385,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add a header to label sections of actions in any dropdown menu.'
+	              "Add a header to label sections of actions in any dropdown menu."
 	            ),
 	            React.createElement(
 	              Well,
@@ -53837,20 +51449,20 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Dropdown>\n',
-	                  '  <DropdownButton bsStyle=\'green\'>\n',
-	                  '    <span>Dropdown </span><Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu bsStyle=\'green\'>\n',
-	                  '    <MenuItem header>Dropdown header</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider/>\n',
-	                  '    <MenuItem header>Dropdown header</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</Dropdown>\n'
+	                  "<Dropdown>\n",
+	                  "  <DropdownButton bsStyle='green'>\n",
+	                  "    <span>Dropdown </span><Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu bsStyle='green'>\n",
+	                  "    <MenuItem header>Dropdown header</MenuItem>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider/>\n",
+	                  "    <MenuItem header>Dropdown header</MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</Dropdown>\n"
 	                )
 	              )
 	            ),
@@ -53863,19 +51475,19 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add prop ',
+	              "Add prop ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'disabled'
 	              ),
-	              ' to a ',
+	              " to a ",
 	              React.createElement(
 	                'code',
 	                null,
-	                '<MenuItem>'
+	                "<MenuItem>"
 	              ),
-	              ' in the dropdown to disable it.'
+	              " in the dropdown to disable it."
 	            ),
 	            React.createElement(
 	              Well,
@@ -53923,16 +51535,16 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Dropdown>\n',
-	                  '  <DropdownButton bsStyle=\'orange75\'>\n',
-	                  '    <span>Dropdown </span><Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu bsStyle=\'orange75\'>\n',
-	                  '    <MenuItem href=\'#\'>Regular link</MenuItem>\n',
-	                  '    <MenuItem href=\'#\' disabled>Disabled link</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</Dropdown>\n'
+	                  "<Dropdown>\n",
+	                  "  <DropdownButton bsStyle='orange75'>\n",
+	                  "    <span>Dropdown </span><Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu bsStyle='orange75'>\n",
+	                  "    <MenuItem href='#'>Regular link</MenuItem>\n",
+	                  "    <MenuItem href='#' disabled>Disabled link</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</Dropdown>\n"
 	                )
 	              )
 	            ),
@@ -53945,7 +51557,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Use a DropdownButton to toggle dropdowns.'
+	              "Use a DropdownButton to toggle dropdowns."
 	            ),
 	            React.createElement(
 	              Well,
@@ -54199,78 +51811,78 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ButtonGroup>\n',
-	                  '  <DropdownButton>\n',
-	                  '    <span>Default </span><Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider></MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</ButtonGroup>{\' \'}\n',
-	                  '<ButtonGroup>\n',
-	                  '  <DropdownButton bsStyle=\'primary\'>\n',
-	                  '    <span>Primary </span><Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu bsStyle=\'primary\'>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider></MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</ButtonGroup>{\' \'}\n',
-	                  '<ButtonGroup>\n',
-	                  '  <DropdownButton bsStyle=\'success\'>\n',
-	                  '    <span>Success </span><Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu bsStyle=\'success\'>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider></MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</ButtonGroup>{\' \'}\n',
-	                  '<ButtonGroup>\n',
-	                  '  <DropdownButton bsStyle=\'info\'>\n',
-	                  '    <span>Info </span><Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu bsStyle=\'info\'>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider></MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</ButtonGroup>{\' \'}\n',
-	                  '<ButtonGroup>\n',
-	                  '  <DropdownButton bsStyle=\'warning\'>\n',
-	                  '    <span>Warning </span><Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu bsStyle=\'warning\'>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider></MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</ButtonGroup>{\' \'}\n',
-	                  '<ButtonGroup>\n',
-	                  '  <DropdownButton bsStyle=\'danger\'>\n',
-	                  '    <span>Danger </span><Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu bsStyle=\'danger\'>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider></MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</ButtonGroup>\n'
+	                  "<ButtonGroup>\n",
+	                  "  <DropdownButton>\n",
+	                  "    <span>Default </span><Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider></MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</ButtonGroup>{' '}\n",
+	                  "<ButtonGroup>\n",
+	                  "  <DropdownButton bsStyle='primary'>\n",
+	                  "    <span>Primary </span><Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu bsStyle='primary'>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider></MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</ButtonGroup>{' '}\n",
+	                  "<ButtonGroup>\n",
+	                  "  <DropdownButton bsStyle='success'>\n",
+	                  "    <span>Success </span><Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu bsStyle='success'>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider></MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</ButtonGroup>{' '}\n",
+	                  "<ButtonGroup>\n",
+	                  "  <DropdownButton bsStyle='info'>\n",
+	                  "    <span>Info </span><Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu bsStyle='info'>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider></MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</ButtonGroup>{' '}\n",
+	                  "<ButtonGroup>\n",
+	                  "  <DropdownButton bsStyle='warning'>\n",
+	                  "    <span>Warning </span><Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu bsStyle='warning'>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider></MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</ButtonGroup>{' '}\n",
+	                  "<ButtonGroup>\n",
+	                  "  <DropdownButton bsStyle='danger'>\n",
+	                  "    <span>Danger </span><Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu bsStyle='danger'>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider></MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</ButtonGroup>\n"
 	                )
 	              )
 	            ),
@@ -54283,7 +51895,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Similarly, create split button dropdowns with the same markup changes, only with a separate Button.'
+	              "Similarly, create split button dropdowns with the same markup changes, only with a separate Button."
 	            ),
 	            React.createElement(
 	              Well,
@@ -54538,84 +52150,84 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ButtonGroup>\n',
-	                  '  <Button>Default</Button>\n',
-	                  '  <DropdownButton>\n',
-	                  '    <Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider></MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</ButtonGroup>{\' \'}\n',
-	                  '<ButtonGroup>\n',
-	                  '  <Button bsStyle=\'primary\'>Primary</Button>\n',
-	                  '  <DropdownButton bsStyle=\'primary\'>\n',
-	                  '    <Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu bsStyle=\'primary\'>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider></MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</ButtonGroup>{\' \'}\n',
-	                  '<ButtonGroup>\n',
-	                  '  <Button bsStyle=\'success\'>Success</Button>\n',
-	                  '  <DropdownButton bsStyle=\'success\'>\n',
-	                  '    <Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu bsStyle=\'success\'>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider></MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</ButtonGroup>{\' \'}\n',
-	                  '<ButtonGroup>\n',
-	                  '  <Button bsStyle=\'info\'>Info</Button>\n',
-	                  '  <DropdownButton bsStyle=\'info\'>\n',
-	                  '    <Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu bsStyle=\'info\'>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider></MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</ButtonGroup>{\' \'}\n',
-	                  '<ButtonGroup>\n',
-	                  '  <Button bsStyle=\'warning\'>Warning</Button>\n',
-	                  '  <DropdownButton bsStyle=\'warning\'>\n',
-	                  '    <Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu bsStyle=\'warning\'>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider></MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</ButtonGroup>{\' \'}\n',
-	                  '<ButtonGroup>\n',
-	                  '  <Button bsStyle=\'danger\'>Danger</Button>\n',
-	                  '  <DropdownButton bsStyle=\'danger\'>\n',
-	                  '    <Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu bsStyle=\'danger\'>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider></MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</ButtonGroup>{\' \'}\n'
+	                  "<ButtonGroup>\n",
+	                  "  <Button>Default</Button>\n",
+	                  "  <DropdownButton>\n",
+	                  "    <Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider></MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</ButtonGroup>{' '}\n",
+	                  "<ButtonGroup>\n",
+	                  "  <Button bsStyle='primary'>Primary</Button>\n",
+	                  "  <DropdownButton bsStyle='primary'>\n",
+	                  "    <Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu bsStyle='primary'>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider></MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</ButtonGroup>{' '}\n",
+	                  "<ButtonGroup>\n",
+	                  "  <Button bsStyle='success'>Success</Button>\n",
+	                  "  <DropdownButton bsStyle='success'>\n",
+	                  "    <Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu bsStyle='success'>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider></MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</ButtonGroup>{' '}\n",
+	                  "<ButtonGroup>\n",
+	                  "  <Button bsStyle='info'>Info</Button>\n",
+	                  "  <DropdownButton bsStyle='info'>\n",
+	                  "    <Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu bsStyle='info'>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider></MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</ButtonGroup>{' '}\n",
+	                  "<ButtonGroup>\n",
+	                  "  <Button bsStyle='warning'>Warning</Button>\n",
+	                  "  <DropdownButton bsStyle='warning'>\n",
+	                  "    <Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu bsStyle='warning'>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider></MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</ButtonGroup>{' '}\n",
+	                  "<ButtonGroup>\n",
+	                  "  <Button bsStyle='danger'>Danger</Button>\n",
+	                  "  <DropdownButton bsStyle='danger'>\n",
+	                  "    <Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu bsStyle='danger'>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider></MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</ButtonGroup>{' '}\n"
 	                )
 	              )
 	            ),
@@ -54628,7 +52240,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Trigger dropup menus by adding dropup prop to a ButtonGroup/Dropdown component.'
+	              "Trigger dropup menus by adding dropup prop to a ButtonGroup/Dropdown component."
 	            ),
 	            React.createElement(
 	              Well,
@@ -54723,32 +52335,32 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ButtonGroup dropup>\n',
-	                  '  <Button>Dropup </Button>\n',
-	                  '  <DropdownButton>\n',
-	                  '    <Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider></MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</ButtonGroup>{\' \'}\n',
-	                  '<ButtonGroup dropup>\n',
-	                  '  <Button bsStyle=\'primary\'>Dropup </Button>\n',
-	                  '  <DropdownButton bsStyle=\'primary\'>\n',
-	                  '    <Caret/>\n',
-	                  '  </DropdownButton>\n',
-	                  '  <Menu bsStyle=\'primary\'>\n',
-	                  '    <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '    <MenuItem divider></MenuItem>\n',
-	                  '    <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '  </Menu>\n',
-	                  '</ButtonGroup>{\' \'}\n'
+	                  "<ButtonGroup dropup>\n",
+	                  "  <Button>Dropup </Button>\n",
+	                  "  <DropdownButton>\n",
+	                  "    <Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider></MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</ButtonGroup>{' '}\n",
+	                  "<ButtonGroup dropup>\n",
+	                  "  <Button bsStyle='primary'>Dropup </Button>\n",
+	                  "  <DropdownButton bsStyle='primary'>\n",
+	                  "    <Caret/>\n",
+	                  "  </DropdownButton>\n",
+	                  "  <Menu bsStyle='primary'>\n",
+	                  "    <MenuItem href='#'>Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "    <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "    <MenuItem divider></MenuItem>\n",
+	                  "    <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "  </Menu>\n",
+	                  "</ButtonGroup>{' '}\n"
 	                )
 	              )
 	            )
@@ -54895,7 +52507,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Group a series of Buttons together on a single line with the ButtonGroup component.'
+	              "Group a series of Buttons together on a single line with the ButtonGroup component."
 	            ),
 	            React.createElement(
 	              Well,
@@ -54929,11 +52541,11 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ButtonGroup>\n',
-	                  '  <Button bsStyle=\'blue\'>Left</Button>\n',
-	                  '  <Button bsStyle=\'blue\'>Middle</Button>\n',
-	                  '  <Button bsStyle=\'blue\'>Right</Button>\n',
-	                  '</ButtonGroup>\n'
+	                  "<ButtonGroup>\n",
+	                  "  <Button bsStyle='blue'>Left</Button>\n",
+	                  "  <Button bsStyle='blue'>Middle</Button>\n",
+	                  "  <Button bsStyle='blue'>Right</Button>\n",
+	                  "</ButtonGroup>\n"
 	                )
 	              )
 	            ),
@@ -54946,7 +52558,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Combine sets of ButtonGroup into a ButtonToolbar for more complex components.'
+	              "Combine sets of ButtonGroup into a ButtonToolbar for more complex components."
 	            ),
 	            React.createElement(
 	              Well,
@@ -55017,22 +52629,22 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ButtonToolbar>\n',
-	                  '  <ButtonGroup>\n',
-	                  '    <Button bsStyle=\'blue\'>1</Button>\n',
-	                  '    <Button bsStyle=\'blue\'>2</Button>\n',
-	                  '    <Button bsStyle=\'blue\'>3</Button>\n',
-	                  '    <Button bsStyle=\'blue\'>4</Button>\n',
-	                  '  </ButtonGroup>\n',
-	                  '  <ButtonGroup>\n',
-	                  '    <Button bsStyle=\'green\'>5</Button>\n',
-	                  '    <Button bsStyle=\'green\'>6</Button>\n',
-	                  '    <Button bsStyle=\'green\'>7</Button>\n',
-	                  '  </ButtonGroup>\n',
-	                  '  <ButtonGroup>\n',
-	                  '    <Button bsStyle=\'red\'>8</Button>\n',
-	                  '  </ButtonGroup>\n',
-	                  '</ButtonToolbar>\n'
+	                  "<ButtonToolbar>\n",
+	                  "  <ButtonGroup>\n",
+	                  "    <Button bsStyle='blue'>1</Button>\n",
+	                  "    <Button bsStyle='blue'>2</Button>\n",
+	                  "    <Button bsStyle='blue'>3</Button>\n",
+	                  "    <Button bsStyle='blue'>4</Button>\n",
+	                  "  </ButtonGroup>\n",
+	                  "  <ButtonGroup>\n",
+	                  "    <Button bsStyle='green'>5</Button>\n",
+	                  "    <Button bsStyle='green'>6</Button>\n",
+	                  "    <Button bsStyle='green'>7</Button>\n",
+	                  "  </ButtonGroup>\n",
+	                  "  <ButtonGroup>\n",
+	                  "    <Button bsStyle='red'>8</Button>\n",
+	                  "  </ButtonGroup>\n",
+	                  "</ButtonToolbar>\n"
 	                )
 	              )
 	            ),
@@ -55045,7 +52657,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Instead of applying button sizing classes to every button in a group, just add lg/sm/xs to the ButtonGroup component itself.'
+	              "Instead of applying button sizing classes to every button in a group, just add lg/sm/xs to the ButtonGroup component itself."
 	            ),
 	            React.createElement(
 	              Well,
@@ -55160,35 +52772,35 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<div>\n',
-	                  '  <ButtonGroup lg>\n',
-	                  '    <Button bsStyle=\'blue\'>1</Button>\n',
-	                  '    <Button bsStyle=\'blue\'>2</Button>\n',
-	                  '    <Button bsStyle=\'blue\'>3</Button>\n',
-	                  '    <Button bsStyle=\'blue\'>4</Button>\n',
-	                  '  </ButtonGroup>\n',
-	                  '</div><br/>\n',
-	                  '<div>\n',
-	                  '  <ButtonGroup>\n',
-	                  '    <Button bsStyle=\'green\'>1</Button>\n',
-	                  '    <Button bsStyle=\'green\'>2</Button>\n',
-	                  '    <Button bsStyle=\'green\'>3</Button>\n',
-	                  '    <Button bsStyle=\'green\'>4</Button>\n',
-	                  '  </ButtonGroup>\n',
-	                  '</div><br/>\n',
-	                  '<div>\n',
-	                  '  <ButtonGroup sm>\n',
-	                  '    <Button bsStyle=\'red\'>1</Button>\n',
-	                  '    <Button bsStyle=\'red\'>2</Button>\n',
-	                  '    <Button bsStyle=\'red\'>3</Button>\n',
-	                  '  </ButtonGroup>\n',
-	                  '</div><br/>\n',
-	                  '<div>\n',
-	                  '  <ButtonGroup xs>\n',
-	                  '    <Button bsStyle=\'yellow\'>1</Button>\n',
-	                  '    <Button bsStyle=\'yellow\'>2</Button>\n',
-	                  '  </ButtonGroup>\n',
-	                  '</div>\n'
+	                  "<div>\n",
+	                  "  <ButtonGroup lg>\n",
+	                  "    <Button bsStyle='blue'>1</Button>\n",
+	                  "    <Button bsStyle='blue'>2</Button>\n",
+	                  "    <Button bsStyle='blue'>3</Button>\n",
+	                  "    <Button bsStyle='blue'>4</Button>\n",
+	                  "  </ButtonGroup>\n",
+	                  "</div><br/>\n",
+	                  "<div>\n",
+	                  "  <ButtonGroup>\n",
+	                  "    <Button bsStyle='green'>1</Button>\n",
+	                  "    <Button bsStyle='green'>2</Button>\n",
+	                  "    <Button bsStyle='green'>3</Button>\n",
+	                  "    <Button bsStyle='green'>4</Button>\n",
+	                  "  </ButtonGroup>\n",
+	                  "</div><br/>\n",
+	                  "<div>\n",
+	                  "  <ButtonGroup sm>\n",
+	                  "    <Button bsStyle='red'>1</Button>\n",
+	                  "    <Button bsStyle='red'>2</Button>\n",
+	                  "    <Button bsStyle='red'>3</Button>\n",
+	                  "  </ButtonGroup>\n",
+	                  "</div><br/>\n",
+	                  "<div>\n",
+	                  "  <ButtonGroup xs>\n",
+	                  "    <Button bsStyle='yellow'>1</Button>\n",
+	                  "    <Button bsStyle='yellow'>2</Button>\n",
+	                  "  </ButtonGroup>\n",
+	                  "</div>\n"
 	                )
 	              )
 	            ),
@@ -55201,7 +52813,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Place a ButtonGroup within another ButtonGroup when you want Dropdown Menus mixed with a series of Button components.'
+	              "Place a ButtonGroup within another ButtonGroup when you want Dropdown Menus mixed with a series of Button components."
 	            ),
 	            React.createElement(
 	              Well,
@@ -55263,20 +52875,20 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ButtonGroup>\n',
-	                  '  <Button bsStyle=\'darkcyan\'>1</Button>\n',
-	                  '  <Button bsStyle=\'darkcyan\'>2</Button>\n',
-	                  '  <ButtonGroup>\n',
-	                  '    <DropdownButton>\n',
-	                  '      <span>Dropdown </span><Caret/>\n',
-	                  '    </DropdownButton>\n',
-	                  '    <Menu>\n',
-	                  '      <MenuItem href=\'#\'>Regular link</MenuItem>\n',
-	                  '      <MenuItem href=\'#\' disabled>Disabled link</MenuItem>\n',
-	                  '      <MenuItem href=\'#\'>Another link</MenuItem>\n',
-	                  '    </Menu>\n',
-	                  '  </ButtonGroup>\n',
-	                  '</ButtonGroup>\n'
+	                  "<ButtonGroup>\n",
+	                  "  <Button bsStyle='darkcyan'>1</Button>\n",
+	                  "  <Button bsStyle='darkcyan'>2</Button>\n",
+	                  "  <ButtonGroup>\n",
+	                  "    <DropdownButton>\n",
+	                  "      <span>Dropdown </span><Caret/>\n",
+	                  "    </DropdownButton>\n",
+	                  "    <Menu>\n",
+	                  "      <MenuItem href='#'>Regular link</MenuItem>\n",
+	                  "      <MenuItem href='#' disabled>Disabled link</MenuItem>\n",
+	                  "      <MenuItem href='#'>Another link</MenuItem>\n",
+	                  "    </Menu>\n",
+	                  "  </ButtonGroup>\n",
+	                  "</ButtonGroup>\n"
 	                )
 	              )
 	            ),
@@ -55289,7 +52901,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Make a set of buttons appear vertically stacked rather than horizontally.'
+	              "Make a set of buttons appear vertically stacked rather than horizontally."
 	            ),
 	            React.createElement(
 	              Well,
@@ -55460,52 +53072,52 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ButtonGroup vertical>\n',
-	                  '  <Button bsStyle=\'pink\'>Button</Button>\n',
-	                  '  <Button bsStyle=\'pink\'>Button</Button>\n',
-	                  '  <ButtonGroup>\n',
-	                  '    <DropdownButton bsStyle=\'pink\'>\n',
-	                  '      <span>Dropdown </span><Caret/>\n',
-	                  '    </DropdownButton>\n',
-	                  '    <Menu bsStyle=\'pink\'>\n',
-	                  '      <MenuItem href=\'#\'>Regular link</MenuItem>\n',
-	                  '      <MenuItem href=\'#\' disabled>Disabled link</MenuItem>\n',
-	                  '      <MenuItem href=\'#\'>Another link</MenuItem>\n',
-	                  '    </Menu>\n',
-	                  '  </ButtonGroup>\n',
-	                  '  <Button bsStyle=\'pink\'>Button</Button>\n',
-	                  '  <Button bsStyle=\'pink\'>Button</Button>\n',
-	                  '  <ButtonGroup>\n',
-	                  '    <DropdownButton bsStyle=\'pink\'>\n',
-	                  '      <span>Dropdown </span><Caret/>\n',
-	                  '    </DropdownButton>\n',
-	                  '    <Menu bsStyle=\'pink\'>\n',
-	                  '      <MenuItem href=\'#\'>Regular link</MenuItem>\n',
-	                  '      <MenuItem href=\'#\' disabled>Disabled link</MenuItem>\n',
-	                  '      <MenuItem href=\'#\'>Another link</MenuItem>\n',
-	                  '    </Menu>\n',
-	                  '  </ButtonGroup>\n',
-	                  '  <ButtonGroup>\n',
-	                  '    <DropdownButton bsStyle=\'pink\'>\n',
-	                  '      <span>Dropdown </span><Caret/>\n',
-	                  '    </DropdownButton>\n',
-	                  '    <Menu bsStyle=\'pink\'>\n',
-	                  '      <MenuItem href=\'#\'>Regular link</MenuItem>\n',
-	                  '      <MenuItem href=\'#\' disabled>Disabled link</MenuItem>\n',
-	                  '      <MenuItem href=\'#\'>Another link</MenuItem>\n',
-	                  '    </Menu>\n',
-	                  '  </ButtonGroup>\n',
-	                  '  <ButtonGroup>\n',
-	                  '    <DropdownButton bsStyle=\'pink\'>\n',
-	                  '      <span>Dropdown </span><Caret/>\n',
-	                  '    </DropdownButton>\n',
-	                  '    <Menu bsStyle=\'pink\'>\n',
-	                  '      <MenuItem href=\'#\'>Regular link</MenuItem>\n',
-	                  '      <MenuItem href=\'#\' disabled>Disabled link</MenuItem>\n',
-	                  '      <MenuItem href=\'#\'>Another link</MenuItem>\n',
-	                  '    </Menu>\n',
-	                  '  </ButtonGroup>\n',
-	                  '</ButtonGroup>\n'
+	                  "<ButtonGroup vertical>\n",
+	                  "  <Button bsStyle='pink'>Button</Button>\n",
+	                  "  <Button bsStyle='pink'>Button</Button>\n",
+	                  "  <ButtonGroup>\n",
+	                  "    <DropdownButton bsStyle='pink'>\n",
+	                  "      <span>Dropdown </span><Caret/>\n",
+	                  "    </DropdownButton>\n",
+	                  "    <Menu bsStyle='pink'>\n",
+	                  "      <MenuItem href='#'>Regular link</MenuItem>\n",
+	                  "      <MenuItem href='#' disabled>Disabled link</MenuItem>\n",
+	                  "      <MenuItem href='#'>Another link</MenuItem>\n",
+	                  "    </Menu>\n",
+	                  "  </ButtonGroup>\n",
+	                  "  <Button bsStyle='pink'>Button</Button>\n",
+	                  "  <Button bsStyle='pink'>Button</Button>\n",
+	                  "  <ButtonGroup>\n",
+	                  "    <DropdownButton bsStyle='pink'>\n",
+	                  "      <span>Dropdown </span><Caret/>\n",
+	                  "    </DropdownButton>\n",
+	                  "    <Menu bsStyle='pink'>\n",
+	                  "      <MenuItem href='#'>Regular link</MenuItem>\n",
+	                  "      <MenuItem href='#' disabled>Disabled link</MenuItem>\n",
+	                  "      <MenuItem href='#'>Another link</MenuItem>\n",
+	                  "    </Menu>\n",
+	                  "  </ButtonGroup>\n",
+	                  "  <ButtonGroup>\n",
+	                  "    <DropdownButton bsStyle='pink'>\n",
+	                  "      <span>Dropdown </span><Caret/>\n",
+	                  "    </DropdownButton>\n",
+	                  "    <Menu bsStyle='pink'>\n",
+	                  "      <MenuItem href='#'>Regular link</MenuItem>\n",
+	                  "      <MenuItem href='#' disabled>Disabled link</MenuItem>\n",
+	                  "      <MenuItem href='#'>Another link</MenuItem>\n",
+	                  "    </Menu>\n",
+	                  "  </ButtonGroup>\n",
+	                  "  <ButtonGroup>\n",
+	                  "    <DropdownButton bsStyle='pink'>\n",
+	                  "      <span>Dropdown </span><Caret/>\n",
+	                  "    </DropdownButton>\n",
+	                  "    <Menu bsStyle='pink'>\n",
+	                  "      <MenuItem href='#'>Regular link</MenuItem>\n",
+	                  "      <MenuItem href='#' disabled>Disabled link</MenuItem>\n",
+	                  "      <MenuItem href='#'>Another link</MenuItem>\n",
+	                  "    </Menu>\n",
+	                  "  </ButtonGroup>\n",
+	                  "</ButtonGroup>\n"
 	                )
 	              )
 	            ),
@@ -55518,7 +53130,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Make a set of buttons appear vertically stacked rather than horizontally.'
+	              "Make a set of buttons appear vertically stacked rather than horizontally."
 	            ),
 	            React.createElement(
 	              Well,
@@ -55580,20 +53192,20 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ButtonGroup justified>\n',
-	                  '  <Button bsStyle=\'purple\' componentClass=\'a\'>Left</Button>\n',
-	                  '  <Button bsStyle=\'purple\' componentClass=\'a\'>Middle</Button>\n',
-	                  '  <ButtonGroup>\n',
-	                  '    <DropdownButton bsStyle=\'purple\'>\n',
-	                  '      <span>Dropdown </span><Caret/>\n',
-	                  '    </DropdownButton>\n',
-	                  '    <Menu alignRight bsStyle=\'purple\'>\n',
-	                  '      <MenuItem href=\'#\'>Regular link</MenuItem>\n',
-	                  '      <MenuItem href=\'#\' disabled>Disabled link</MenuItem>\n',
-	                  '      <MenuItem href=\'#\'>Another link</MenuItem>\n',
-	                  '    </Menu>\n',
-	                  '  </ButtonGroup>\n',
-	                  '</ButtonGroup>\n'
+	                  "<ButtonGroup justified>\n",
+	                  "  <Button bsStyle='purple' componentClass='a'>Left</Button>\n",
+	                  "  <Button bsStyle='purple' componentClass='a'>Middle</Button>\n",
+	                  "  <ButtonGroup>\n",
+	                  "    <DropdownButton bsStyle='purple'>\n",
+	                  "      <span>Dropdown </span><Caret/>\n",
+	                  "    </DropdownButton>\n",
+	                  "    <Menu alignRight bsStyle='purple'>\n",
+	                  "      <MenuItem href='#'>Regular link</MenuItem>\n",
+	                  "      <MenuItem href='#' disabled>Disabled link</MenuItem>\n",
+	                  "      <MenuItem href='#'>Another link</MenuItem>\n",
+	                  "    </Menu>\n",
+	                  "  </ButtonGroup>\n",
+	                  "</ButtonGroup>\n"
 	                )
 	              )
 	            )
@@ -55724,25 +53336,25 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Extend ',
+	              "Extend ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'Input'
 	              ),
-	              ' components by adding text or buttons before, after, or on both sides of any text-based input. Use ',
+	              " components by adding text or buttons before, after, or on both sides of any text-based input. Use ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'InputGroup'
 	              ),
-	              ' with an ',
+	              " with an ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'InputGroupAddon'
 	              ),
-	              ' to prepend or append elements to a single ',
+	              " to prepend or append elements to a single ",
 	              React.createElement(
 	                'code',
 	                null,
@@ -55800,19 +53412,19 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<InputGroup>\n',
-	                  '  <InputGroupAddon>@</InputGroupAddon>\n',
-	                  '  <Input type=\'text\' placeholder=\'Username\'/>\n',
-	                  '</InputGroup><br/>\n',
-	                  '<InputGroup>\n',
-	                  '  <Input type=\'text\'/>\n',
-	                  '  <InputGroupAddon>.00</InputGroupAddon>\n',
-	                  '</InputGroup><br/>\n',
-	                  '<InputGroup>\n',
-	                  '  <InputGroupAddon> $ </InputGroupAddon>\n',
-	                  '  <Input type=\'text\'/>\n',
-	                  '  <InputGroupAddon>.00</InputGroupAddon>\n',
-	                  '</InputGroup>\n'
+	                  "<InputGroup>\n",
+	                  "  <InputGroupAddon>@</InputGroupAddon>\n",
+	                  "  <Input type='text' placeholder='Username'/>\n",
+	                  "</InputGroup><br/>\n",
+	                  "<InputGroup>\n",
+	                  "  <Input type='text'/>\n",
+	                  "  <InputGroupAddon>.00</InputGroupAddon>\n",
+	                  "</InputGroup><br/>\n",
+	                  "<InputGroup>\n",
+	                  "  <InputGroupAddon> $ </InputGroupAddon>\n",
+	                  "  <Input type='text'/>\n",
+	                  "  <InputGroupAddon>.00</InputGroupAddon>\n",
+	                  "</InputGroup>\n"
 	                )
 	              )
 	            ),
@@ -55825,13 +53437,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add the relative form sizing classes to the ',
+	              "Add the relative form sizing classes to the ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'InputGroup'
 	              ),
-	              ' itself and contents within will automatically resize—no need for repeating the form control size classes on each element.'
+	              " itself and contents within will automatically resize—no need for repeating the form control size classes on each element."
 	            ),
 	            React.createElement(
 	              Well,
@@ -55878,18 +53490,18 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<InputGroup lg>\n',
-	                  '  <InputGroupAddon>@</InputGroupAddon>\n',
-	                  '  <Input type=\'text\' placeholder=\'Username\'/>\n',
-	                  '</InputGroup><br/>\n',
-	                  '<InputGroup>\n',
-	                  '  <InputGroupAddon>@</InputGroupAddon>\n',
-	                  '  <Input type=\'text\' placeholder=\'Username\'/>\n',
-	                  '</InputGroup><br/>\n',
-	                  '<InputGroup sm>\n',
-	                  '  <InputGroupAddon>@</InputGroupAddon>\n',
-	                  '  <Input type=\'text\' placeholder=\'Username\'/>\n',
-	                  '</InputGroup>\n'
+	                  "<InputGroup lg>\n",
+	                  "  <InputGroupAddon>@</InputGroupAddon>\n",
+	                  "  <Input type='text' placeholder='Username'/>\n",
+	                  "</InputGroup><br/>\n",
+	                  "<InputGroup>\n",
+	                  "  <InputGroupAddon>@</InputGroupAddon>\n",
+	                  "  <Input type='text' placeholder='Username'/>\n",
+	                  "</InputGroup><br/>\n",
+	                  "<InputGroup sm>\n",
+	                  "  <InputGroupAddon>@</InputGroupAddon>\n",
+	                  "  <Input type='text' placeholder='Username'/>\n",
+	                  "</InputGroup>\n"
 	                )
 	              )
 	            ),
@@ -55902,13 +53514,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Place any checkbox or radio option within an ',
+	              "Place any checkbox or radio option within an ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'InputGroupAddon'
 	              ),
-	              ' instead of text..'
+	              " instead of text.."
 	            ),
 	            React.createElement(
 	              Well,
@@ -55959,22 +53571,22 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Grid>\n',
-	                  '  <Row>\n',
-	                  '    <Col xs={6}>\n',
-	                  '      <InputGroup>\n',
-	                  '        <InputGroupAddon><Checkbox native/></InputGroupAddon>\n',
-	                  '        <Input type=\'text\' placeholder=\'Username\'/>\n',
-	                  '      </InputGroup>\n',
-	                  '    </Col>\n',
-	                  '    <Col xs={6}>\n',
-	                  '      <InputGroup>\n',
-	                  '        <InputGroupAddon><Radio native/></InputGroupAddon>\n',
-	                  '        <Input type=\'text\' placeholder=\'Username\'/>\n',
-	                  '      </InputGroup>\n',
-	                  '    </Col>\n',
-	                  '  </Row>\n',
-	                  '</Grid>\n'
+	                  "<Grid>\n",
+	                  "  <Row>\n",
+	                  "    <Col xs={6}>\n",
+	                  "      <InputGroup>\n",
+	                  "        <InputGroupAddon><Checkbox native/></InputGroupAddon>\n",
+	                  "        <Input type='text' placeholder='Username'/>\n",
+	                  "      </InputGroup>\n",
+	                  "    </Col>\n",
+	                  "    <Col xs={6}>\n",
+	                  "      <InputGroup>\n",
+	                  "        <InputGroupAddon><Radio native/></InputGroupAddon>\n",
+	                  "        <Input type='text' placeholder='Username'/>\n",
+	                  "      </InputGroup>\n",
+	                  "    </Col>\n",
+	                  "  </Row>\n",
+	                  "</Grid>\n"
 	                )
 	              )
 	            ),
@@ -56041,22 +53653,22 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Grid>\n',
-	                  '  <Row>\n',
-	                  '    <Col xs={6}>\n',
-	                  '      <InputGroup>\n',
-	                  '        <InputGroupButton><Button onlyOnHover>Go!</Button></InputGroupButton>\n',
-	                  '        <Input type=\'text\' placeholder=\'Username\'/>\n',
-	                  '      </InputGroup>\n',
-	                  '    </Col>\n',
-	                  '    <Col xs={6}>\n',
-	                  '      <InputGroup>\n',
-	                  '        <Input type=\'text\' placeholder=\'Username\'/>\n',
-	                  '        <InputGroupButton><Button onlyOnHover>Go!</Button></InputGroupButton>\n',
-	                  '      </InputGroup>\n',
-	                  '    </Col>\n',
-	                  '  </Row>\n',
-	                  '</Grid>\n'
+	                  "<Grid>\n",
+	                  "  <Row>\n",
+	                  "    <Col xs={6}>\n",
+	                  "      <InputGroup>\n",
+	                  "        <InputGroupButton><Button onlyOnHover>Go!</Button></InputGroupButton>\n",
+	                  "        <Input type='text' placeholder='Username'/>\n",
+	                  "      </InputGroup>\n",
+	                  "    </Col>\n",
+	                  "    <Col xs={6}>\n",
+	                  "      <InputGroup>\n",
+	                  "        <Input type='text' placeholder='Username'/>\n",
+	                  "        <InputGroupButton><Button onlyOnHover>Go!</Button></InputGroupButton>\n",
+	                  "      </InputGroup>\n",
+	                  "    </Col>\n",
+	                  "  </Row>\n",
+	                  "</Grid>\n"
 	                )
 	              )
 	            ),
@@ -56183,44 +53795,44 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Grid>\n',
-	                  '  <Row>\n',
-	                  '    <Col xs={6}>\n',
-	                  '      <InputGroup>\n',
-	                  '        <InputGroupButton dropdown>\n',
-	                  '          <DropdownButton onlyOnHover>\n',
-	                  '            <span>Action </span><Caret/>\n',
-	                  '          </DropdownButton>\n',
-	                  '          <Menu>\n',
-	                  '            <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '            <MenuItem divider></MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '          </Menu>\n',
-	                  '        </InputGroupButton>\n',
-	                  '        <Input type=\'text\' placeholder=\'Username\'/>\n',
-	                  '      </InputGroup>\n',
-	                  '    </Col>\n',
-	                  '    <Col xs={6}>\n',
-	                  '      <InputGroup>\n',
-	                  '        <Input type=\'text\' placeholder=\'Username\'/>\n',
-	                  '        <InputGroupButton dropdown>\n',
-	                  '          <DropdownButton onlyOnHover>\n',
-	                  '            <span>Action </span><Caret/>\n',
-	                  '          </DropdownButton>\n',
-	                  '          <Menu alignRight>\n',
-	                  '            <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '            <MenuItem divider></MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '          </Menu>\n',
-	                  '        </InputGroupButton>\n',
-	                  '      </InputGroup>\n',
-	                  '    </Col>\n',
-	                  '  </Row>\n',
-	                  '</Grid>\n'
+	                  "<Grid>\n",
+	                  "  <Row>\n",
+	                  "    <Col xs={6}>\n",
+	                  "      <InputGroup>\n",
+	                  "        <InputGroupButton dropdown>\n",
+	                  "          <DropdownButton onlyOnHover>\n",
+	                  "            <span>Action </span><Caret/>\n",
+	                  "          </DropdownButton>\n",
+	                  "          <Menu>\n",
+	                  "            <MenuItem href='#'>Action</MenuItem>\n",
+	                  "            <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "            <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "            <MenuItem divider></MenuItem>\n",
+	                  "            <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "          </Menu>\n",
+	                  "        </InputGroupButton>\n",
+	                  "        <Input type='text' placeholder='Username'/>\n",
+	                  "      </InputGroup>\n",
+	                  "    </Col>\n",
+	                  "    <Col xs={6}>\n",
+	                  "      <InputGroup>\n",
+	                  "        <Input type='text' placeholder='Username'/>\n",
+	                  "        <InputGroupButton dropdown>\n",
+	                  "          <DropdownButton onlyOnHover>\n",
+	                  "            <span>Action </span><Caret/>\n",
+	                  "          </DropdownButton>\n",
+	                  "          <Menu alignRight>\n",
+	                  "            <MenuItem href='#'>Action</MenuItem>\n",
+	                  "            <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "            <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "            <MenuItem divider></MenuItem>\n",
+	                  "            <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "          </Menu>\n",
+	                  "        </InputGroupButton>\n",
+	                  "      </InputGroup>\n",
+	                  "    </Col>\n",
+	                  "  </Row>\n",
+	                  "</Grid>\n"
 	                )
 	              )
 	            ),
@@ -56347,46 +53959,46 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Grid>\n',
-	                  '  <Row>\n',
-	                  '    <Col xs={6}>\n',
-	                  '      <InputGroup>\n',
-	                  '        <InputGroupButton dropdown>\n',
-	                  '          <Button onlyOnHover>Action </Button>\n',
-	                  '          <DropdownButton onlyOnHover>\n',
-	                  '            <Caret/>\n',
-	                  '          </DropdownButton>\n',
-	                  '          <Menu>\n',
-	                  '            <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '            <MenuItem divider></MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '          </Menu>\n',
-	                  '        </InputGroupButton>\n',
-	                  '        <Input type=\'text\' placeholder=\'Username\'/>\n',
-	                  '      </InputGroup>\n',
-	                  '    </Col>\n',
-	                  '    <Col xs={6}>\n',
-	                  '      <InputGroup>\n',
-	                  '        <Input type=\'text\' placeholder=\'Username\'/>\n',
-	                  '        <InputGroupButton dropdown>\n',
-	                  '          <Button onlyOnHover>Action </Button>\n',
-	                  '          <DropdownButton onlyOnHover>\n',
-	                  '            <Caret/>\n',
-	                  '          </DropdownButton>\n',
-	                  '          <Menu alignRight>\n',
-	                  '            <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '            <MenuItem divider></MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '          </Menu>\n',
-	                  '        </InputGroupButton>\n',
-	                  '      </InputGroup>\n',
-	                  '    </Col>\n',
-	                  '  </Row>\n',
-	                  '</Grid>\n'
+	                  "<Grid>\n",
+	                  "  <Row>\n",
+	                  "    <Col xs={6}>\n",
+	                  "      <InputGroup>\n",
+	                  "        <InputGroupButton dropdown>\n",
+	                  "          <Button onlyOnHover>Action </Button>\n",
+	                  "          <DropdownButton onlyOnHover>\n",
+	                  "            <Caret/>\n",
+	                  "          </DropdownButton>\n",
+	                  "          <Menu>\n",
+	                  "            <MenuItem href='#'>Action</MenuItem>\n",
+	                  "            <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "            <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "            <MenuItem divider></MenuItem>\n",
+	                  "            <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "          </Menu>\n",
+	                  "        </InputGroupButton>\n",
+	                  "        <Input type='text' placeholder='Username'/>\n",
+	                  "      </InputGroup>\n",
+	                  "    </Col>\n",
+	                  "    <Col xs={6}>\n",
+	                  "      <InputGroup>\n",
+	                  "        <Input type='text' placeholder='Username'/>\n",
+	                  "        <InputGroupButton dropdown>\n",
+	                  "          <Button onlyOnHover>Action </Button>\n",
+	                  "          <DropdownButton onlyOnHover>\n",
+	                  "            <Caret/>\n",
+	                  "          </DropdownButton>\n",
+	                  "          <Menu alignRight>\n",
+	                  "            <MenuItem href='#'>Action</MenuItem>\n",
+	                  "            <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "            <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "            <MenuItem divider></MenuItem>\n",
+	                  "            <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "          </Menu>\n",
+	                  "        </InputGroupButton>\n",
+	                  "      </InputGroup>\n",
+	                  "    </Col>\n",
+	                  "  </Row>\n",
+	                  "</Grid>\n"
 	                )
 	              )
 	            )
@@ -56530,7 +54142,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.'
+	              "Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus."
 	            ),
 	            React.createElement(
 	              Well,
@@ -56621,7 +54233,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Similar markup to Tabs as above. Even the API is same as we reuse the same component.'
+	              "Similar markup to Tabs as above. Even the API is same as we reuse the same component."
 	            ),
 	            React.createElement(
 	              Well,
@@ -56708,40 +54320,40 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<TabContainer id=\'tab-2\'>\n',
-	                  '  <TabList pills bsStyle=\'orange75\'>\n',
-	                  '    <Tab active>Home</Tab>\n',
-	                  '    <Tab>Profile</Tab>\n',
-	                  '    <TabDropdown title=\'Dropdown\' menu-props={{bsStyle: \'orange75\'}}>\n',
-	                  '      <Tab>\n',
-	                  '        @fat\n',
-	                  '      </Tab>\n',
-	                  '      <Tab>\n',
-	                  '        @mdo\n',
-	                  '      </Tab>\n',
-	                  '    </TabDropdown>\n',
-	                  '  </TabList>\n',
-	                  '</TabContainer>\n',
-	                  '<Grid>\n',
-	                  '  <Row>\n',
-	                  '    <Col xs={12}>\n',
-	                  '      <TabContent tabContainerID=\'tab-2\' style={{marginTop: 12.5}}>\n',
-	                  '        <TabPane>\n',
-	                  '          <LoremIpsum query=\'5s\' />\n',
-	                  '        </TabPane>\n',
-	                  '        <TabPane>\n',
-	                  '          <LoremIpsum query=\'5s\' />\n',
-	                  '        </TabPane>\n',
-	                  '        <TabPane>\n',
-	                  '          <LoremIpsum query=\'5s\' />\n',
-	                  '        </TabPane>\n',
-	                  '        <TabPane>\n',
-	                  '          <LoremIpsum query=\'5s\' />\n',
-	                  '        </TabPane>\n',
-	                  '      </TabContent>\n',
-	                  '    </Col>\n',
-	                  '  </Row>\n',
-	                  '</Grid>\n'
+	                  "<TabContainer id='tab-2'>\n",
+	                  "  <TabList pills bsStyle='orange75'>\n",
+	                  "    <Tab active>Home</Tab>\n",
+	                  "    <Tab>Profile</Tab>\n",
+	                  "    <TabDropdown title='Dropdown' menu-props={{bsStyle: 'orange75'}}>\n",
+	                  "      <Tab>\n",
+	                  "        @fat\n",
+	                  "      </Tab>\n",
+	                  "      <Tab>\n",
+	                  "        @mdo\n",
+	                  "      </Tab>\n",
+	                  "    </TabDropdown>\n",
+	                  "  </TabList>\n",
+	                  "</TabContainer>\n",
+	                  "<Grid>\n",
+	                  "  <Row>\n",
+	                  "    <Col xs={12}>\n",
+	                  "      <TabContent tabContainerID='tab-2' style={{marginTop: 12.5}}>\n",
+	                  "        <TabPane>\n",
+	                  "          <LoremIpsum query='5s' />\n",
+	                  "        </TabPane>\n",
+	                  "        <TabPane>\n",
+	                  "          <LoremIpsum query='5s' />\n",
+	                  "        </TabPane>\n",
+	                  "        <TabPane>\n",
+	                  "          <LoremIpsum query='5s' />\n",
+	                  "        </TabPane>\n",
+	                  "        <TabPane>\n",
+	                  "          <LoremIpsum query='5s' />\n",
+	                  "        </TabPane>\n",
+	                  "      </TabContent>\n",
+	                  "    </Col>\n",
+	                  "  </Row>\n",
+	                  "</Grid>\n"
 	                )
 	              )
 	            ),
@@ -56754,7 +54366,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Easily make tabs or pills equal widths of their parent.'
+	              "Easily make tabs or pills equal widths of their parent."
 	            ),
 	            React.createElement(
 	              Well,
@@ -56829,34 +54441,34 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<TabContainer>\n',
-	                  '  <TabList pills justified bsStyle=\'orange75\'>\n',
-	                  '    <Tab active>Home</Tab>\n',
-	                  '    <Tab>Profile</Tab>\n',
-	                  '    <TabDropdown title=\'Dropdown\' menu-props={{bsStyle: \'orange75\'}}>\n',
-	                  '      <Tab>\n',
-	                  '        @fat\n',
-	                  '      </Tab>\n',
-	                  '      <Tab>\n',
-	                  '        @mdo\n',
-	                  '      </Tab>\n',
-	                  '    </TabDropdown>\n',
-	                  '  </TabList>\n',
-	                  '  <TabContent style={{marginTop: 12.5}}>\n',
-	                  '    <TabPane>\n',
-	                  '      <LoremIpsum query=\'5s\' />\n',
-	                  '    </TabPane>\n',
-	                  '    <TabPane>\n',
-	                  '      <LoremIpsum query=\'5s\' />\n',
-	                  '    </TabPane>\n',
-	                  '    <TabPane>\n',
-	                  '      <LoremIpsum query=\'5s\' />\n',
-	                  '    </TabPane>\n',
-	                  '    <TabPane>\n',
-	                  '      <LoremIpsum query=\'5s\' />\n',
-	                  '    </TabPane>\n',
-	                  '  </TabContent>\n',
-	                  '</TabContainer>\n'
+	                  "<TabContainer>\n",
+	                  "  <TabList pills justified bsStyle='orange75'>\n",
+	                  "    <Tab active>Home</Tab>\n",
+	                  "    <Tab>Profile</Tab>\n",
+	                  "    <TabDropdown title='Dropdown' menu-props={{bsStyle: 'orange75'}}>\n",
+	                  "      <Tab>\n",
+	                  "        @fat\n",
+	                  "      </Tab>\n",
+	                  "      <Tab>\n",
+	                  "        @mdo\n",
+	                  "      </Tab>\n",
+	                  "    </TabDropdown>\n",
+	                  "  </TabList>\n",
+	                  "  <TabContent style={{marginTop: 12.5}}>\n",
+	                  "    <TabPane>\n",
+	                  "      <LoremIpsum query='5s' />\n",
+	                  "    </TabPane>\n",
+	                  "    <TabPane>\n",
+	                  "      <LoremIpsum query='5s' />\n",
+	                  "    </TabPane>\n",
+	                  "    <TabPane>\n",
+	                  "      <LoremIpsum query='5s' />\n",
+	                  "    </TabPane>\n",
+	                  "    <TabPane>\n",
+	                  "      <LoremIpsum query='5s' />\n",
+	                  "    </TabPane>\n",
+	                  "  </TabContent>\n",
+	                  "</TabContainer>\n"
 	                )
 	              )
 	            )
@@ -56995,7 +54607,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Navbars are responsive meta components that serve as navigation headers for your application or site.'
+	              "Navbars are responsive meta components that serve as navigation headers for your application or site."
 	            ),
 	            React.createElement(
 	              Well,
@@ -57137,47 +54749,47 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<NavBar>\n',
-	                  '  <Container fluid>\n',
-	                  '    <NavHeader>\n',
-	                  '      <NavToggle target=\'navcontainer1\'>Toggle navigation</NavToggle>\n',
-	                  '      <NavBrand>Brand</NavBrand>\n',
-	                  '    </NavHeader>\n',
-	                  '    <NavContent id=\'navcontainer1\' collapse>\n',
-	                  '      <Nav>\n',
-	                  '        <NavItem active href=\'#\'>Link 1</NavItem>\n',
-	                  '        <NavItem href=\'#\'>CSS</NavItem>\n',
-	                  '        <NavItem dropdown>\n',
-	                  '          <DropdownButton nav>\n',
-	                  '            <span>Dropdown </span><Caret/>\n',
-	                  '          </DropdownButton>\n',
-	                  '          <Menu>\n',
-	                  '            <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '            <MenuItem divider></MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '          </Menu>\n',
-	                  '        </NavItem>\n',
-	                  '      </Nav>\n',
-	                  '      <Nav right>\n',
-	                  '        <NavItem href=\'#\'>Link 3</NavItem>\n',
-	                  '        <NavItem dropdown>\n',
-	                  '          <DropdownButton nav>\n',
-	                  '            <span>Dropdown </span><Caret/>\n',
-	                  '          </DropdownButton>\n',
-	                  '          <Menu>\n',
-	                  '            <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '            <MenuItem divider></MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '          </Menu>\n',
-	                  '        </NavItem>\n',
-	                  '      </Nav>\n',
-	                  '    </NavContent>\n',
-	                  '  </Container>\n',
-	                  '</NavBar>\n'
+	                  "<NavBar>\n",
+	                  "  <Container fluid>\n",
+	                  "    <NavHeader>\n",
+	                  "      <NavToggle target='navcontainer1'>Toggle navigation</NavToggle>\n",
+	                  "      <NavBrand>Brand</NavBrand>\n",
+	                  "    </NavHeader>\n",
+	                  "    <NavContent id='navcontainer1' collapse>\n",
+	                  "      <Nav>\n",
+	                  "        <NavItem active href='#'>Link 1</NavItem>\n",
+	                  "        <NavItem href='#'>CSS</NavItem>\n",
+	                  "        <NavItem dropdown>\n",
+	                  "          <DropdownButton nav>\n",
+	                  "            <span>Dropdown </span><Caret/>\n",
+	                  "          </DropdownButton>\n",
+	                  "          <Menu>\n",
+	                  "            <MenuItem href='#'>Action</MenuItem>\n",
+	                  "            <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "            <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "            <MenuItem divider></MenuItem>\n",
+	                  "            <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "          </Menu>\n",
+	                  "        </NavItem>\n",
+	                  "      </Nav>\n",
+	                  "      <Nav right>\n",
+	                  "        <NavItem href='#'>Link 3</NavItem>\n",
+	                  "        <NavItem dropdown>\n",
+	                  "          <DropdownButton nav>\n",
+	                  "            <span>Dropdown </span><Caret/>\n",
+	                  "          </DropdownButton>\n",
+	                  "          <Menu>\n",
+	                  "            <MenuItem href='#'>Action</MenuItem>\n",
+	                  "            <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "            <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "            <MenuItem divider></MenuItem>\n",
+	                  "            <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "          </Menu>\n",
+	                  "        </NavItem>\n",
+	                  "      </Nav>\n",
+	                  "    </NavContent>\n",
+	                  "  </Container>\n",
+	                  "</NavBar>\n"
 	                )
 	              )
 	            ),
@@ -57190,7 +54802,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Place form content within NavForm for proper vertical alignment and collapsed behavior in narrow viewports.'
+	              "Place form content within NavForm for proper vertical alignment and collapsed behavior in narrow viewports."
 	            ),
 	            React.createElement(
 	              Well,
@@ -57294,37 +54906,37 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<NavBar>\n',
-	                  '  <Container fluid>\n',
-	                  '    <NavHeader>\n',
-	                  '      <NavToggle target=\'navcontainer\'>Toggle navigation</NavToggle>\n',
-	                  '      <NavBrand>Brand</NavBrand>\n',
-	                  '    </NavHeader>\n',
-	                  '    <NavContent collapse>\n',
-	                  '      <NavForm left role=\'search\'>\n',
-	                  '        <FormGroup>\n',
-	                  '          <Input placeholder=\'Search\' />\n',
-	                  '        </FormGroup>{\' \'}\n',
-	                  '        <Button outlined onlyOnHover bsStyle=\'darkgreen45\'>Submit</Button>\n',
-	                  '      </NavForm>\n',
-	                  '      <Nav right>\n',
-	                  '        <NavItem href=\'#\'>Link 3</NavItem>\n',
-	                  '        <NavItem dropdown>\n',
-	                  '          <DropdownButton nav>\n',
-	                  '            <span>Dropdown </span><Caret/>\n',
-	                  '          </DropdownButton>\n',
-	                  '          <Menu>\n',
-	                  '            <MenuItem href=\'#\'>Action</MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Another Action</MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Something else here</MenuItem>\n',
-	                  '            <MenuItem divider></MenuItem>\n',
-	                  '            <MenuItem href=\'#\'>Separated link</MenuItem>\n',
-	                  '          </Menu>\n',
-	                  '        </NavItem>\n',
-	                  '      </Nav>\n',
-	                  '    </NavContent>\n',
-	                  '  </Container>\n',
-	                  '</NavBar>\n'
+	                  "<NavBar>\n",
+	                  "  <Container fluid>\n",
+	                  "    <NavHeader>\n",
+	                  "      <NavToggle target='navcontainer'>Toggle navigation</NavToggle>\n",
+	                  "      <NavBrand>Brand</NavBrand>\n",
+	                  "    </NavHeader>\n",
+	                  "    <NavContent collapse>\n",
+	                  "      <NavForm left role='search'>\n",
+	                  "        <FormGroup>\n",
+	                  "          <Input placeholder='Search' />\n",
+	                  "        </FormGroup>{' '}\n",
+	                  "        <Button outlined onlyOnHover bsStyle='darkgreen45'>Submit</Button>\n",
+	                  "      </NavForm>\n",
+	                  "      <Nav right>\n",
+	                  "        <NavItem href='#'>Link 3</NavItem>\n",
+	                  "        <NavItem dropdown>\n",
+	                  "          <DropdownButton nav>\n",
+	                  "            <span>Dropdown </span><Caret/>\n",
+	                  "          </DropdownButton>\n",
+	                  "          <Menu>\n",
+	                  "            <MenuItem href='#'>Action</MenuItem>\n",
+	                  "            <MenuItem href='#'>Another Action</MenuItem>\n",
+	                  "            <MenuItem href='#'>Something else here</MenuItem>\n",
+	                  "            <MenuItem divider></MenuItem>\n",
+	                  "            <MenuItem href='#'>Separated link</MenuItem>\n",
+	                  "          </Menu>\n",
+	                  "        </NavItem>\n",
+	                  "      </Nav>\n",
+	                  "    </NavContent>\n",
+	                  "  </Container>\n",
+	                  "</NavBar>\n"
 	                )
 	              )
 	            )
@@ -57455,7 +55067,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Indicate the current page\'s location within a navigational hierarchy.'
+	              "Indicate the current page's location within a navigational hierarchy."
 	            ),
 	            React.createElement(
 	              Well,
@@ -57512,18 +55124,18 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Breadcrumb>\n',
-	                  '  <BLink href=\'#\' active>Home </BLink>\n',
-	                  '</Breadcrumb>\n',
-	                  '<Breadcrumb>\n',
-	                  '  <BLink href=\'#\'>Home </BLink>\n',
-	                  '  <BLink href=\'#\' active>Library </BLink>\n',
-	                  '</Breadcrumb>\n',
-	                  '<Breadcrumb>\n',
-	                  '  <BLink href=\'#\'>Home </BLink>\n',
-	                  '  <BLink href=\'#\'>Library </BLink>\n',
-	                  '  <BLink href=\'#\' active>Data</BLink>\n',
-	                  '</Breadcrumb>\n'
+	                  "<Breadcrumb>\n",
+	                  "  <BLink href='#' active>Home </BLink>\n",
+	                  "</Breadcrumb>\n",
+	                  "<Breadcrumb>\n",
+	                  "  <BLink href='#'>Home </BLink>\n",
+	                  "  <BLink href='#' active>Library </BLink>\n",
+	                  "</Breadcrumb>\n",
+	                  "<Breadcrumb>\n",
+	                  "  <BLink href='#'>Home </BLink>\n",
+	                  "  <BLink href='#'>Library </BLink>\n",
+	                  "  <BLink href='#' active>Data</BLink>\n",
+	                  "</Breadcrumb>\n"
 	                )
 	              )
 	            )
@@ -57654,7 +55266,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Provide pagination links for your site or app with the multi-page pagination component, or the simpler pager alternative.'
+	              "Provide pagination links for your site or app with the multi-page pagination component, or the simpler pager alternative."
 	            ),
 	            React.createElement(
 	              Well,
@@ -57709,15 +55321,15 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Pagination>\n',
-	                  '  <Page begin disabled />\n',
-	                  '  <Page active href=\'#\'>2</Page>\n',
-	                  '  <Page href=\'#\'>2</Page>\n',
-	                  '  <Page href=\'#\'>3</Page>\n',
-	                  '  <Page href=\'#\'>4</Page>\n',
-	                  '  <Page href=\'#\'>5</Page>\n',
-	                  '  <Page end />\n',
-	                  '</Pagination>\n'
+	                  "<Pagination>\n",
+	                  "  <Page begin disabled />\n",
+	                  "  <Page active href='#'>2</Page>\n",
+	                  "  <Page href='#'>2</Page>\n",
+	                  "  <Page href='#'>3</Page>\n",
+	                  "  <Page href='#'>4</Page>\n",
+	                  "  <Page href='#'>5</Page>\n",
+	                  "  <Page end />\n",
+	                  "</Pagination>\n"
 	                )
 	              )
 	            ),
@@ -57730,7 +55342,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Fancy larger or smaller pagination? Add ',
+	              "Fancy larger or smaller pagination? Add ",
 	              React.createElement(
 	                'code',
 	                null,
@@ -57743,7 +55355,7 @@
 	                'sm'
 	              ),
 	              ' ',
-	              'for additional sizes.'
+	              "for additional sizes."
 	            ),
 	            React.createElement(
 	              Well,
@@ -57890,15 +55502,15 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Pagination lg>\n',
-	                  '  ...\n',
-	                  '</Pagination>\n',
-	                  '<Pagination>\n',
-	                  '  ...\n',
-	                  '</Pagination>\n',
-	                  '<Pagination sm>\n',
-	                  '  ...\n',
-	                  '</Pagination>\n'
+	                  "<Pagination lg>\n",
+	                  "  ...\n",
+	                  "</Pagination>\n",
+	                  "<Pagination>\n",
+	                  "  ...\n",
+	                  "</Pagination>\n",
+	                  "<Pagination sm>\n",
+	                  "  ...\n",
+	                  "</Pagination>\n"
 	                )
 	              )
 	            ),
@@ -57911,7 +55523,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Quick previous and next links for simple pagination implementations with light markup and styles. It\'s great for simple sites like blogs or magazines.'
+	              "Quick previous and next links for simple pagination implementations with light markup and styles. It's great for simple sites like blogs or magazines."
 	            ),
 	            React.createElement(
 	              Well,
@@ -57945,10 +55557,10 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Pager>\n',
-	                  '  <Page href=\'#\'>Previous</Page>{\' \'}\n',
-	                  '  <Page href=\'#\'>Next</Page>\n',
-	                  '</Pager>\n'
+	                  "<Pager>\n",
+	                  "  <Page href='#'>Previous</Page>{' '}\n",
+	                  "  <Page href='#'>Next</Page>\n",
+	                  "</Pager>\n"
 	                )
 	              )
 	            ),
@@ -57961,7 +55573,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Alternatively, you can align each link to the sides (with optional disabled state).'
+	              "Alternatively, you can align each link to the sides (with optional disabled state)."
 	            ),
 	            React.createElement(
 	              Well,
@@ -57995,10 +55607,10 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Pager>\n',
-	                  '  <Page previous disabled href=\'#\'>Previous</Page>{\' \'}\n',
-	                  '  <Page next href=\'#\'>Next</Page>\n',
-	                  '</Pager>\n'
+	                  "<Pager>\n",
+	                  "  <Page previous disabled href='#'>Previous</Page>{' '}\n",
+	                  "  <Page next href='#'>Next</Page>\n",
+	                  "</Pager>\n"
 	                )
 	              )
 	            )
@@ -58216,12 +55828,12 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<h1>Example heading <BLabel>New</BLabel></h1>\n',
-	                  '<h2>Example heading <BLabel>New</BLabel></h2>\n',
-	                  '<h3>Example heading <BLabel>New</BLabel></h3>\n',
-	                  '<h4>Example heading <BLabel>New</BLabel></h4>\n',
-	                  '<h5>Example heading <BLabel>New</BLabel></h5>\n',
-	                  '<h6>Example heading <BLabel>New</BLabel></h6>\n'
+	                  "<h1>Example heading <BLabel>New</BLabel></h1>\n",
+	                  "<h2>Example heading <BLabel>New</BLabel></h2>\n",
+	                  "<h3>Example heading <BLabel>New</BLabel></h3>\n",
+	                  "<h4>Example heading <BLabel>New</BLabel></h4>\n",
+	                  "<h5>Example heading <BLabel>New</BLabel></h5>\n",
+	                  "<h6>Example heading <BLabel>New</BLabel></h6>\n"
 	                )
 	              )
 	            ),
@@ -58290,12 +55902,12 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<BLabel bsStyle=\'default\'>Default</BLabel>{\' \'}\n',
-	                  '<BLabel bsStyle=\'primary\'>Primary</BLabel>{\' \'}\n',
-	                  '<BLabel bsStyle=\'success\'>Success</BLabel>{\' \'}\n',
-	                  '<BLabel bsStyle=\'info\'>Info</BLabel>{\' \'}\n',
-	                  '<BLabel bsStyle=\'warning\'>Warning</BLabel>{\' \'}\n',
-	                  '<BLabel bsStyle=\'danger\'>Danger</BLabel>\n'
+	                  "<BLabel bsStyle='default'>Default</BLabel>{' '}\n",
+	                  "<BLabel bsStyle='primary'>Primary</BLabel>{' '}\n",
+	                  "<BLabel bsStyle='success'>Success</BLabel>{' '}\n",
+	                  "<BLabel bsStyle='info'>Info</BLabel>{' '}\n",
+	                  "<BLabel bsStyle='warning'>Warning</BLabel>{' '}\n",
+	                  "<BLabel bsStyle='danger'>Danger</BLabel>\n"
 	                )
 	              )
 	            ),
@@ -58308,13 +55920,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Easily highlight new or unread items by adding a ',
+	              "Easily highlight new or unread items by adding a ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'Badge'
 	              ),
-	              ' to links'
+	              " to links"
 	            ),
 	            React.createElement(
 	              Well,
@@ -58339,7 +55951,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<a href=\'#\'>Inbox <Badge>42</Badge></a>\n'
+	                  "<a href='#'>Inbox <Badge>42</Badge></a>\n"
 	                )
 	              )
 	            )
@@ -58503,15 +56115,15 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Jumbotron>\n',
-	                  '  <h1 className=\'fg-black50\'>Hello, world</h1>\n',
-	                  '  <p>\n',
-	                  '    This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.\n',
-	                  '  </p>\n',
-	                  '  <p>\n',
-	                  '    <Button lg bsStyle=\'primary\'>Learn more</Button>\n',
-	                  '  </p>\n',
-	                  '</Jumbotron>\n'
+	                  "<Jumbotron>\n",
+	                  "  <h1 className='fg-black50'>Hello, world</h1>\n",
+	                  "  <p>\n",
+	                  "    This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.\n",
+	                  "  </p>\n",
+	                  "  <p>\n",
+	                  "    <Button lg bsStyle='primary'>Learn more</Button>\n",
+	                  "  </p>\n",
+	                  "</Jumbotron>\n"
 	                )
 	              )
 	            )
@@ -58642,7 +56254,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.'
+	              "Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages."
 	            ),
 	            React.createElement(
 	              Well,
@@ -58665,7 +56277,7 @@
 	                  null,
 	                  'Heads up!'
 	                ),
-	                ' This alert needs your attention, but it\'s not super important.'
+	                " This alert needs your attention, but it's not super important."
 	              ),
 	              React.createElement(
 	                Alert,
@@ -58675,7 +56287,7 @@
 	                  null,
 	                  'Warning!'
 	                ),
-	                ' Better check yourself, you\'re not looking too good.'
+	                " Better check yourself, you're not looking too good."
 	              ),
 	              React.createElement(
 	                Alert,
@@ -58697,18 +56309,18 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Alert success>\n',
-	                  '  <strong>Well done!</strong> You successfully read this important alert message.\n',
-	                  '</Alert>\n',
-	                  '<Alert info>\n',
-	                  '  <strong>Heads up!</strong>{" This alert needs your attention, but it\'s not super important."}\n',
-	                  '</Alert>\n',
-	                  '<Alert warning>\n',
-	                  '  <strong>Warning!</strong>{" Better check yourself, you\'re not looking too good."}\n',
-	                  '</Alert>\n',
-	                  '<Alert danger collapseBottom>\n',
-	                  '  <strong>Oh snap!</strong>Change a few things up and try submitting again.\n',
-	                  '</Alert>\n'
+	                  "<Alert success>\n",
+	                  "  <strong>Well done!</strong> You successfully read this important alert message.\n",
+	                  "</Alert>\n",
+	                  "<Alert info>\n",
+	                  "  <strong>Heads up!</strong>{\" This alert needs your attention, but it's not super important.\"}\n",
+	                  "</Alert>\n",
+	                  "<Alert warning>\n",
+	                  "  <strong>Warning!</strong>{\" Better check yourself, you're not looking too good.\"}\n",
+	                  "</Alert>\n",
+	                  "<Alert danger collapseBottom>\n",
+	                  "  <strong>Oh snap!</strong>Change a few things up and try submitting again.\n",
+	                  "</Alert>\n"
 	                )
 	              )
 	            ),
@@ -58721,13 +56333,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Build on any alert by adding an optional ',
+	              "Build on any alert by adding an optional ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'dismissible'
 	              ),
-	              ' property.'
+	              " property."
 	            ),
 	            React.createElement(
 	              Well,
@@ -58740,7 +56352,7 @@
 	                  null,
 	                  'Warning!'
 	                ),
-	                ' Better check yourself, you\'re not looking too good.'
+	                " Better check yourself, you're not looking too good."
 	              )
 	            ),
 	            React.createElement(
@@ -58752,9 +56364,9 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Alert warning dismissible collapseBottom>\n',
-	                  '  <strong>Warning!</strong>{" Better check yourself, you\'re not looking too good."}\n',
-	                  '</Alert>\n'
+	                  "<Alert warning dismissible collapseBottom>\n",
+	                  "  <strong>Warning!</strong>{\" Better check yourself, you're not looking too good.\"}\n",
+	                  "</Alert>\n"
 	                )
 	              )
 	            ),
@@ -58767,13 +56379,13 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Use the ',
+	              "Use the ",
 	              React.createElement(
 	                'code',
 	                null,
 	                'AlertLink'
 	              ),
-	              ' component to quickly provide matching colored links within any alert.'
+	              " component to quickly provide matching colored links within any alert."
 	            ),
 	            React.createElement(
 	              Well,
@@ -58808,7 +56420,7 @@
 	                  { href: '#' },
 	                  'alert needs your attention'
 	                ),
-	                ', but it\'s not super important.'
+	                ", but it's not super important."
 	              ),
 	              React.createElement(
 	                Alert,
@@ -58818,7 +56430,7 @@
 	                  null,
 	                  'Warning!'
 	                ),
-	                ' Better check yourself, you\'re ',
+	                " Better check yourself, you're ",
 	                React.createElement(
 	                  AlertLink,
 	                  { href: '#' },
@@ -58851,18 +56463,18 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Alert success>\n',
-	                  '  <strong>Well done!</strong> You successfully read <AlertLink href=\'#\'>this important alert message</AlertLink>.\n',
-	                  '</Alert>\n',
-	                  '<Alert info>\n',
-	                  '  <strong>Heads up!</strong> This <AlertLink href=\'#\'>alert needs your attention</AlertLink>{", but it\'s not super important."}',
-	                  '</Alert>\n',
-	                  '<Alert warning>\n',
-	                  '  <strong>Warning!</strong>{" Better check yourself, you\'re "}<AlertLink href=\'#\'>not looking too good.</AlertLink>\n',
-	                  '</Alert>\n',
-	                  '<Alert danger collapseBottom>\n',
-	                  '  <strong>Oh snap!</strong> <AlertLink href=\'#\'>Change a few things up</AlertLink> and try submitting again.\n',
-	                  '</Alert>\n'
+	                  "<Alert success>\n",
+	                  "  <strong>Well done!</strong> You successfully read <AlertLink href='#'>this important alert message</AlertLink>.\n",
+	                  "</Alert>\n",
+	                  "<Alert info>\n",
+	                  "  <strong>Heads up!</strong> This <AlertLink href='#'>alert needs your attention</AlertLink>{\", but it's not super important.\"}",
+	                  "</Alert>\n",
+	                  "<Alert warning>\n",
+	                  "  <strong>Warning!</strong>{\" Better check yourself, you're \"}<AlertLink href='#'>not looking too good.</AlertLink>\n",
+	                  "</Alert>\n",
+	                  "<Alert danger collapseBottom>\n",
+	                  "  <strong>Oh snap!</strong> <AlertLink href='#'>Change a few things up</AlertLink> and try submitting again.\n",
+	                  "</Alert>\n"
 	                )
 	              )
 	            )
@@ -58993,7 +56605,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Provide up-to-date feedback on the progress of a workflow or action with simple yet flexible progress bars.'
+	              "Provide up-to-date feedback on the progress of a workflow or action with simple yet flexible progress bars."
 	            ),
 	            React.createElement(
 	              Well,
@@ -59009,7 +56621,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Progress value={60} min={0} max={100} />\n'
+	                  "<Progress value={60} min={0} max={100} />\n"
 	                )
 	              )
 	            ),
@@ -59033,7 +56645,7 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Progress withLabel value={60} min={0} max={100} />\n'
+	                  "<Progress withLabel value={60} min={0} max={100} />\n"
 	                )
 	              )
 	            ),
@@ -59046,7 +56658,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Progress bars use some of the same button and alert classes for consistent styles.'
+	              "Progress bars use some of the same button and alert classes for consistent styles."
 	            ),
 	            React.createElement(
 	              Well,
@@ -59065,10 +56677,10 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Progress success value={40} min={0} max={100} />\n',
-	                  '<Progress info value={20} min={0} max={100} />\n',
-	                  '<Progress warning value={60} min={0} max={100} />\n',
-	                  '<Progress danger value={80} min={0} max={100} />\n'
+	                  "<Progress success value={40} min={0} max={100} />\n",
+	                  "<Progress info value={20} min={0} max={100} />\n",
+	                  "<Progress warning value={60} min={0} max={100} />\n",
+	                  "<Progress danger value={80} min={0} max={100} />\n"
 	                )
 	              )
 	            ),
@@ -59081,7 +56693,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Uses a gradient to create a striped effect.'
+	              "Uses a gradient to create a striped effect."
 	            ),
 	            React.createElement(
 	              Well,
@@ -59100,10 +56712,10 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Progress striped success value={40} min={0} max={100} />\n',
-	                  '<Progress striped info value={20} min={0} max={100} />\n',
-	                  '<Progress striped warning value={60} min={0} max={100} />\n',
-	                  '<Progress striped danger value={80} min={0} max={100} />\n'
+	                  "<Progress striped success value={40} min={0} max={100} />\n",
+	                  "<Progress striped info value={20} min={0} max={100} />\n",
+	                  "<Progress striped warning value={60} min={0} max={100} />\n",
+	                  "<Progress striped danger value={80} min={0} max={100} />\n"
 	                )
 	              )
 	            ),
@@ -59116,7 +56728,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add active to animate the stripes right to left.'
+	              "Add active to animate the stripes right to left."
 	            ),
 	            React.createElement(
 	              Well,
@@ -59135,10 +56747,10 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Progress striped active success value={40} min={0} max={100} />\n',
-	                  '<Progress striped active info value={20} min={0} max={100} />\n',
-	                  '<Progress striped active warning value={60} min={0} max={100} />\n',
-	                  '<Progress striped active danger value={80} min={0} max={100} />\n'
+	                  "<Progress striped active success value={40} min={0} max={100} />\n",
+	                  "<Progress striped active info value={20} min={0} max={100} />\n",
+	                  "<Progress striped active warning value={60} min={0} max={100} />\n",
+	                  "<Progress striped active danger value={80} min={0} max={100} />\n"
 	                )
 	              )
 	            ),
@@ -59151,7 +56763,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Place multiple progress bars by stacking them in a ProgressGroup.'
+	              "Place multiple progress bars by stacking them in a ProgressGroup."
 	            ),
 	            React.createElement(
 	              Well,
@@ -59174,12 +56786,12 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ProgressGroup collapseBottom>\n',
-	                  '  <Progress active striped info withLabel value={35} min={0} max={100} />\n',
-	                  '  <Progress active striped danger withLabel value={20} min={0} max={100} />\n',
-	                  '  <Progress active striped warning withLabel value={20} min={0} max={100} />\n',
-	                  '  <Progress active striped success withLabel value={10} min={0} max={100} />\n',
-	                  '</ProgressGroup>\n'
+	                  "<ProgressGroup collapseBottom>\n",
+	                  "  <Progress active striped info withLabel value={35} min={0} max={100} />\n",
+	                  "  <Progress active striped danger withLabel value={20} min={0} max={100} />\n",
+	                  "  <Progress active striped warning withLabel value={20} min={0} max={100} />\n",
+	                  "  <Progress active striped success withLabel value={10} min={0} max={100} />\n",
+	                  "</ProgressGroup>\n"
 	                )
 	              )
 	            )
@@ -59314,7 +56926,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Abstract object styles for building various types of components (like blog comments, Tweets, etc) that feature a left- or right-aligned image alongside textual content.'
+	              "Abstract object styles for building various types of components (like blog comments, Tweets, etc) that feature a left- or right-aligned image alongside textual content."
 	            ),
 	            React.createElement(
 	              Well,
@@ -59428,53 +57040,53 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<MediaList>\n',
-	                  '  <Media>\n',
-	                  '    <a className=\'pull-left\' href=\'#\'>\n',
-	                  '      <MediaObject data-src=\'holder.js/64x64/random\' alt=\'64x64\' />\n',
-	                  '    </a>\n',
-	                  '    <MediaBody>\n',
-	                  '      <MediaHeading>Media Heading</MediaHeading>\n',
-	                  '      <LoremIpsum query=\'4s\' />\n',
-	                  '      <MediaDiv>\n',
-	                  '        <a className=\'pull-left\' href=\'#\'>\n',
-	                  '          <MediaObject data-src=\'holder.js/64x64/random\' alt=\'64x64\' />\n',
-	                  '        </a>\n',
-	                  '        <MediaBody>\n',
-	                  '          <MediaHeading>Nested Media Heading</MediaHeading>\n',
-	                  '          <LoremIpsum query=\'4s\' />\n',
-	                  '          <MediaDiv>\n',
-	                  '            <a className=\'pull-left\' href=\'#\'>\n',
-	                  '              <MediaObject data-src=\'holder.js/64x64/random\' alt=\'64x64\' />\n',
-	                  '            </a>\n',
-	                  '            <MediaBody>\n',
-	                  '              <MediaHeading>Nested Media Heading</MediaHeading>\n',
-	                  '              <LoremIpsum query=\'4s\' />\n',
-	                  '            </MediaBody>\n',
-	                  '          </MediaDiv>\n',
-	                  '        </MediaBody>\n',
-	                  '        <MediaDiv>\n',
-	                  '          <a className=\'pull-left\' href=\'#\'>\n',
-	                  '            <MediaObject data-src=\'holder.js/64x64/random\' alt=\'64x64\' />\n',
-	                  '          </a>\n',
-	                  '          <MediaBody>\n',
-	                  '            <MediaHeading>Nested Media Heading</MediaHeading>\n',
-	                  '            <LoremIpsum query=\'4s\' />\n',
-	                  '          </MediaBody>\n',
-	                  '        </MediaDiv>\n',
-	                  '      </MediaDiv>\n',
-	                  '    </MediaBody>\n',
-	                  '  </Media>\n',
-	                  '  <Media>\n',
-	                  '    <a className=\'pull-left\' href=\'#\'>\n',
-	                  '      <MediaObject data-src=\'holder.js/64x64/random\' alt=\'64x64\' />\n',
-	                  '    </a>\n',
-	                  '    <MediaBody>\n',
-	                  '      <MediaHeading>Media Heading</MediaHeading>\n',
-	                  '      <LoremIpsum query=\'4s\' />\n',
-	                  '    </MediaBody>\n',
-	                  '  </Media>\n',
-	                  '</MediaList>\n'
+	                  "<MediaList>\n",
+	                  "  <Media>\n",
+	                  "    <a className='pull-left' href='#'>\n",
+	                  "      <MediaObject data-src='holder.js/64x64/random' alt='64x64' />\n",
+	                  "    </a>\n",
+	                  "    <MediaBody>\n",
+	                  "      <MediaHeading>Media Heading</MediaHeading>\n",
+	                  "      <LoremIpsum query='4s' />\n",
+	                  "      <MediaDiv>\n",
+	                  "        <a className='pull-left' href='#'>\n",
+	                  "          <MediaObject data-src='holder.js/64x64/random' alt='64x64' />\n",
+	                  "        </a>\n",
+	                  "        <MediaBody>\n",
+	                  "          <MediaHeading>Nested Media Heading</MediaHeading>\n",
+	                  "          <LoremIpsum query='4s' />\n",
+	                  "          <MediaDiv>\n",
+	                  "            <a className='pull-left' href='#'>\n",
+	                  "              <MediaObject data-src='holder.js/64x64/random' alt='64x64' />\n",
+	                  "            </a>\n",
+	                  "            <MediaBody>\n",
+	                  "              <MediaHeading>Nested Media Heading</MediaHeading>\n",
+	                  "              <LoremIpsum query='4s' />\n",
+	                  "            </MediaBody>\n",
+	                  "          </MediaDiv>\n",
+	                  "        </MediaBody>\n",
+	                  "        <MediaDiv>\n",
+	                  "          <a className='pull-left' href='#'>\n",
+	                  "            <MediaObject data-src='holder.js/64x64/random' alt='64x64' />\n",
+	                  "          </a>\n",
+	                  "          <MediaBody>\n",
+	                  "            <MediaHeading>Nested Media Heading</MediaHeading>\n",
+	                  "            <LoremIpsum query='4s' />\n",
+	                  "          </MediaBody>\n",
+	                  "        </MediaDiv>\n",
+	                  "      </MediaDiv>\n",
+	                  "    </MediaBody>\n",
+	                  "  </Media>\n",
+	                  "  <Media>\n",
+	                  "    <a className='pull-left' href='#'>\n",
+	                  "      <MediaObject data-src='holder.js/64x64/random' alt='64x64' />\n",
+	                  "    </a>\n",
+	                  "    <MediaBody>\n",
+	                  "      <MediaHeading>Media Heading</MediaHeading>\n",
+	                  "      <LoremIpsum query='4s' />\n",
+	                  "    </MediaBody>\n",
+	                  "  </Media>\n",
+	                  "</MediaList>\n"
 	                )
 	              )
 	            )
@@ -59609,7 +57221,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'List groups are a flexible and powerful component for displaying not only simple lists of elements, but complex ones with custom content.'
+	              "List groups are a flexible and powerful component for displaying not only simple lists of elements, but complex ones with custom content."
 	            ),
 	            React.createElement(
 	              Well,
@@ -59653,13 +57265,13 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ListGroup>\n',
-	                  '  <ListGroupItem><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '</ListGroup>\n'
+	                  "<ListGroup>\n",
+	                  "  <ListGroupItem><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "</ListGroup>\n"
 	                )
 	              )
 	            ),
@@ -59672,7 +57284,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add the badges component to any list group item and it will automatically be positioned on the right.'
+	              "Add the badges component to any list group item and it will automatically be positioned on the right."
 	            ),
 	            React.createElement(
 	              Well,
@@ -59741,13 +57353,13 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ListGroup>\n',
-	                  '  <ListGroupItem><Badge>14</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><Badge>2</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><Badge>3</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><Badge>4</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><Badge>5</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '</ListGroup>\n'
+	                  "<ListGroup>\n",
+	                  "  <ListGroupItem><Badge>14</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><Badge>2</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><Badge>3</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><Badge>4</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><Badge>5</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "</ListGroup>\n"
 	                )
 	              )
 	            ),
@@ -59760,7 +57372,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Linkify list group items.'
+	              "Linkify list group items."
 	            ),
 	            React.createElement(
 	              Well,
@@ -59829,13 +57441,13 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ListGroup>\n',
-	                  '  <ListGroupItem active><Badge>14</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><Badge>2</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><Badge>3</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><Badge>4</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><Badge>5</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '</ListGroup>\n'
+	                  "<ListGroup>\n",
+	                  "  <ListGroupItem active><Badge>14</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><Badge>2</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><Badge>3</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><Badge>4</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><Badge>5</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "</ListGroup>\n"
 	                )
 	              )
 	            ),
@@ -59848,7 +57460,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add disabled to a ListGroupItem to gray it out to appear disabled.'
+	              "Add disabled to a ListGroupItem to gray it out to appear disabled."
 	            ),
 	            React.createElement(
 	              Well,
@@ -59917,13 +57529,13 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ListGroup>\n',
-	                  '  <ListGroupItem disabled><Badge>14</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><Badge>2</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><Badge>3</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><Badge>4</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem><Badge>5</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '</ListGroup>\n'
+	                  "<ListGroup>\n",
+	                  "  <ListGroupItem disabled><Badge>14</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><Badge>2</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><Badge>3</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><Badge>4</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem><Badge>5</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "</ListGroup>\n"
 	                )
 	              )
 	            ),
@@ -59936,7 +57548,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Use contextual classes to style list items, default or linked. Also includes active state.'
+	              "Use contextual classes to style list items, default or linked. Also includes active state."
 	            ),
 	            React.createElement(
 	              Well,
@@ -59995,12 +57607,12 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ListGroup>\n',
-	                  '  <ListGroupItem success><Badge>14</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem info><Badge>2</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem warning><Badge>3</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '  <ListGroupItem danger><Badge>4</Badge><LoremIpsum query=\'3w\'/></ListGroupItem>\n',
-	                  '</ListGroup>\n'
+	                  "<ListGroup>\n",
+	                  "  <ListGroupItem success><Badge>14</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem info><Badge>2</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem warning><Badge>3</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "  <ListGroupItem danger><Badge>4</Badge><LoremIpsum query='3w'/></ListGroupItem>\n",
+	                  "</ListGroup>\n"
 	                )
 	              )
 	            ),
@@ -60013,7 +57625,7 @@
 	            React.createElement(
 	              'p',
 	              null,
-	              'Add nearly any HTML within, even for linked list groups like the one below.'
+	              "Add nearly any HTML within, even for linked list groups like the one below."
 	            ),
 	            React.createElement(
 	              Well,
@@ -60088,32 +57700,32 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<ListGroup>\n',
-	                  '  <ListGroupItem active>\n',
-	                  '    <ListGroupItemHeading>List group item heading</ListGroupItemHeading>\n',
-	                  '    <ListGroupItemText>\n',
-	                  '      <LoremIpsum query=\'2s\'/>\n',
-	                  '    </ListGroupItemText>\n',
-	                  '  </ListGroupItem>\n',
-	                  '  <ListGroupItem>\n',
-	                  '    <ListGroupItemHeading>List group item heading</ListGroupItemHeading>\n',
-	                  '    <ListGroupItemText>\n',
-	                  '      <LoremIpsum query=\'2s\'/>\n',
-	                  '    </ListGroupItemText>\n',
-	                  '  </ListGroupItem>\n',
-	                  '  <ListGroupItem>\n',
-	                  '    <ListGroupItemHeading>List group item heading</ListGroupItemHeading>\n',
-	                  '    <ListGroupItemText>\n',
-	                  '      <LoremIpsum query=\'2s\'/>\n',
-	                  '    </ListGroupItemText>\n',
-	                  '  </ListGroupItem>\n',
-	                  '  <ListGroupItem>\n',
-	                  '    <ListGroupItemHeading>List group item heading</ListGroupItemHeading>\n',
-	                  '    <ListGroupItemText>\n',
-	                  '      <LoremIpsum query=\'2s\'/>\n',
-	                  '    </ListGroupItemText>\n',
-	                  '  </ListGroupItem>\n',
-	                  '</ListGroup>\n'
+	                  "<ListGroup>\n",
+	                  "  <ListGroupItem active>\n",
+	                  "    <ListGroupItemHeading>List group item heading</ListGroupItemHeading>\n",
+	                  "    <ListGroupItemText>\n",
+	                  "      <LoremIpsum query='2s'/>\n",
+	                  "    </ListGroupItemText>\n",
+	                  "  </ListGroupItem>\n",
+	                  "  <ListGroupItem>\n",
+	                  "    <ListGroupItemHeading>List group item heading</ListGroupItemHeading>\n",
+	                  "    <ListGroupItemText>\n",
+	                  "      <LoremIpsum query='2s'/>\n",
+	                  "    </ListGroupItemText>\n",
+	                  "  </ListGroupItem>\n",
+	                  "  <ListGroupItem>\n",
+	                  "    <ListGroupItemHeading>List group item heading</ListGroupItemHeading>\n",
+	                  "    <ListGroupItemText>\n",
+	                  "      <LoremIpsum query='2s'/>\n",
+	                  "    </ListGroupItemText>\n",
+	                  "  </ListGroupItem>\n",
+	                  "  <ListGroupItem>\n",
+	                  "    <ListGroupItemHeading>List group item heading</ListGroupItemHeading>\n",
+	                  "    <ListGroupItemText>\n",
+	                  "      <LoremIpsum query='2s'/>\n",
+	                  "    </ListGroupItemText>\n",
+	                  "  </ListGroupItem>\n",
+	                  "</ListGroup>\n"
 	                )
 	              )
 	            )
@@ -60239,7 +57851,7 @@
 	            React.createElement(
 	              Alert,
 	              { info: true },
-	              'Mozilla L20n is a new localization framework developed by Mozilla for the Web. It allows localizers to put small bits of logic into localization resources to codify the grammar of the language. If you are unfamiliar with Mozilla\'s awesome framework we suggest you go through the learning material provided here: ',
+	              "Mozilla L20n is a new localization framework developed by Mozilla for the Web. It allows localizers to put small bits of logic into localization resources to codify the grammar of the language. If you are unfamiliar with Mozilla's awesome framework we suggest you go through the learning material provided here: ",
 	              React.createElement(
 	                AlertLink,
 	                { href: 'http://l20n.org/learn/', target: '_blank' },
@@ -60261,7 +57873,7 @@
 	                    null,
 	                    'Entity: '
 	                  ),
-	                  'Entities are containers for information. You use entities to identify, store, and recall information to be used in the software\'s UI.'
+	                  "Entities are containers for information. You use entities to identify, store, and recall information to be used in the software's UI."
 	                ),
 	                React.createElement(
 	                  'li',
@@ -60271,7 +57883,7 @@
 	                    null,
 	                    'Context: '
 	                  ),
-	                  'Each context stores information about languages available to it, downloaded resource files and all entities in these resource files. Software developers can create contexts and query them for values of specific entities.'
+	                  "Each context stores information about languages available to it, downloaded resource files and all entities in these resource files. Software developers can create contexts and query them for values of specific entities."
 	                ),
 	                React.createElement(
 	                  'li',
@@ -60281,43 +57893,43 @@
 	                    null,
 	                    'Context data: '
 	                  ),
-	                  'Context data is how entities defined in L20n resources can interact with non-localizable variables provided by the developer. Context data is generally unknown at the time of writing the L20n code. By assigning values to it, the developer makes it known at runtime.'
+	                  "Context data is how entities defined in L20n resources can interact with non-localizable variables provided by the developer. Context data is generally unknown at the time of writing the L20n code. By assigning values to it, the developer makes it known at runtime."
 	                )
 	              )
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'To use L20n you need to get localizers to write language specific files following the conventions set by the L20n framework. These files (should be named strings.l20n) should then be stored in the ',
+	              "To use L20n you need to get localizers to write language specific files following the conventions set by the L20n framework. These files (should be named strings.l20n) should then be stored in the ",
 	              React.createElement(
 	                'strong',
 	                null,
 	                'public/locales/app'
 	              ),
-	              ' folder with names reflecting language codes (preferably ISO 639-1 format). We have also provided a handy flags icon set (courtesy ',
+	              " folder with names reflecting language codes (preferably ISO 639-1 format). We have also provided a handy flags icon set (courtesy ",
 	              React.createElement(
 	                'a',
 	                { href: 'http://gosquared.com', target: '_blank' },
 	                'GoSquared'
 	              ),
-	              ') for your use. You can use currenly only use 1 file per language and should follow this format: ',
+	              ") for your use. You can use currenly only use 1 file per language and should follow this format: ",
 	              React.createElement(
 	                'strong',
 	                null,
-	                'public/locales/app/<two-letter-lang-code>/strings.l20n'
+	                "public/locales/app/<two-letter-lang-code>/strings.l20n"
 	              ),
-	              '. If in doubt, refer to the file structure in ',
+	              ". If in doubt, refer to the file structure in ",
 	              React.createElement(
 	                'strong',
 	                null,
-	                'public/locales/demo'
+	                "public/locales/demo"
 	              ),
 	              '.'
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'The markup for invoking L20n entities is as follows:'
+	              "The markup for invoking L20n entities is as follows:"
 	            ),
 	            React.createElement(
 	              'div',
@@ -60328,14 +57940,14 @@
 	                React.createElement(
 	                  'code',
 	                  { className: 'language-markup' },
-	                  '<Entity entity=\'some-entity-here\' data={{a: \'some context data\', b: \'some other context data\'}} />\n'
+	                  "<Entity entity='some-entity-here' data={{a: 'some context data', b: 'some other context data'}} />\n"
 	                )
 	              )
 	            ),
 	            React.createElement(
 	              'p',
 	              null,
-	              'The Entity component defined above requires you to have \'entity\' property defined alongwith an optional \'data\' property. React takes care of keeping the rendered data in sync and the resultant output is actually a span element (so it can be used within Buttons or any other block element without compromising the interface).'
+	              "The Entity component defined above requires you to have 'entity' property defined alongwith an optional 'data' property. React takes care of keeping the rendered data in sync and the resultant output is actually a span element (so it can be used within Buttons or any other block element without compromising the interface)."
 	            )
 	          )
 	        )
@@ -60473,4 +58085,3 @@
 
 /***/ }
 /******/ ]);
-})();
